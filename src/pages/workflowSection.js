@@ -26,20 +26,21 @@ const WorkflowSection = () => {
         }}
       >
         <h1
+          className="mt-[6rem] font-extrabold"
           style={{
-            fontSize: theme.fontSize.mainTitle,
-            color: theme.colors.primary,
-            fontWeight: "bold",
+            fontSize: theme.fontSize.subTitle,
+            textAlign: "left",
+            color: "#e16a15",
+            marginBottom: theme.gaps[1],
+            textTransform: "uppercase",
           }}
         >
-
-          
           How it works?
         </h1>
         <p
           style={{
-            width: "816px",
-            fontSize: theme.fontSize.content,
+            width: "50%",
+            fontSize: theme.fontSize.smcontent,
             opacity: 0.5,
             marginBottom: theme.gaps[5],
           }}
@@ -50,11 +51,12 @@ const WorkflowSection = () => {
         <Box sx={{ ...theme.container, marginBottom: theme.gaps[2] }}>
           <Box sx={{ width: "25%", ...theme.container }}>
             <Box
+              className="flex justify-center items-center"
               sx={{
-                width: "32px",
-                height: "32px",
+                width: "3rem",
+                height: "3rem",
                 borderRadius: "50%",
-                background: theme.colors.primary,
+                background: "#e16a15",
                 lineHeight: "32px",
                 color: theme.colors.white,
                 textAlign: "center",
@@ -72,9 +74,10 @@ const WorkflowSection = () => {
           </Box>
           <Box sx={{ width: "25%", ...theme.container }}>
             <Box
+              className="flex justify-center items-center"
               sx={{
-                width: "32px",
-                height: "32px",
+                width: "3rem",
+                height: "3rem",
                 borderRadius: "50%",
                 background: theme.colors.primary,
                 lineHeight: "32px",
@@ -94,9 +97,10 @@ const WorkflowSection = () => {
           </Box>
           <Box sx={{ width: "25%", ...theme.container }}>
             <Box
+              className="flex justify-center items-center"
               sx={{
-                width: "32px",
-                height: "32px",
+                width: "3rem",
+                height: "3rem",
                 borderRadius: "50%",
                 background: theme.colors.primary,
                 lineHeight: "32px",
@@ -116,9 +120,10 @@ const WorkflowSection = () => {
           </Box>
           <Box sx={{ width: "25%", ...theme.container }}>
             <Box
+              className="flex justify-center items-center"
               sx={{
-                width: "32px",
-                height: "32px",
+                width: "3rem",
+                height: "3rem",
                 borderRadius: "50%",
                 background: theme.colors.primary,
                 lineHeight: "32px",
@@ -146,9 +151,11 @@ const WorkflowSection = () => {
           <Box
             sx={{
               width: "25%",
+              height: "35vh",
               p: theme.gaps[3],
               mr: theme.gaps[2],
               background: theme.background.secondary,
+              borderRadius: "10px",
             }}
           >
             <p
@@ -158,9 +165,9 @@ const WorkflowSection = () => {
                 marginBottom: theme.gaps[1],
               }}
             >
-              1. Dicover Projects
+              Discover Projects
             </p>
-            <p style={{ opacity: 0.5 }}>
+            <p className="text-md" style={{ opacity: 0.5 }}>
               Browse through a wide range of innovative projects that are
               seeking funding. From technology to art, there's something for
               everyone.
@@ -169,9 +176,11 @@ const WorkflowSection = () => {
           <Box
             sx={{
               width: "25%",
+              height: "35vh",
               p: theme.gaps[3],
               mr: theme.gaps[2],
               background: theme.background.secondary,
+              borderRadius: "10px",
             }}
           >
             <p
@@ -181,9 +190,9 @@ const WorkflowSection = () => {
                 marginBottom: theme.gaps[1],
               }}
             >
-              2. Fund with Bitcoin
+              Fund with Bitcoin
             </p>
-            <p style={{ opacity: 0.5 }}>
+            <p className="text-md" style={{ opacity: 0.5 }}>
               Once you find a project you're interested in, contribute to its
               funding using Bitcoin. Our secure payment system ensures your
               transactions are safe and transparent.
@@ -192,9 +201,11 @@ const WorkflowSection = () => {
           <Box
             sx={{
               width: "25%",
+              height: "35vh",
               p: theme.gaps[3],
               mr: theme.gaps[2],
               background: theme.background.secondary,
+              borderRadius: "10px",
             }}
           >
             <p
@@ -204,9 +215,9 @@ const WorkflowSection = () => {
                 marginBottom: theme.gaps[1],
               }}
             >
-              3. Track Progress
+              Track Progress
             </p>
-            <p style={{ opacity: 0.5 }}>
+            <p className="text-md" style={{ opacity: 0.5 }}>
               Stay updated on the progress of the projects you've supported. Get
               insights into how the funds are being utilized and the milestones
               achieved.
@@ -215,8 +226,11 @@ const WorkflowSection = () => {
           <Box
             sx={{
               width: "25%",
+              height: "35vh",
               p: theme.gaps[3],
+              mr: theme.gaps[2],
               background: theme.background.secondary,
+              borderRadius: "10px",
             }}
           >
             <p
@@ -226,9 +240,9 @@ const WorkflowSection = () => {
                 marginBottom: theme.gaps[1],
               }}
             >
-              4. Engage with the Community
+              Engage with the Community
             </p>
-            <p style={{ opacity: 0.5 }}>
+            <p className="text-md" style={{ opacity: 0.5 }}>
               Connect with other supporters and project creators in our vibrant
               community. Share ideas, provide feedback, and collaborate to make
               a difference.

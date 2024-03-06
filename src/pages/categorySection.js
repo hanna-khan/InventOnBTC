@@ -29,35 +29,40 @@ const CategorySection = () => {
           ...theme.container,
           flexDirection: "column",
           p: theme.gaps[3],
+          background: "#e6e7e9",
+          marginTop: "6rem",
         }}
       >
-        <img
+        {/* <img
           style={{ marginBottom: theme.gaps[2] }}
           src={CategoryLogo}
           alt="Logo"
-        />
+        /> */}
         <h1
           style={{
+            marginTop: "6rem",
             fontWeight: "bold",
-            fontSize: theme.fontSize.subTitle,
+            fontSize: "2rem",
             textTransform: "uppercase",
             marginBottom: theme.gaps[2],
           }}
         >
-          Which Categories are you interested in?
+          WHAT CATEGORIES ARE YOU INTERESTED IN?
         </h1>
         <p
           style={{
-            fontSize: theme.fontSize.medium,
+            fontSize: theme.fontSize.title,
+            fontWeight: "500",
             textTransform: "uppercase",
-            marginBottom: theme.gaps[5],
+            marginBottom: theme.gaps[3],
           }}
         >
           Discover projects that align with your interests
         </p>
         <p
           style={{
-            fontSize: theme.fontSize.medium,
+            fontSize: theme.fontSize.title,
+            fontWeight: "500",
             textTransform: "uppercase",
             marginBottom: theme.gaps[3],
           }}
@@ -73,11 +78,16 @@ const CategorySection = () => {
         >
           {CategoryData.map((item, index) => (
             <Box key={index} sx={{ textAlign: "center" }}>
-              <img src={item.image} alt="Category" />
+              <img
+                className="w-[5vw] mb-6"
+                src={item.image}
+                alt="Category"
+              />
               <p
                 style={{
-                  fontSize: theme.fontSize.medium,
-                  textTransform: "uppercase",
+                  fontSize: "0.8rem",
+                  fontWeight: "500",
+                  textTransform: "capitalize",
                 }}
               >
                 {" "}

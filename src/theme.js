@@ -10,7 +10,7 @@ const themeSettings = createTheme({
     sectionColor: "#E6E7E9",
   },
   colors: {
-    primary: "#D88327",
+    primary: "#e16a15",
     secondary: "#F68222",
     black: "#181824",
     grey: "#6A6A6A",
@@ -23,6 +23,7 @@ const themeSettings = createTheme({
     subTitle: "1.5rem",
     medium: "30px",
     content: "1.2rem",
+    smcontent: "1rem",
     small: "14px",
     xsmall: "10px",
     logo: "24px",

@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <>
+    <div className="font-sans">
       <Navbar />
       <HeroSection />
       <ProjectSection />
@@ -24,7 +24,7 @@ const Home = () => {
       <Blogs />
       <Feedback />
       <Footer />
-    </>
+    </div>
   );
 };
 
