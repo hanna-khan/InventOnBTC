@@ -33,17 +33,18 @@ const Blogs = () => {
   return (
     <React.Fragment>
       <Box
+        className="m-auto flex flex-col justify-center max-w-[90%]"
         sx={{
-          p: theme.gaps[3],
           background: theme.background.white,
-          textAlign: "center",
         }}
       >
         <h1
+          className="mt-[6rem] font-extrabold"
           style={{
-            fontSize: "40px",
-            textTransform: 700,
-            marginBottom: theme.gaps[2],
+            fontSize: theme.fontSize.subTitle,
+            textAlign: "left",
+            color: "#191919",
+            marginBottom: theme.gaps[1],
             textTransform: "uppercase",
           }}
         >
@@ -51,18 +52,23 @@ const Blogs = () => {
         </h1>
 
         <p
-          style={{ fontSize: "24px", lineHeight: "24px", marginBottom: "30px" }}
+          style={{
+            fontSize: "24px",
+            lineHeight: "24px",
+            marginBottom: theme.gaps[5],
+          }}
         >
           Keep up-to date on the Bitcoin Economy
         </p>
         <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: Laptop2
-              ? "minmax(0, 1fr) minmax(0, 1fr)"
-              : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
-            gap: "97px",
-          }}
+          className="grid grid-cols-3"
+          // sx={{
+          //   display: "grid",
+          //   gridTemplateColumns: Laptop2
+          //     ? "minmax(0, 1fr) minmax(0, 1fr)"
+          //     : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
+          //   gap: "97px",
+          // }}
         >
           {BlogData.map((item, index) => {
             return (

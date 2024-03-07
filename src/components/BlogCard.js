@@ -22,44 +22,49 @@ const BlogCard = (props) => {
 
   return (
     <React.Fragment>
-      <Box sx={{ maxWidth: "394px", margin: "auto" }}>
+      <Box
+        sx={{
+          width: "22vw",
+          height: "55vh",
+          cursor: "pointer",
+          margin: "auto",
+        }}
+      >
         <img
           src={props.img}
           alt="Img"
-          style={{ width: "394px", marginBottom: "30px" }}
+          style={{ width: "394px", marginBottom: "10px" }}
         />
         <h6
           style={{
             fontSize: "15.25px",
             fontWeight: 500,
             lineHeight: "24px",
-            marginBottom: "80x",
-            textAlign: "left",
+            marginBottom: "0.6rem",
+            textAlign: "center",
           }}
         >
           {props.title}
         </h6>
         <p
+          className="text-[0.8rem]"
           style={{
-            fontSize: "15.25px",
-            fontWeight: 500,
-            lineHeight: "24px",
-            marginBottom: "80x",
-            opacity: 0.6,
-            textAlign: "left",
+            marginBottom: theme.gaps[1],
+            color: theme.colors.grey,
           }}
         >
           {props.content}
         </p>
         <p
           style={{
-            fontSize: "12px",
+            fontSize: "0.65rem",
             fontWeight: 700,
             lineHeight: "18px",
             textAlign: "left",
+            textTransform: "uppercase"
           }}
         >
-          {"Learn more >"}
+          {"Learn more"}
         </p>
       </Box>
     </React.Fragment>

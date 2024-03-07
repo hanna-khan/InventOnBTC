@@ -40,41 +40,49 @@ const Spotlight = () => {
   return (
     <React.Fragment>
       <Box
+        className="m-auto flex flex-col justify-center max-w-[90%] mt-[10rem]"
         sx={{
           p: theme.gaps[3],
           background: theme.background.white,
         }}
       >
         <h1
+          className="uppercase font-extrabold"
           style={{
             fontSize: theme.fontSize.mainTitle,
-            textTransform: 900,
-            marginBottom: theme.gaps[2],
           }}
         >
           Spotlight
         </h1>
         <h2
+          className="uppercase font-extrabold tracking-[1px]"
           style={{
             fontSize: theme.fontSize.subTitle,
-            textTransform: 900,
-            marginBottom: theme.gaps[2],
+            marginBottom: theme.gaps[1],
           }}
         >
           Founder interviews
         </h2>
-        <p style={{ fontSize: "11.6px", lineHeight: "18px" }}>
+        <p
+          style={{
+            fontSize: "11.6px",
+            lineHeight: "18px",
+            marginBottom: theme.gaps[4],
+            color: "#808080",
+          }}
+        >
           Get insights on the founders behind the projects on <br />{" "}
           InventOnBTC. Dive deep into their vision behind <br /> their ideas and
           innovations
         </p>
         <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: gridTemplateColumnsValue,
-            gap: "97px",
-            marginTop: "65px",
-          }}
+          className="grid grid-cols-3 gap-10"
+          // sx={{
+          //   display: "grid",
+          //   gridTemplateColumns: gridTemplateColumnsValue,
+          //   gap: "97px",
+          //   marginTop: "65px",
+          // }}
         >
           {FounderData.map((item, index) => {
             return (

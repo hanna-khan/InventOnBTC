@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
@@ -27,9 +28,18 @@ const FounderCard = (props) => {
 
   return (
     <React.Fragment>
-      <Box sx={{ width: "353px", border: "1px solid gray" }}>
+      <Box
+        sx={{
+          width: "20vw",
+          height: "64vh",
+          cursor: "pointer",
+          margin: "auto",
+          border: "0.5px solid #dddddd",
+          justifyContent: "space-around"
+        }}
+      >
         <img
-          style={{ width: "100%", margin: "auto" }}
+          style={{ width: "20vw", height: "35vh", margin: "auto" }}
           src={props.image}
           alt="Project Image"
         />
@@ -42,6 +52,7 @@ const FounderCard = (props) => {
             }}
           >
             <p
+               className="text-[0.8rem]"
               style={{
                 color: theme.colors.blue,
                 fontWeight: 900,
@@ -52,19 +63,20 @@ const FounderCard = (props) => {
             </p>
           </Box>
           <p
-            style={{
-              fontSize: theme.fontSize.content,
-              fontWeight: "bold",
-              marginBottom: theme.gaps[1],
-            }}
+             className="text-[0.9rem]"
+             style={{
+               fontWeight: "bold",
+               marginBottom: theme.gaps[1],
+             }}
           >
             {props.title}
           </p>
           <p
-            style={{
-              fontSize: theme.fontSize.small,
-              marginBottom: theme.gaps[2],
-            }}
+           className="text-[0.7rem]"
+           style={{
+             marginBottom: theme.gaps[2],
+             color: theme.colors.grey,
+           }}
           >
             {props.content}
           </p>

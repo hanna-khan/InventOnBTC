@@ -51,7 +51,7 @@ const ProjectSection = () => {
           style={{
             fontSize: theme.fontSize.subTitle,
             textAlign: "left",
-            color: theme.colors.black,
+            color: "#191919",
             marginBottom: theme.gaps[3],
             textTransform: "uppercase",
           }}

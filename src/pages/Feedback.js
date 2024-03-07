@@ -36,29 +36,40 @@ const Feedback = () => {
         }}
       >
         <h1
+          className="mt-[6rem] font-extrabold"
           style={{
-            fontSize: "72px",
-            textTransform: 900,
-            marginBottom: theme.gaps[2],
+            fontSize: theme.fontSize.subTitle,
+            textAlign: "left",
+            color: "#191919",
+            marginBottom: theme.gaps[1],
+            textTransform: "uppercase",
           }}
         >
           What People Are Saying
         </h1>
 
-        <p style={{ fontSize: "24px", lineHeight: "24px", opacity: 0.6 }}>
+        <p
+          style={{
+            color: "#808080",
+            fontSize: "0.9rem",
+            lineHeight: "18px",
+            marginBottom: theme.gaps[4],
+          }}
+        >
           Don't just take our word for it. Here's what our satisfied startup
           founders and <br /> backers have to say about their experience with
           our crowdfunding platform.
         </p>
         <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: Laptop4
-              ? "minmax(0, 1fr)"
-              : "minmax(0, 1fr) minmax(0, 1fr)",
-            gap: "97px",
-            marginTop: "65px",
-          }}
+          className="grid grid-cols-2 relative left-[-4rem] gap-[1rem]"
+          // sx={{
+          //   display: "grid",
+          //   gridTemplateColumns: Laptop4
+          //     ? "minmax(0, 1fr)"
+          //     : "minmax(0, 1fr) minmax(0, 1fr)",
+          //   gap: "97px",
+          //   marginTop: "65px",
+          // }}
         >
           {FeedbackData.map((item, index) => {
             return (

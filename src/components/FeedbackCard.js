@@ -26,27 +26,37 @@ const FeedbackCard = (props) => {
         sx={{
           ...theme.container,
           alignItems: "flex-start",
-          width: "570px",
+          width: "30vw",
           ml: props.index % 2 === 0 && "auto !important",
+          background: "#f8f8f8",
+          borderRadius: "10px",
+          padding: "14px",
         }}
       >
         <Box
           sx={{
-            width: "64px",
-            height: "64px",
+            width: "55px",
+            height: "55px",
             borderRadius: "50%",
             background: theme.background.black,
             mr: theme.gaps[2],
+            marginBottom: theme.gaps[4],
           }}
         />
         <Box sx={{ flex: 1 }}>
           <h6
-            style={{ fontSize: "20px", fontWeight: 900, lineHeight: "24.2px" }}
+            className="text-[1.2rem]"
+            style={{
+              fontWeight: "bold",
+            }}
           >
             {props.title}
           </h6>
           <p
-            style={{ fontSize: "20px", fontWeight: 400, lineHeight: "24.2px" }}
+            style={{
+              fontSize: "0.8rem",
+              fontWeight: 500,
+            }}
           >
             {props.content}
           </p>

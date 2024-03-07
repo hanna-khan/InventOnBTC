@@ -159,15 +159,15 @@ const WorkflowSection = () => {
             }}
           >
             <p
+              className="text-[1.2rem]"
               style={{
                 fontWeight: "bold",
-                fontSize: theme.fontSize.subTitle,
                 marginBottom: theme.gaps[1],
               }}
             >
               Discover Projects
             </p>
-            <p className="text-md" style={{ opacity: 0.5 }}>
+            <p className="text-sm" style={{ opacity: 0.5 }}>
               Browse through a wide range of innovative projects that are
               seeking funding. From technology to art, there's something for
               everyone.
@@ -184,15 +184,15 @@ const WorkflowSection = () => {
             }}
           >
             <p
+              className="text-[1.2rem]"
               style={{
                 fontWeight: "bold",
-                fontSize: theme.fontSize.subTitle,
                 marginBottom: theme.gaps[1],
               }}
             >
               Fund with Bitcoin
             </p>
-            <p className="text-md" style={{ opacity: 0.5 }}>
+            <p className="text-sm" style={{ opacity: 0.5 }}>
               Once you find a project you're interested in, contribute to its
               funding using Bitcoin. Our secure payment system ensures your
               transactions are safe and transparent.
@@ -209,15 +209,15 @@ const WorkflowSection = () => {
             }}
           >
             <p
+              className="text-[1.2rem]"
               style={{
                 fontWeight: "bold",
-                fontSize: theme.fontSize.subTitle,
                 marginBottom: theme.gaps[1],
               }}
             >
               Track Progress
             </p>
-            <p className="text-md" style={{ opacity: 0.5 }}>
+            <p className="text-sm" style={{ opacity: 0.5 }}>
               Stay updated on the progress of the projects you've supported. Get
               insights into how the funds are being utilized and the milestones
               achieved.
@@ -234,15 +234,15 @@ const WorkflowSection = () => {
             }}
           >
             <p
+              className="text-[1.2rem]"
               style={{
                 fontWeight: "bold",
-                fontSize: theme.fontSize.subTitle,
                 marginBottom: theme.gaps[1],
               }}
             >
               Engage with the Community
             </p>
-            <p className="text-md" style={{ opacity: 0.5 }}>
+            <p className="text-sm" style={{ opacity: 0.5 }}>
               Connect with other supporters and project creators in our vibrant
               community. Share ideas, provide feedback, and collaborate to make
               a difference.
