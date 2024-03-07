@@ -35,9 +35,8 @@ const ProjectCard = (props) => {
   return (
     <React.Fragment>
       <Box
+        className="h-[60vh] md:h-[52vh] xl:w-[22vw] lg:w-[30vw] md:w-[40vw] w-[60vw]"
         sx={{
-          width: "22vw",
-          height: "75vh",
           cursor: "pointer",
           margin: "auto",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
@@ -45,11 +44,12 @@ const ProjectCard = (props) => {
         onClick={handleRedirectProjectDetail}
       >
         <img
-          style={{ width: "22vw", height: "32vh", margin: "auto" }}
+          className=" w-[60vw] h-[30vh] md:h-[24vh] md:w-[40vw] lg:h-[22vh] lg:w-[30vw]"
+          style={{ margin: "auto" }}
           src={props.image}
           alt="Project Image"
         />
-        <Box sx={{ p: theme.gaps[2], height: "338px" }}>
+        <Box sx={{ p: theme.gaps[2] }}>
           <Box
             sx={{
               ...theme.container,

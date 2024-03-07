@@ -59,7 +59,7 @@ const ProjectSection = () => {
           TRENDING PROJECTS
         </h1>
         <Box
-          className="grid grid-cols-4 gap-12"
+          className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12"
           sx={{
             // gridTemplateColumns: gridTemplateColumnsValue,
           }}
