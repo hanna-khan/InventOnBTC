@@ -79,7 +79,7 @@ const CategorySection = () => {
           {CategoryData.map((item, index) => (
             <Box key={index} sx={{ textAlign: "center" }}>
               <img
-                className="w-[5vw] mb-6"
+                className="w-[5vw] mb-6 mix-blend-multiply"
                 src={item.image}
                 alt="Category"
               />

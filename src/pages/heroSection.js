@@ -54,6 +54,7 @@ const HeroSection = () => {
             Crowdfunding for Bitcoin <br /> start-ups
           </h1>
           <p
+            className="md:text-[1.2rem] text-[1rem] mb-[50px] md:mb-[20px]"
             style={{
               fontSize: theme.fontSize.content,
               color: theme.colors.grey,

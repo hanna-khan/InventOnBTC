@@ -96,12 +96,12 @@ function Navbar(props) {
             onClick={() => navigate("/")}
           >
             <img
-              className="md:w-[72px] w-[50px]"
+              className="md:w-[50px] w-[72px]"
               src={Logo}
               alt="logo Images"
             />
             <Box
-              className="md:text-[24px] text-[1.2rem]"
+              className="md:text-[20px] text-[1.2rem]"
               style={{ textAlign: "center", fontSize: theme.fontSize.logo }}
             >
               InventOn <br />
