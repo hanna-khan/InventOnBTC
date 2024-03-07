@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
@@ -48,21 +49,8 @@ function Footer(props) {
         padding: "60px",
       }}
     >
-      <Box
-        sx={{
-          ...theme.container,
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          gap: "145px",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-start",
-          }}
-        >
+      <Box className="m-auto justify-around max-w-[100%] flex gap-8">
+        <Box>
           <img src={Logo} alt="logo Images" style={{ width: "72px" }} />
         </Box>
         <Box
@@ -70,9 +58,8 @@ function Footer(props) {
             ...theme.container,
             alignItems: "flex-start",
             flexDirection: "column",
-            alignItems: "flex-start",
             paddingBottom: "24px",
-            borderBottom: "1px solid grey",
+            borderBottom: "0.5px solid #dddddd",
           }}
         >
           <Box
@@ -89,16 +76,17 @@ function Footer(props) {
                 ...theme.container,
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
-                gap: Laptop3 ? "100px" : "220px",
+                gap: Laptop3 ? "8rem" : "220px",
               }}
             >
               <Box>
                 <h6
                   style={{
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     lineHeight: "24px",
                     opacity: "0.7",
                     marginBottom: "13px",
+                    textTransform: "uppercase",
                   }}
                 >
                   Explore
@@ -109,6 +97,7 @@ function Footer(props) {
                     flexDirection: "column",
                     gap: "5px",
                     alignItems: "flex-start",
+                    fontSize: "0.8rem",
                   }}
                 >
                   <a href="#">What We Do</a>
@@ -118,10 +107,11 @@ function Footer(props) {
               <Box>
                 <h6
                   style={{
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     lineHeight: "24px",
                     opacity: "0.7",
                     marginBottom: "13px",
+                    textTransform: "uppercase",
                   }}
                 >
                   About
@@ -132,6 +122,7 @@ function Footer(props) {
                     flexDirection: "column",
                     gap: "5px",
                     alignItems: "flex-start",
+                    fontSize: "0.8rem",
                   }}
                 >
                   <a href="#">About Us</a>
@@ -146,10 +137,11 @@ function Footer(props) {
               <Box>
                 <h6
                   style={{
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     lineHeight: "24px",
                     opacity: "0.7",
                     marginBottom: "13px",
+                    textTransform: "uppercase",
                   }}
                 >
                   Entrepreneurs
@@ -160,6 +152,7 @@ function Footer(props) {
                     flexDirection: "column",
                     gap: "5px",
                     alignItems: "flex-start",
+                    fontSize: "0.8rem",
                   }}
                 >
                   <a href="#">How It Works</a>
@@ -182,11 +175,12 @@ function Footer(props) {
                 alt="Icon"
                 style={{
                   marginBottom: "20px",
+                  width: "40px",
                 }}
               />
               <h6
                 style={{
-                  fontSize: "16px",
+                  fontSize: "0.8rem",
                   lineHeight: "24px",
                   fontWeight: 700,
                 }}
@@ -195,7 +189,7 @@ function Footer(props) {
               </h6>
               <p
                 style={{
-                  fontSize: "15px",
+                  fontSize: "0.8rem",
                   textAlign: "center",
                   lineHeight: "24px",
                   marginBottom: "41px",
@@ -205,6 +199,7 @@ function Footer(props) {
               </p>
               <Box sx={{ marginBottom: "10px", width: "282px" }}>
                 <TextField
+                  className="text-[0.8rem]"
                   id="outlined-basic"
                   label="Your email address"
                   variant="filled"
@@ -245,7 +240,7 @@ function Footer(props) {
                     },
                   }}
                 />
-                <p>
+                <p className="text-[0.8rem] mt-2">
                   I agree to the{" "}
                   <a
                     style={{
