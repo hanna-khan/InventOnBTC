@@ -21,9 +21,7 @@ const WorkflowSection = () => {
   return (
     <React.Fragment>
       <Box
-        sx={{
-          px: theme.gaps[5],
-        }}
+      className="sm:px-6 px-0"
       >
         <h1
           className="mt-[6rem] font-extrabold"
@@ -48,7 +46,10 @@ const WorkflowSection = () => {
           Welcome to InventOnBTC, where you can support and fund projects
           created on Bitcoin. Here's how it works:
         </p>
-        <Box sx={{ ...theme.container, marginBottom: theme.gaps[2] }}>
+        <Box
+          className="lg:flex hidden items-center justify-center flex-wrap"
+          sx={{ marginBottom: theme.gaps[2] }}
+        >
           <Box sx={{ width: "25%", ...theme.container }}>
             <Box
               className="flex justify-center items-center"
@@ -143,17 +144,15 @@ const WorkflowSection = () => {
           </Box>
         </Box>
         <Box
+          className="flex items-center justify-center gap-4 flex-wrap lg:flex-nowrap"
           sx={{
-            ...theme.container,
             alignItems: "stretch",
           }}
         >
           <Box
+            className="md:w-[25%] w-[40%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
-              p: theme.gaps[3],
-              mr: theme.gaps[2],
+              height: "auto",
               background: theme.background.secondary,
               borderRadius: "10px",
             }}
@@ -174,11 +173,10 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
+            className="md:w-[25%] w-[40%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
+              height: "auto",
               p: theme.gaps[3],
-              mr: theme.gaps[2],
               background: theme.background.secondary,
               borderRadius: "10px",
             }}
@@ -199,11 +197,10 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
+            className="md:w-[25%] w-[40%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
+              height: "auto",
               p: theme.gaps[3],
-              mr: theme.gaps[2],
               background: theme.background.secondary,
               borderRadius: "10px",
             }}
@@ -224,11 +221,10 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
+            className="md:w-[25%] w-[40%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
+              height: "auto",
               p: theme.gaps[3],
-              mr: theme.gaps[2],
               background: theme.background.secondary,
               borderRadius: "10px",
             }}

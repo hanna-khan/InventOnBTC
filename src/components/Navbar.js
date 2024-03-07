@@ -95,8 +95,15 @@ function Navbar(props) {
             }}
             onClick={() => navigate("/")}
           >
-            <img src={Logo} alt="logo Images" style={{ width: "72px" }} />
-            <Box style={{ textAlign: "center", fontSize: theme.fontSize.logo }}>
+            <img
+              className="md:w-[72px] w-[50px]"
+              src={Logo}
+              alt="logo Images"
+            />
+            <Box
+              className="md:text-[24px] text-[1.2rem]"
+              style={{ textAlign: "center", fontSize: theme.fontSize.logo }}
+            >
               InventOn <br />
               <span style={{ color: theme.colors.primary }}>BTC</span>
             </Box>
@@ -233,9 +240,13 @@ function Navbar(props) {
                     {page.menuItems.length > 0 && (
                       <span>
                         {expandedSubMenu === page.name ? (
-                          <ExpandLess sx={{ position: "absolute", top: "7px" }} />
+                          <ExpandLess
+                            sx={{ position: "absolute", top: "7px" }}
+                          />
                         ) : (
-                          <ExpandMore sx={{ position: "absolute", top: "7px" }} />
+                          <ExpandMore
+                            sx={{ position: "absolute", top: "7px" }}
+                          />
                         )}
                       </span>
                     )}
