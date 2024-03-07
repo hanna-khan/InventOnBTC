@@ -36,9 +36,8 @@ const Feedback = () => {
         }}
       >
         <h1
-          className="mt-[6rem] font-extrabold"
+          className="mt-[6rem] font-extrabold sm:text-2xl text-xl"
           style={{
-            fontSize: theme.fontSize.subTitle,
             textAlign: "left",
             color: "#191919",
             marginBottom: theme.gaps[1],
@@ -49,9 +48,9 @@ const Feedback = () => {
         </h1>
 
         <p
+        className="sm:text-[0.9rem] text-[0.8rem]"
           style={{
             color: "#808080",
-            fontSize: "0.9rem",
             lineHeight: "18px",
             marginBottom: theme.gaps[4],
           }}
@@ -61,7 +60,7 @@ const Feedback = () => {
           our crowdfunding platform.
         </p>
         <Box
-          className="grid grid-cols-2 relative left-[-4rem] gap-[1rem]"
+          className="grid sm:grid-cols-2 grid-cols-1 relative lg:left-[-4rem] left-0 gap-[1rem]"
           // sx={{
           //   display: "grid",
           //   gridTemplateColumns: Laptop4

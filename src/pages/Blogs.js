@@ -39,9 +39,8 @@ const Blogs = () => {
         }}
       >
         <h1
-          className="mt-[6rem] font-extrabold"
+          className="mt-[6rem] sm:text-2xl text-xl font-extrabold"
           style={{
-            fontSize: theme.fontSize.subTitle,
             textAlign: "left",
             color: "#191919",
             marginBottom: theme.gaps[1],
@@ -52,8 +51,8 @@ const Blogs = () => {
         </h1>
 
         <p
+        className="sm:text-[24px] text-sm"
           style={{
-            fontSize: "24px",
             lineHeight: "24px",
             marginBottom: theme.gaps[5],
           }}
@@ -61,7 +60,7 @@ const Blogs = () => {
           Keep up-to date on the Bitcoin Economy
         </p>
         <Box
-          className="grid grid-cols-3"
+          className="grid sm:grid-cols-3 grid-cols-1 gap-3"
           // sx={{
           //   display: "grid",
           //   gridTemplateColumns: Laptop2
