@@ -33,12 +33,13 @@ const HeroSection = () => {
   return (
     <React.Fragment>
       <Box
+        className="h-auto"
         sx={{
           position: "relative",
           ...theme.container,
           background: theme.background.primary,
           justifyContent: "space-between",
-          py: theme.gaps[3],
+          pt: theme.gaps[3],
         }}
       >
         <Box sx={{ paddingLeft: "120px" }}>

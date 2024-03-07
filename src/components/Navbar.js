@@ -218,7 +218,7 @@ function Navbar(props) {
               return (
                 <Box key={page.name}>
                   <Button
-                    className="menu-item"
+                    className="menu-item lg:text-[10px] text-[14px]"
                     key={page.name}
                     onClick={() => handleRedirectUrl(page.link)}
                     onMouseEnter={() => handleExpandedMenu(page.name)}
@@ -227,7 +227,6 @@ function Navbar(props) {
                       position: "relative",
                       display: "inline-block",
                       color: theme.colors.white,
-                      fontSize: theme.fontSize.small,
                     }}
                   >
                     {page.name}
