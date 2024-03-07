@@ -306,10 +306,10 @@ function Footer(props) {
                 BTC & STX
               </span>
             </Button>
-            <img className="w-[3vw] md:w-[5vw]" src={FaceBookIcon} alt="Icon" />
-            <img className="w-[3vw] md:w-[5vw]" src={TwitterIcon} alt="Icon" />
-            <img className="w-[3vw] md:w-[5vw]" src={UtubuIcon} alt="Icon" />
-            <img className="w-[3vw] md:w-[5vw]" src={DiscordIcon} alt="Icon" />
+            <img className="w-[10px] md:w-[15px]" src={FaceBookIcon} alt="Icon" />
+            <img className="w-[10px] md:w-[15px]" src={TwitterIcon} alt="Icon" />
+            <img className="w-[10px] md:w-[15px]" src={UtubuIcon} alt="Icon" />
+            <img className="w-[10px] md:w-[15px]" src={DiscordIcon} alt="Icon" />
           </Box>
         </Box>
       </Box>
