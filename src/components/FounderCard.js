@@ -29,21 +29,21 @@ const FounderCard = (props) => {
   return (
     <React.Fragment>
       <Box
+        className="sm:w-[20vw] w-[35vw] border-[0.5px] border-[#dddddd]"
         sx={{
-          width: "20vw",
-          height: "64vh",
+          height: "auto",
           cursor: "pointer",
           margin: "auto",
-          border: "0.5px solid #dddddd",
-          justifyContent: "space-around"
+          justifyContent: "space-around",
         }}
       >
         <img
-          style={{ width: "20vw", height: "35vh", margin: "auto" }}
+          className="sm:w-[20vw] w-[35vw]"
+          style={{ height: "35vh", margin: "auto" }}
           src={props.image}
           alt="Project Image"
         />
-        <Box sx={{ p: theme.gaps[2], height: "293px" }}>
+        <Box sx={{ p: theme.gaps[2] }}>
           <Box
             sx={{
               ...theme.container,
@@ -52,7 +52,7 @@ const FounderCard = (props) => {
             }}
           >
             <p
-               className="text-[0.8rem]"
+              className="text-[0.8rem]"
               style={{
                 color: theme.colors.blue,
                 fontWeight: 900,
@@ -63,20 +63,20 @@ const FounderCard = (props) => {
             </p>
           </Box>
           <p
-             className="text-[0.9rem]"
-             style={{
-               fontWeight: "bold",
-               marginBottom: theme.gaps[1],
-             }}
+            className="text-[0.9rem]"
+            style={{
+              fontWeight: "bold",
+              marginBottom: theme.gaps[1],
+            }}
           >
             {props.title}
           </p>
           <p
-           className="text-[0.7rem]"
-           style={{
-             marginBottom: theme.gaps[2],
-             color: theme.colors.grey,
-           }}
+            className="text-[0.7rem]"
+            style={{
+              marginBottom: theme.gaps[2],
+              color: theme.colors.grey,
+            }}
           >
             {props.content}
           </p>
