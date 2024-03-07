@@ -33,18 +33,20 @@ const HeroSection = () => {
   return (
     <React.Fragment>
       <Box
-        className="h-auto sm:h-[50vh] lg:pt-[30px] pt-4 justify-center text-center items-center md:text-left"
+        className="h-auto mt-[3rem]"
         sx={{
           position: "relative",
           ...theme.container,
           background: theme.background.primary,
           justifyContent: "space-between",
+          pt: theme.gaps[3],
         }}
       >
-        <Box className="lg:pl-[80px] pl-8">
+        <Box sx={{ paddingLeft: "120px" }}>
           <h1
-            className="font-extrabold leading-[3.5rem] md:text-[2.5rem] text-[2rem]"
+            className="font-extrabold leading-[3.5rem]"
             style={{
+              fontSize: Laptop4 ? "35px" : theme.fontSize.mainTitle,
               color: theme.colors.white,
               marginBottom: theme.gaps[2],
             }}
@@ -52,7 +54,6 @@ const HeroSection = () => {
             Crowdfunding for Bitcoin <br /> start-ups
           </h1>
           <p
-          className="lg:max-w-[100%] max-w-[80%]"
             style={{
               fontSize: theme.fontSize.content,
               color: theme.colors.grey,
@@ -108,7 +109,7 @@ const HeroSection = () => {
           </Box>
         </Box>
         <img
-          className="md:block hidden h-[47vh]"
+          className="md:block hidden"
           src={HeroImg}
           alt="Hero Image"
           style={{
