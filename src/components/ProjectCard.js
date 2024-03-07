@@ -35,7 +35,7 @@ const ProjectCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="h-[60vh] md:h-[52vh] xl:w-[22vw] lg:w-[30vw] md:w-[40vw] w-[60vw]"
+        className="h-auto xl:w-[22vw] lg:w-[30vw] w-[40vw]"
         sx={{
           cursor: "pointer",
           margin: "auto",
