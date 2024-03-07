@@ -23,7 +23,7 @@ const FeedbackCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="sm:w-[30vw] w-[50vw]"
+        className="sm:w-[30vw] w-[60vw]"
         sx={{
           ...theme.container,
           alignItems: "flex-start",

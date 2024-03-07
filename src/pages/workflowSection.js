@@ -20,7 +20,7 @@ const WorkflowSection = () => {
   const isSmallMobile = useMediaQuery("(max-width:375px)");
   return (
     <React.Fragment>
-      <Box className="sm:px-6 px-0">
+      <Box className="px-6">
         <h1
           className="mt-[6rem] font-extrabold"
           style={{

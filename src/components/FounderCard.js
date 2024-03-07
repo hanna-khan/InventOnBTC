@@ -29,7 +29,7 @@ const FounderCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="sm:w-[20vw] w-[35vw] border-[0.5px] border-[#dddddd]"
+        className="sm:w-[20vw] w-[40vw] border-[0.5px] border-[#dddddd]"
         sx={{
           height: "auto",
           cursor: "pointer",
@@ -38,7 +38,7 @@ const FounderCard = (props) => {
         }}
       >
         <img
-          className="sm:w-[20vw] w-[35vw]"
+          className="sm:w-[20vw] w-[40vw]"
           style={{ height: "35vh", margin: "auto" }}
           src={props.image}
           alt="Project Image"
