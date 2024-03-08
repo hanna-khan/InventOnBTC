@@ -44,7 +44,7 @@ const StartupSection = () => {
         }}
       />
       <Box
-        className="md:mt-[8rem] mt-[2rem]"
+        className="md:mt-[8rem] mt-[6rem]"
         sx={{
           ...theme.container,
           flexDirection: "column",
@@ -61,18 +61,16 @@ const StartupSection = () => {
             alignItems: "flex-start",
           }}
         >
-          <Box sx={{ ...theme.container }}>
-            <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[48.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold mr-8">
+          <Box className="flex justify-center items-center md:flex-row flex-col">
+            <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[48.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold md:mr-8 mr-0">
               Become a <br /> Bitcoin
               <br /> Entrepreneur
             </h1>
             <Button
-              className="navbar-item"
+              className="navbar-item md:w-[300px] md:h-[80px] h-[50px] w-[200px]"
               variant="contained"
               sx={{
                 ...theme.buttons.primary,
-                width: "320px",
-                height: "89px",
                 fontSize: "24px",
                 ml: theme.gaps[2],
               }}
@@ -81,6 +79,7 @@ const StartupSection = () => {
                 style={{
                   display: isMobile ? "none" : "inline",
                 }}
+                className="lg:text-[1.5rem] text-[1rem]"
               >
                 start a project
               </span>
@@ -95,16 +94,17 @@ const StartupSection = () => {
                 gap: theme.gaps[2],
               }}
             >
-              <img style={{ width: "50px" }} src={Coin1} alt="Icon" />
-              <img src={Coin2} alt="Icon" />
+              <img className="md:w-[50px] w-[8vw]" src={Coin1} alt="Icon" />
+              <img className="md:w-[50px] w-[8vw]" src={Coin2} alt="Icon" />
             </Box>
           </Box>
-          <Box
-            className="md:mt-[4rem] mt-6"
-            sx={{ ...theme.container, gap: "4rem" }}
-          >
+          <Box className="md:mt-[4rem] mt-6 flex justify-center items-center gap-[4rem] flex-col md:flex-row">
             <Box sx={{ textAlign: "center" }}>
-              <img className="m-auto mb-6" src={RocketIcon} alt="Icon" />
+              <img
+                className="md:w-auto w-[12vw] m-auto mb-6"
+                src={RocketIcon}
+                alt="Icon"
+              />
               <p
                 style={{
                   fontSize: "18px",
@@ -136,7 +136,11 @@ const StartupSection = () => {
               </p>
             </Box>
             <Box sx={{ textAlign: "center" }}>
-              <img className="m-auto mb-6" src={Planet} alt="Icon" />
+              <img
+                className="md:w-auto w-[12vw] m-auto mb-6"
+                src={Planet}
+                alt="Icon"
+              />
               <p
                 style={{
                   fontSize: "18px",
@@ -190,9 +194,7 @@ const StartupSection = () => {
           <h2 className="md:text-[1.5rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-6 font-bold">
             Advantages to get curated
           </h2>
-          <Box
-            sx={{ ...theme.container, gap: "80px", alignItems: "flex-start" }}
-          >
+          <Box className="md:gap-[80px] gap-4 flex justify-center md:flex-row flex-col md:items-start items-center">
             <Box>
               <img
                 src={CuratedIcon1}
@@ -252,7 +254,7 @@ const StartupSection = () => {
             </Box>
           </Box>
         </Box>
-        <Box>
+        <Box className="p-6">
           <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] font-extrabold leading-[40px] md:mb-10 mb-4">
             PROJECTS FUNDED THROUGH{" "}
             <span style={{ color: theme.colors.primary }}>INVENT ON BTC</span>{" "}
@@ -273,27 +275,20 @@ const StartupSection = () => {
           </Box>
         </Box>
         <Box style={{ marginBottom: theme.gaps[5] }}>
-          <p
-            style={{
-              marginBottom: theme.gaps[2],
-              fontSize: "36px",
-              fontWeight: "900",
-              textAlign: "center",
-            }}
-          >
+          <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px]mb-5 text-center md:mt-[6rem] mt-6 font-extrabold">
             CREATOR RESOURCES
           </p>
-          <p style={{ textAlign: "center", marginBottom: theme.gaps[5] }}>
-            Some tools and resources to help you <br /> on you Bitcoin
+          <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] md:mb-[40px] mb-5 font-bold text-center mt-6">
+            Some tools and resources to help you on you <br /> Bitcoin
             Entrepreneurial journey
           </p>
           <Box
+            className="md:gap-x-[8rem] md:gap-y-[2rem] gap-4"
             sx={{
               display: "grid",
               gridTemplateColumns: isMobile
                 ? "minmax(0, 1fr)"
                 : "minmax(0, 1fr) minmax(0, 1fr)",
-              gap: "80px",
             }}
           >
             {ResourceData.map((item, index) => {
