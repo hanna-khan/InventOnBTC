@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Grid } from "@mui/material";
 import {
   Box,
   AppBar,
@@ -40,9 +40,9 @@ const Spotlight = () => {
   return (
     <React.Fragment>
       <Box
-        className="m-auto flex flex-col justify-center max-w-[90%] mt-[10rem]"
+        className="m-auto flex flex-col justify-center mt-[10rem]"
         sx={{
-          p: theme.gaps[3],
+          padding: "10px",
           background: theme.background.white,
         }}
       >
@@ -69,26 +69,20 @@ const Spotlight = () => {
           InventOnBTC. Dive deep into their vision behind <br /> their ideas and
           innovations
         </p>
-        <Box
-          className="grid sm:grid-cols-3 grid-cols-1 gap-10"
-          // sx={{
-          //   display: "grid",
-          //   gridTemplateColumns: gridTemplateColumnsValue,
-          //   gap: "97px",
-          //   marginTop: "65px",
-          // }}
-        >
+        <Grid container columnGap={2} rowGap={5}>
           {FounderData.map((item, index) => {
             return (
-              <FounderCard
-                key={index}
-                image={item.image}
-                title={item.title}
-                content={item.content}
-              />
+              <Grid item>
+                <FounderCard
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  content={item.content}
+                />
+              </Grid>
             );
           })}
-        </Box>
+        </Grid>
       </Box>
     </React.Fragment>
   );

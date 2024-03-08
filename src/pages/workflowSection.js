@@ -35,7 +35,7 @@ const WorkflowSection = () => {
         </h1>
         <p
           style={{
-            width: "50%",
+            // width: "50%",
             fontSize: theme.fontSize.smcontent,
             opacity: 0.5,
             marginBottom: theme.gaps[5],
@@ -148,7 +148,7 @@ const WorkflowSection = () => {
           }}
         >
           <Box
-            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
+            className="xl:w-[25%] xs:w-[100%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
               height: "auto",
               background: theme.background.secondary,
@@ -171,7 +171,7 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
-            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
+            className="xl:w-[25%] xs:w-[100%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
               height: "auto",
               background: theme.background.secondary,
@@ -194,7 +194,7 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
-            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
+            className="xl:w-[25%] xs:w-[100%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
               height: "auto",
               background: theme.background.secondary,
@@ -217,7 +217,7 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
-            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
+            className="xl:w-[25%] xs:w-[100%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
               height: "auto",
               background: theme.background.secondary,

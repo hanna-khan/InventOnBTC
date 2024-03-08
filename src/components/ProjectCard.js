@@ -35,10 +35,8 @@ const ProjectCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="h-auto xl:w-[22vw] lg:w-[30vw] w-[40vw]"
         sx={{
           width: "400px",
-          // height: "75vh",
           cursor: "pointer",
           margin: "auto",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
@@ -55,7 +53,6 @@ const ProjectCard = (props) => {
           src={props.image}
           alt="Project Image"
         />
-        <Box sx={{ p: theme.gaps[2] }}>
         <Box sx={{ p: theme.gaps[2] }}>
           <Box
             sx={{

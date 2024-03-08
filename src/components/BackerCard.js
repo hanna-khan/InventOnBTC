@@ -31,16 +31,15 @@ const BackerCard = (props) => {
         sx={{
           p: theme.gaps[2],
           background: "#F8F8F8",
-          maxWidth: "411px",
-          ...theme.container,
-          flexDirection: "column",
+          width: "400px",
         }}
       >
         <img
           style={{
-            width: "371px",
+            width: "100%",
             height: "300px",
-            background: "white",
+            margin: "auto",
+            objectFit: "cover",
             marginBottom: theme.gaps[2],
           }}
         />

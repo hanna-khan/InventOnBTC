@@ -29,17 +29,21 @@ const FounderCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="sm:w-[20vw] w-[40vw] border-[0.5px] border-[#dddddd]"
+        className="border-[0.5px] border-[#dddddd]"
         sx={{
-          height: "auto",
+          width: "400px",
           cursor: "pointer",
           margin: "auto",
           justifyContent: "space-around",
         }}
       >
         <img
-          className="sm:w-[20vw] w-[40vw]"
-          style={{ height: "35vh", margin: "auto" }}
+          style={{
+            width: "100%",
+            height: "300px",
+            margin: "auto",
+            objectFit: "cover",
+          }}
           src={props.image}
           alt="Project Image"
         />

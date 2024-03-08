@@ -29,17 +29,20 @@ const PressCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="h-auto xl:w-[22vw] lg:w-[30vw] w-[40vw]"
-
         sx={{
+          width: "400px",
           cursor: "pointer",
           margin: "auto",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         }}
       >
         <img
-          className=" w-[60vw] h-[30vh] md:h-[24vh] md:w-[40vw] lg:h-[22vh] lg:w-[30vw]"
-          style={{ margin: "auto" }}
+          style={{
+            width: "100%",
+            height: "300px",
+            margin: "auto",
+            objectFit: "cover",
+          }}
           src={props.image}
           alt="Project Image"
         />

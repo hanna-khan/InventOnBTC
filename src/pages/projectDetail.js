@@ -204,7 +204,14 @@ const ProjectDetail = () => {
             You can fund this project by choosing from the packages and deals on
             offer.
           </p>
-          <Box sx={{ ...theme.container, gap: theme.gaps[1] }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "10px",
+              flexWrap: "wrap",
+            }}
+          >
             {BackerData.map((item, index) => (
               <BackerCard
                 key={index}
@@ -228,14 +235,14 @@ const ProjectDetail = () => {
           </p>
           <Box
             sx={{
-              ...theme.container,
-              alignItems: "stretch",
+              display: "flex",
+              flexWrap: "wrap",
               mb: theme.gaps[3],
             }}
           >
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -254,7 +261,7 @@ const ProjectDetail = () => {
             </Box>
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -272,7 +279,7 @@ const ProjectDetail = () => {
             </Box>
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -291,7 +298,7 @@ const ProjectDetail = () => {
             </Box>
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -328,15 +335,16 @@ const ProjectDetail = () => {
           </p>
           <Box
             sx={{
-              ...theme.container,
-              alignItems: "stretch",
+              display: "flex",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
               mb: theme.gaps[3],
-              gap: theme.gaps[1],
+              gap: "5px",
             }}
           >
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -358,7 +366,7 @@ const ProjectDetail = () => {
             </Box>
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -380,7 +388,7 @@ const ProjectDetail = () => {
             </Box>
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -402,7 +410,7 @@ const ProjectDetail = () => {
             </Box>
             <Box
               sx={{
-                width: "25%",
+                width: { xs: "100%", md: "25%" },
                 borderRadius: "10px",
                 px: theme.gaps[2],
                 py: theme.gaps[3],
@@ -422,30 +430,29 @@ const ProjectDetail = () => {
                 receive a signed copy of the project's official merchandise.
               </p>
             </Box>
-          </Box>
-          <Box
-            sx={{
-              width: "25%",
-              borderRadius: "10px",
-              px: theme.gaps[2],
-              py: theme.gaps[3],
-              background: "#F8F8F8",
-              margin: "auto",
-            }}
-          >
-            <h2
-              style={{
-                fontWeight: "bold",
-                marginBottom: theme.gaps[1],
+            <Box
+              sx={{
+                width: { xs: "100%", md: "25%" },
+                borderRadius: "10px",
+                px: theme.gaps[2],
+                py: theme.gaps[3],
+                background: "#F8F8F8",
               }}
             >
-              Diamond Backer
-            </h2>
-            <p>
-              Become an official sponsor of the project and have your logo
-              prominently displayed on the project's website and marketing
-              materials.
-            </p>
+              <h2
+                style={{
+                  fontWeight: "bold",
+                  marginBottom: theme.gaps[1],
+                }}
+              >
+                Diamond Backer
+              </h2>
+              <p>
+                Become an official sponsor of the project and have your logo
+                prominently displayed on the project's website and marketing
+                materials.
+              </p>
+            </Box>
           </Box>
         </Box>
       </Box>

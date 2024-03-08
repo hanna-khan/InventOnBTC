@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Grid } from "@mui/material";
 import {
   Box,
   AppBar,
@@ -51,7 +51,7 @@ const Blogs = () => {
         </h1>
 
         <p
-        className="sm:text-[24px] text-sm"
+          className="sm:text-[24px] text-sm"
           style={{
             lineHeight: "24px",
             marginBottom: theme.gaps[5],
@@ -59,27 +59,20 @@ const Blogs = () => {
         >
           Keep up-to date on the Bitcoin Economy
         </p>
-        <Box
-          className="grid sm:grid-cols-3 grid-cols-1 gap-3"
-          // sx={{
-          //   display: "grid",
-          //   gridTemplateColumns: Laptop2
-          //     ? "minmax(0, 1fr) minmax(0, 1fr)"
-          //     : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
-          //   gap: "97px",
-          // }}
-        >
+        <Grid container columnGap={2} rowGap={5}>
           {BlogData.map((item, index) => {
             return (
-              <BlogCard
-                key={index}
-                img={item.image}
-                title={item.title}
-                content={item.content}
-              />
+              <Grid item>
+                <BlogCard
+                  key={index}
+                  img={item.image}
+                  title={item.title}
+                  content={item.content}
+                />
+              </Grid>
             );
           })}
-        </Box>
+        </Grid>
       </Box>
     </React.Fragment>
   );

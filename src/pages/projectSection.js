@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Grid } from "@mui/material";
 import {
   Box,
   AppBar,
@@ -58,23 +58,22 @@ const ProjectSection = () => {
         >
           TRENDING PROJECTS
         </h1>
-        <Box
-          className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12"
-          sx={{}}
-        >
+        <Grid container columnGap={2} rowGap={5}>
           {ProjectsData.map((item, index) => (
-            <ProjectCard
-              key={index}
-              image={item.image}
-              title={item.title}
-              content={item.content}
-              type={item.type}
-              amount={item.amout}
-              percent={item.percent}
-              leftDays={item.leftDays}
-            />
+            <Grid item>
+              <ProjectCard
+                key={index}
+                image={item.image}
+                title={item.title}
+                content={item.content}
+                type={item.type}
+                amount={item.amout}
+                percent={item.percent}
+                leftDays={item.leftDays}
+              />
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Box>
     </React.Fragment>
   );

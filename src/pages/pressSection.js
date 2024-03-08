@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Grid } from "@mui/material";
 import {
   Box,
   AppBar,
@@ -59,9 +59,11 @@ const PressSection = () => {
           CURATED PROJECTS
         </h1>
         <Box
-          className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12"
           sx={{
-            // gridTemplateColumns: gridTemplateColumnsValue,
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "10px",
           }}
         >
           {PressData.map((item, index) => {
@@ -92,6 +94,42 @@ const PressSection = () => {
             }
           })}
         </Box>
+        {/* <Box
+          className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12"
+          sx={
+            {
+              // gridTemplateColumns: gridTemplateColumnsValue,
+            }
+          }
+        >
+          {PressData.map((item, index) => {
+            if (index === 0) {
+              return (
+                <ProjectCard
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  content={item.content}
+                  type={item.type}
+                  amount={item.amout}
+                  percent={item.percent}
+                  leftDays={item.leftDays}
+                />
+              );
+            } else {
+              return (
+                <PressCard
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  content={item.content}
+                  type={item.type}
+                  explain={item.explain}
+                />
+              );
+            }
+          })}
+        </Box> */}
         {/* <Slider {...sliderSettings}>
           {PressData.map((item, index) => (
             <PressCard

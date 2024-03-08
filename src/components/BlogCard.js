@@ -23,17 +23,21 @@ const BlogCard = (props) => {
   return (
     <React.Fragment>
       <Box
-      className="w-[40vw] sm:w-[30vw]"
         sx={{
-          height: "auto",
+          width: "400px",
           cursor: "pointer",
           margin: "auto",
         }}
       >
         <img
+          style={{
+            width: "100%",
+            height: "300px",
+            margin: "auto",
+            objectFit: "cover",
+          }}
           src={props.img}
           alt="Img"
-          style={{ width: "394px", marginBottom: "10px" }}
         />
         <h6
           style={{
@@ -61,7 +65,7 @@ const BlogCard = (props) => {
             fontWeight: 700,
             lineHeight: "18px",
             textAlign: "left",
-            textTransform: "uppercase"
+            textTransform: "uppercase",
           }}
         >
           {"Learn more"}
