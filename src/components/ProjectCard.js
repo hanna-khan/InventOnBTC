@@ -142,7 +142,6 @@ const ProjectCard = (props) => {
           </Box>
         </Box>
       </Box>
-      </Box>
     </React.Fragment>
   );
 };
