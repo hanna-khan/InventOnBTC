@@ -198,10 +198,11 @@ function Footer(props) {
                 Discover new innovations in the <br /> InventOnBTC newsletter
               </p>
               <Box
-                className="md:w-[282px] w-[200px] md:text-[0.8rem] text-[0.6rem]"
+                className="md:w-[282px] w-[180px] md:text-[0.8rem] text-[0.6rem]"
                 sx={{ marginBottom: "10px" }}
               >
                 <TextField
+                  className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"
                   label="Your email address"
                   variant="filled"
@@ -291,11 +292,10 @@ function Footer(props) {
             }}
           >
             <Button
-              className="navbar-item"
+              className="navbar-item md:w-[300px] w-[150px]"
               variant="outlined"
               sx={{
                 ...theme.buttons.secondary,
-                width: "300px",
               }}
             >
               <span
@@ -306,17 +306,26 @@ function Footer(props) {
                 BTC & STX
               </span>
             </Button>
-            <img className="w-[10px] md:w-[15px]" src={FaceBookIcon} alt="Icon" />
-            <img className="w-[10px] md:w-[15px]" src={TwitterIcon} alt="Icon" />
+            <img
+              className="w-[10px] md:w-[15px]"
+              src={FaceBookIcon}
+              alt="Icon"
+            />
+            <img
+              className="w-[10px] md:w-[15px]"
+              src={TwitterIcon}
+              alt="Icon"
+            />
             <img className="w-[10px] md:w-[15px]" src={UtubuIcon} alt="Icon" />
-            <img className="w-[10px] md:w-[15px]" src={DiscordIcon} alt="Icon" />
+            <img
+              className="w-[10px] md:w-[15px]"
+              src={DiscordIcon}
+              alt="Icon"
+            />
           </Box>
         </Box>
       </Box>
-      <Box
-        className="md:gap-[10px] gap-0"
-        sx={{ ...theme.container, padding: "15px" }}
-      >
+      <Box className="md:gap-[10px] gap-0 md:p-[15px] p-4 flex justify-center items-center md:flex-row flex-col">
         <a className="text-[8px] md:text-[11px]" style={{ padding: "12px" }}>
           Terms of Use
         </a>

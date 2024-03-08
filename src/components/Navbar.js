@@ -23,7 +23,7 @@ import { Link, useNavigate } from "react-router-dom";
 const pages = [
   { name: "Explore", link: "/category", menuItems: [] },
   { name: "Curated Projects", link: "/", menuItems: [] },
-  { name: "Start a project", link: "/", menuItems: [] },
+  { name: "Start a project", menuItems: [] },
 ];
 
 function Navbar(props) {
