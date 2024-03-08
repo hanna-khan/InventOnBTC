@@ -106,7 +106,7 @@ const BetaLoginPage = () => {
             >
               <span
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 Doc
@@ -302,7 +302,7 @@ const BetaLoginPage = () => {
                 <a href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                   style={{
                     textDecoration: "underline",
-                    display: isMobile ? "none" : "inline",
+                    
                     color: "#fff"
                   }}
                 >

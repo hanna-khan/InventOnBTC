@@ -291,7 +291,7 @@ function Navbar(props) {
             >
               <span
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 Connect Wallet

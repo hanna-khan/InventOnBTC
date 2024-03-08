@@ -76,10 +76,7 @@ const StartupSection = () => {
               }}
             >
               <span
-                style={{
-                  display: isMobile ? "none" : "inline",
-                }}
-                className="lg:text-[1.5rem] text-[1rem]"
+                className="lg:text-[1.5rem] text-[1rem] text-white"
               >
                 start a project
               </span>

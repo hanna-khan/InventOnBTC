@@ -276,7 +276,7 @@ function Footer(props) {
               >
                 <span
                   style={{
-                    display: isMobile ? "none" : "inline",
+                    
                   }}
                 >
                   Sign me up
@@ -300,7 +300,7 @@ function Footer(props) {
             >
               <span
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 BTC & STX

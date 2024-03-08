@@ -173,7 +173,7 @@ const BackerSection = () => {
         >
           <span
             style={{
-              display: isMobile ? "none" : "inline",
+              
             }}
           >
             EXPLORE <br />

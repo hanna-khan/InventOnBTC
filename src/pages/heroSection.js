@@ -80,7 +80,7 @@ const HeroSection = () => {
               <span
                 className="font-extrabold"
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 For Backers
@@ -98,7 +98,7 @@ const HeroSection = () => {
               <span
                 className="font-extrabold"
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 For Startups
