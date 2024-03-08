@@ -267,18 +267,13 @@ function Footer(props) {
                 </p>
               </Box>
               <Button
-                className="navbar-item"
+                className="navbar-item md:w-[300px] md:h-[2.6rem] h-[50px] w-[120px]"
                 variant="contained"
                 sx={{
                   ...theme.buttons.primary,
-                  width: "282px",
                 }}
               >
-                <span
-                  style={{
-                    
-                  }}
-                >
+                <span className="md:text-[0.8rem] text-[0.6rem] text-white">
                   Sign me up
                 </span>
               </Button>
@@ -292,20 +287,16 @@ function Footer(props) {
             }}
           >
             <Button
-              className="navbar-item md:w-[300px] w-[150px]"
-              variant="outlined"
-              sx={{
-                ...theme.buttons.secondary,
-              }}
-            >
-              <span
-                style={{
-                  
+                className="navbar-item md:w-[300px] md:h-[2.6rem] h-[50px] w-[120px]"
+                variant="contained"
+                sx={{
+                  ...theme.buttons.secondary,
                 }}
               >
-                BTC & STX
-              </span>
-            </Button>
+                <span className="md:text-[0.8rem] text-[0.6rem] text-dark">
+                  BTC & STX
+                </span>
+              </Button>
             <img
               className="w-[10px] md:w-[15px]"
               src={FaceBookIcon}

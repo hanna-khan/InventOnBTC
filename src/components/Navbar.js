@@ -96,13 +96,13 @@ function Navbar(props) {
             onClick={() => navigate("/")}
           >
             <img
-              className="w-[50px] md:w-[72px]"
+              className="w-[60px] md:w-[72px]"
               src={Logo}
               alt="logo Images"
             />
             <Box
-              className="text-[20px] md:text-[0.8rem]"
-              style={{ textAlign: "center", fontSize: theme.fontSize.logo }}
+              className="md:text-[20px] text-[0.8rem]"
+              style={{ textAlign: "center" }}
             >
               InventOn <br />
               <span style={{ color: theme.colors.primary }}>BTC</span>
@@ -281,22 +281,17 @@ function Navbar(props) {
             })}
           </Box>
           <Box sx={{ ...theme.container }}>
-            <Button
-              className="navbar-item"
-              variant="contained"
-              sx={{
-                ...theme.buttons.primary,
-                mr: "8px",
-              }}
-            >
-              <span
-                style={{
-                  
+          <Button
+                className="navbar-item md:w-[8rem] md:h-[3.2rem] h-[40px] w-[6rem] mr-2"
+                variant="contained"
+                sx={{
+                  ...theme.buttons.primary,
                 }}
               >
-                Connect Wallet
-              </span>
-            </Button>
+                <span className="md:text-[0.8rem] text-[0.6rem] text-white uppercase">
+                 Connect Wallet
+                </span>
+              </Button>
             <LogoutIcon
               sx={{ cursor: "pointer" }}
               onClick={() => navigate("/betaLogin")}
