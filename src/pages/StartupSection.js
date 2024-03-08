@@ -33,16 +33,18 @@ const StartupSection = () => {
     <React.Fragment>
       <Navbar />
       <Box
+        className="relative top-[4rem]"
         sx={{
           width: "100%",
-          height: Laptop3 ? "250px" : "389px",
+          height: Laptop3 ? "40vh" : "389px",
           backgroundImage: `url(${ForeImage})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          marginBottom: "30px",
         }}
       />
       <Box
+        className="md:mt-[8rem] mt-[2rem]"
         sx={{
           ...theme.container,
           flexDirection: "column",
@@ -51,6 +53,7 @@ const StartupSection = () => {
         }}
       >
         <Box
+          className="m-auto block max-w-[80%]"
           sx={{
             ...theme.container,
             flexDirection: "column",
@@ -59,7 +62,7 @@ const StartupSection = () => {
           }}
         >
           <Box sx={{ ...theme.container }}>
-            <h1 style={{ fontSize: "64px", fontWeight: 900 }}>
+            <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[48.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold mr-8">
               Become a <br /> Bitcoin
               <br /> Entrepreneur
             </h1>
@@ -96,9 +99,12 @@ const StartupSection = () => {
               <img src={Coin2} alt="Icon" />
             </Box>
           </Box>
-          <Box sx={{ ...theme.container, gap: "80px" }}>
+          <Box
+            className="md:mt-[4rem] mt-6"
+            sx={{ ...theme.container, gap: "4rem" }}
+          >
             <Box sx={{ textAlign: "center" }}>
-              <img src={RocketIcon} alt="Icon" />
+              <img className="m-auto mb-6" src={RocketIcon} alt="Icon" />
               <p
                 style={{
                   fontSize: "18px",
@@ -130,7 +136,7 @@ const StartupSection = () => {
               </p>
             </Box>
             <Box sx={{ textAlign: "center" }}>
-              <img src={Planet} alt="Icon" />
+              <img className="m-auto mb-6" src={Planet} alt="Icon" />
               <p
                 style={{
                   fontSize: "18px",
@@ -164,30 +170,24 @@ const StartupSection = () => {
           </Box>
         </Box>
         <Box
+          className="m-auto block p-5 pt-[4rem]"
           sx={{
-            padding: "50px",
             background: theme.background.sectionColor,
             width: "100%",
             textAlign: "center",
           }}
         >
-          <h1
-            style={{
-              fontSize: "36px",
-              lineHeight: "40px",
-              marginBottom: theme.gaps[1],
-            }}
-          >
+          <h1 className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] mb-6 font-bold">
             GET CURATED
           </h1>
-          <p style={{ lineHeight: "27px", marginBottom: theme.gaps[2] }}>
+          <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-5 text-[#2a2a2a]">
             {" "}
             Curated Projects on the Invent On BTC Platform are marked with the
             blue tick. <br /> This is a badge that makes the project stand-out
             from the rest and is only given to those who have <br />
             satisfied the requirements set by the Invent On BTC platform
           </p>
-          <h2 style={{ marginBottom: theme.gaps[2] }}>
+          <h2 className="md:text-[1.5rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-6 font-bold">
             Advantages to get curated
           </h2>
           <Box
@@ -198,8 +198,9 @@ const StartupSection = () => {
                 src={CuratedIcon1}
                 alt="Icon"
                 style={{ marginBottom: "20px" }}
+                className="md:w-auto w-[5vw] m-auto"
               />
-              <p style={{ textAlign: "left", lineHeight: "18px" }}>
+              <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-5 text-[#6a6a6a]">
                 Get Featured on the <br /> CURATED PROJECTS <br />
                 section and get a blue <br /> tick.
               </p>
@@ -209,8 +210,9 @@ const StartupSection = () => {
                 src={CuratedIcon2}
                 alt="Icon"
                 style={{ marginBottom: "20px" }}
+                className="md:w-auto w-[5vw] m-auto"
               />
-              <p style={{ textAlign: "left", lineHeight: "24px" }}>
+              <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-5 text-[#6a6a6a]">
                 Your project gets
                 <br /> analytics blogs and
                 <br /> Founder interviews to
@@ -225,8 +227,9 @@ const StartupSection = () => {
                 src={CuratedIcon3}
                 alt="Icon"
                 style={{ marginBottom: "20px" }}
+                className="md:w-auto w-[5vw] m-auto"
               />
-              <p style={{ textAlign: "left", lineHeight: "24px" }}>
+              <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-5 text-[#6a6a6a]">
                 We will host Twitter
                 <br /> spaces for you and your
                 <br /> team to introduce you to
@@ -239,8 +242,9 @@ const StartupSection = () => {
                 src={CuratedIcon4}
                 alt="Icon"
                 style={{ marginBottom: "20px" }}
+                className="md:w-auto w-[5vw] m-auto"
               />
-              <p style={{ textAlign: "left", lineHeight: "24  px" }}>
+              <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-5 text-[#6a6a6a]">
                 Get included in the
                 <br /> Treasury pool for a<br /> chance to get funded by <br />
                 Invent On BTC
@@ -249,26 +253,11 @@ const StartupSection = () => {
           </Box>
         </Box>
         <Box>
-          <p
-            style={{
-              marginBottom: theme.gaps[5],
-              fontSize: "36px",
-              fontWeight: "900",
-            }}
-          >
+          <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] font-extrabold leading-[40px] md:mb-10 mb-4">
             PROJECTS FUNDED THROUGH{" "}
             <span style={{ color: theme.colors.primary }}>INVENT ON BTC</span>{" "}
           </p>
-          <Box
-            sx={{
-              gap: "180px",
-              display: "grid",
-              gridTemplateColumns: Laptop3
-                ? "minmax(0, 1fr) minmax(0, 1fr)"
-                : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
-              gap: "180px",
-            }}
-          >
+          <Box className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
             {ProjectsFundData.map((item, index) => (
               <ProjectCard
                 key={index}

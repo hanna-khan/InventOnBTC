@@ -60,9 +60,7 @@ const ProjectSection = () => {
         </h1>
         <Box
           className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12"
-          sx={{
-            // gridTemplateColumns: gridTemplateColumnsValue,
-          }}
+          sx={{}}
         >
           {ProjectsData.map((item, index) => (
             <ProjectCard
@@ -77,9 +75,6 @@ const ProjectSection = () => {
             />
           ))}
         </Box>
-        {/* <Slider {...sliderSettings}>
-          
-        </Slider> */}
       </Box>
     </React.Fragment>
   );
