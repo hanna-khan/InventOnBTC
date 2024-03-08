@@ -18,6 +18,9 @@ import {
 import EastIcon from "@mui/icons-material/East";
 import BetaIcon from "../assets/images/beta_icon.png";
 
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";
+
 import { useAuth } from "../context/AuthContext";
 
 import Logo from "../assets/images/logo.png";
@@ -29,6 +32,10 @@ const BetaLoginPage = () => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width:430px)");
   const [open, setOpen] = React.useState(false);
+  const [form, setForm] = React.useState({
+    email: "",
+    twitter: "",
+  });
   const [password, setPassword] = React.useState("");
   const { login } = useAuth();
   const Laptop3 = useMediaQuery("(max-width:1530px)");
@@ -39,6 +46,18 @@ const BetaLoginPage = () => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const addEmailAndTwitterHandle = async () => {
+    try {
+      await addDoc(collection(db, "betaLogin"), form);
+      setForm({
+        email: "",
+        twitter: "",
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
   };
 
   const handlePasswordInput = (event) => {
@@ -230,6 +249,13 @@ const BetaLoginPage = () => {
                 <TextField
                   id="outlined-basic"
                   label="Your email address"
+                  value={form.email}
+                  onChange={(e) =>
+                    setForm({
+                      ...form,
+                      email: e.target.value,
+                    })
+                  }
                   variant="filled"
                   name="mail_address"
                   InputLabelProps={{
@@ -251,6 +277,13 @@ const BetaLoginPage = () => {
                 <TextField
                   id="outlined-basic"
                   label="Your twitter handle"
+                  value={form.twitter}
+                  onChange={(e) =>
+                    setForm({
+                      ...form,
+                      twitter: e.target.value,
+                    })
+                  }
                   variant="filled"
                   name="twitter_address"
                   InputLabelProps={{
@@ -292,6 +325,7 @@ const BetaLoginPage = () => {
               <Button
                 className="navbar-item"
                 variant="contained"
+                onClick={addEmailAndTwitterHandle}
                 sx={{
                   ...theme.buttons.primary,
                   textTransform: "none",

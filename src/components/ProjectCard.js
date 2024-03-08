@@ -36,8 +36,8 @@ const ProjectCard = (props) => {
     <React.Fragment>
       <Box
         sx={{
-          width: "22vw",
-          height: "75vh",
+          width: "400px",
+          // height: "75vh",
           cursor: "pointer",
           margin: "auto",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
@@ -45,11 +45,16 @@ const ProjectCard = (props) => {
         onClick={handleRedirectProjectDetail}
       >
         <img
-          style={{ width: "22vw", height: "32vh", margin: "auto" }}
+          style={{
+            width: "100%",
+            height: "300px",
+            margin: "auto",
+            objectFit: "cover",
+          }}
           src={props.image}
           alt="Project Image"
         />
-        <Box sx={{ p: theme.gaps[2], height: "338px" }}>
+        <Box sx={{ p: theme.gaps[2] }}>
           <Box
             sx={{
               ...theme.container,

@@ -50,18 +50,18 @@ const ProjectDetail = () => {
       <Box sx={{ p: theme.gaps[3] }}>
         <Box
           sx={{
-            ...theme.container,
-            alignItems: "stretch",
-            pt: theme.gaps[6],
-            mb: theme.gaps[6],
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            padding: "100px 0",
           }}
         >
           <img
-            style={{ width: "695px", height: "523px" }}
+            style={{ width: { xs: "100%", lg: "40%" }, height: "523px" }}
             src={image}
             alt="Project Detail"
           />
-          <Box sx={{ width: "40%", pl: theme.gaps[3] }}>
+          <Box sx={{ width: { xs: "100%", lg: "40%" }, pl: theme.gaps[3] }}>
             <p style={{ color: theme.colors.secondary }}>FUNDING</p>
             <h1
               style={{
