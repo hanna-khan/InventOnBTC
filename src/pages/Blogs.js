@@ -59,7 +59,7 @@ const Blogs = () => {
         >
           Keep up-to date on the Bitcoin Economy
         </p>
-        <Grid container columnGap={2} rowGap={5}>
+        <Grid container columnGap={2} rowGap={5} justifyContent={"center"}>
           {BlogData.map((item, index) => {
             return (
               <Grid item>

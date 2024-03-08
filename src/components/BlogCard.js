@@ -23,8 +23,8 @@ const BlogCard = (props) => {
   return (
     <React.Fragment>
       <Box
+        className="md:w-[400px] w-[300px]"
         sx={{
-          width: "400px",
           cursor: "pointer",
           margin: "auto",
         }}

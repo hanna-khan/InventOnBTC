@@ -69,7 +69,7 @@ const Spotlight = () => {
           InventOnBTC. Dive deep into their vision behind <br /> their ideas and
           innovations
         </p>
-        <Grid container columnGap={2} rowGap={5}>
+        <Grid container columnGap={2} rowGap={5} justifyContent={"center"}>
           {FounderData.map((item, index) => {
             return (
               <Grid item>

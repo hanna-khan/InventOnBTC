@@ -58,7 +58,7 @@ const ProjectSection = () => {
         >
           TRENDING PROJECTS
         </h1>
-        <Grid container columnGap={2} rowGap={5}>
+        <Grid container columnGap={2} rowGap={5} justifyContent={"center"}>
           {ProjectsData.map((item, index) => (
             <Grid item>
               <ProjectCard
