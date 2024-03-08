@@ -39,10 +39,10 @@ const CategorySection = () => {
           alt="Logo"
         /> */}
         <h1
+          className="lg:text-[2rem] sm:text-[1.5rem] text-[1rem]"
           style={{
             marginTop: "6rem",
             fontWeight: "bold",
-            fontSize: "2rem",
             textTransform: "uppercase",
             marginBottom: theme.gaps[2],
           }}
@@ -50,8 +50,8 @@ const CategorySection = () => {
           WHAT CATEGORIES ARE YOU INTERESTED IN?
         </h1>
         <p
+          className="lg:text-[1.5rem] sm:text-[1rem] text-[0.8rem]"
           style={{
-            fontSize: theme.fontSize.title,
             fontWeight: "500",
             textTransform: "uppercase",
             marginBottom: theme.gaps[3],
@@ -60,8 +60,8 @@ const CategorySection = () => {
           Discover projects that align with your interests
         </p>
         <p
+          className="lg:text-[1rem] text-[0.8rem]"
           style={{
-            fontSize: theme.fontSize.title,
             fontWeight: "500",
             textTransform: "uppercase",
             marginBottom: theme.gaps[3],
@@ -73,19 +73,19 @@ const CategorySection = () => {
           sx={{
             ...theme.container,
             justifyContent: "space-around",
-            width: "80%",
+            width: "100%",
           }}
         >
           {CategoryData.map((item, index) => (
             <Box key={index} sx={{ textAlign: "center" }}>
               <img
-                className="w-[5vw] mb-6"
+                className="w-[5vw] mb-6 mix-blend-multiply"
                 src={item.image}
                 alt="Category"
               />
               <p
+                className="sm:text-[0.8rem] text-[0.6rem]"
                 style={{
-                  fontSize: "0.8rem",
                   fontWeight: "500",
                   textTransform: "capitalize",
                 }}

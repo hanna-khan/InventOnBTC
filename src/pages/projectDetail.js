@@ -174,13 +174,7 @@ const ProjectDetail = () => {
                     ...theme.buttons.primary,
                   }}
                 >
-                  <span
-                    style={{
-                      display: isMobile ? "none" : "inline",
-                    }}
-                  >
-                    Fund Now
-                  </span>
+                  <span style={{}}>Fund Now</span>
                 </Button>
               </Box>
               <Box

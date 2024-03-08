@@ -46,18 +46,12 @@ const Spotlight = () => {
           background: theme.background.white,
         }}
       >
-        <h1
-          className="uppercase font-extrabold"
-          style={{
-            fontSize: theme.fontSize.mainTitle,
-          }}
-        >
+        <h1 className="uppercase font-extrabold lg:text-5xl text-3xl">
           Spotlight
         </h1>
         <h2
-          className="uppercase font-extrabold tracking-[1px]"
+          className="uppercase font-extrabold tracking-[1px] lg:text-3xl text-xl"
           style={{
-            fontSize: theme.fontSize.subTitle,
             marginBottom: theme.gaps[1],
           }}
         >
@@ -76,7 +70,7 @@ const Spotlight = () => {
           innovations
         </p>
         <Box
-          className="grid grid-cols-3 gap-10"
+          className="grid sm:grid-cols-3 grid-cols-1 gap-10"
           // sx={{
           //   display: "grid",
           //   gridTemplateColumns: gridTemplateColumnsValue,

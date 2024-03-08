@@ -125,7 +125,7 @@ const BetaLoginPage = () => {
             >
               <span
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 Doc
@@ -333,14 +333,15 @@ const BetaLoginPage = () => {
                   ml: theme.gaps[3],
                 }}
               >
-                <span
+                <a href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                   style={{
                     textDecoration: "underline",
-                    display: isMobile ? "none" : "inline",
+                    
+                    color: "#fff"
                   }}
                 >
-                  START A PROJECT
-                </span>
+                   START A PROJECT
+                </a>
               </Button>
             </Box>
           </Box>

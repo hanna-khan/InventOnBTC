@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
@@ -34,9 +36,8 @@ const BackerSection = () => {
     <React.Fragment>
       <Navbar />
       <Box
+        className="relative top-[4rem] h-[60vh] w-full bg-center"
         sx={{
-          width: "100%",
-          height: "440px",
           backgroundImage: `url(${ForeImage})`,
           backgroundSize: "cover",
         }}
@@ -49,26 +50,20 @@ const BackerSection = () => {
         }}
       >
         <Box
+          className="md:gap-[97px] gap-[1rem]"
           sx={{
             ...theme.container,
             padding: "108px",
-            gap: "97px",
             flexDirection: Laptop3 ? "column" : "row",
           }}
         >
-          <img src={MainImage1} alt="Image" />
+          <img className="md:w-auto w-[50vw]" src={MainImage1} alt="Image" />
           <div style={{ textAlign: "center", flex: 1 }}>
-            <h1
-              style={{
-                fontSize: "48px",
-                lineHeight: "44.8px",
-                marginBottom: "40px",
-              }}
-            >
-              Fund the next big thing <br /> on{" "}
+            <h1 className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[40px] mb-2">
+              Fund the next big thing on
               <span style={{ color: theme.colors.primary }}>Bitcoin</span>
             </h1>
-            <p style={{ lineHeight: "24px" }}>
+            <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[15px] mb-5">
               Invent on BTC gives you access and opportunity to support
               groundbreaking Bitcoin innovations among <br /> many different
               categories. This is your chance to get on the ground floor and
@@ -92,7 +87,7 @@ const BackerSection = () => {
         }}
       >
         <Box sx={{ ...theme.container }}>
-          <h3 style={{ fontSize: theme.fontSize.subTitle }}>
+          <h3 className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px]">
             Bringing you{" "}
             <span style={{ color: theme.colors.blue }}>
               CURATED{" "}
@@ -111,17 +106,15 @@ const BackerSection = () => {
             projects
           </h3>
         </Box>
-        <p style={{ lineHeight: "24px", textAlign: "center" }}>
+        <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[20px]  text-center">
           Curated Projects on the Invent On BTC Platform are marked with the
           blue tick. <br /> It is only given to those who have satisfied the
           requirements set by the Invent On BTC platform
         </p>
         <p
+          className="md:text-[0.9rem] text-[0.7rem] md:leading-[24px] leading-[20px] text-center font-medium"
           style={{
-            lineHeight: "24px",
-            textAlign: "center",
             color: theme.colors.blue,
-            fontWeight: 600,
           }}
         >
           With curated projects you can get even more in-depth information about
@@ -131,26 +124,34 @@ const BackerSection = () => {
         </p>
       </Box>
       <Box
+        className="md:gap-[1.2rem] gap-[0.8rem] md:p-[90px] p-4"
         sx={{
-          padding: "97px",
           ...theme.container,
           flexDirection: "column",
-          gap: "20px",
         }}
       >
-        <h2 style={{ fontSize: theme.fontSize.subTitle }}>
+        <h2 className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[40px] mb-5">
           Innovations from ideas to launched projects
         </h2>
         <Box sx={{ ...theme.container, gap: "20px" }}>
-          <img src={StepIcon1} alt="Icon" />
-          <Box sx={{ width: "119px", border: "1px solid black" }} />
-          <img src={StepIcon2} alt="Icon" />
-          <Box sx={{ width: "119px", border: "1px solid black" }} />
-          <img src={StepIcon3} alt="Icon" />
-          <Box sx={{ width: "119px", border: "1px solid black" }} />
-          <img src={StepIcon4} alt="Icon" />
+          <img className="md:w-auto w-[5vw]" src={StepIcon1} alt="Icon" />
+          <Box
+            className="md:w-[119px] w-[50px]"
+            sx={{ border: "1px solid black" }}
+          />
+          <img className="md:w-auto w-[5vw]" src={StepIcon2} alt="Icon" />
+          <Box
+            className="md:w-[119px] w-[50px]"
+            sx={{ border: "1px solid black" }}
+          />
+          <img className="md:w-auto w-[5vw]" src={StepIcon3} alt="Icon" />
+          <Box
+            className="md:w-[119px] w-[50px]"
+            sx={{ border: "1px solid black" }}
+          />
+          <img className="md:w-auto w-[5vw]" src={StepIcon4} alt="Icon" />
         </Box>
-        <p style={{ lineHeight: "24px", textAlign: "center" }}>
+        <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[20px] text-center">
           Invent On BTC gives you access to projects on all stages in their
           journey. They could be as early as just an idea or could be an <br />
           already launched project looking to go to the next level. We support
@@ -167,12 +168,12 @@ const BackerSection = () => {
           variant="contained"
           sx={{
             ...theme.buttons.primary,
-            width: "150px",
+            width: "160px",
           }}
         >
           <span
             style={{
-              display: isMobile ? "none" : "inline",
+              
             }}
           >
             EXPLORE <br />
@@ -181,8 +182,8 @@ const BackerSection = () => {
         </Button>
       </Box>
       <Box
+      className="p-4 md:p-[30px]" 
         sx={{
-          padding: "30px",
           background: theme.background.sectionColor,
           ...theme.container,
           gap: theme.gaps[3],
@@ -192,35 +193,39 @@ const BackerSection = () => {
       >
         <Box sx={{ ...theme.container, alignItems: "stretch", gap: "144px" }}>
           <Box>
-            <p
-              style={{
-                fontSize: theme.fontSize.subTitle,
-                marginBottom: theme.gaps[2],
-              }}
-            >
+            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
               Fund With
             </p>
-            <Box sx={{ ...theme.container, gap: "49px" }}>
-              <img style={{ width: "50px" }} src={Coin1} alt="Icon" />
-              <img src={Coin2} alt="Icon" />
+            <Box
+              className="md:gap-[49px] gap-[10px]"
+              sx={{ ...theme.container }}
+            >
+              <img className="w-[50px] md:w-[78px]" src={Coin1} alt="Icon" />
+              <img className="w-[50px] md:w-[78px]" src={Coin2} alt="Icon" />
             </Box>
           </Box>
           <Box>
-            <p
-              style={{
-                fontSize: theme.fontSize.subTitle,
-                marginBottom: theme.gaps[2],
-              }}
-            >
+            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
               Wallet integration
             </p>
-            <Box sx={{ ...theme.container, gap: "49px" }}>
-              <img src={XverseIcon} alt="Icon" style={{ width: "78px" }} />
-              <img src={LeatherIcon} alt="Icon" style={{ width: "78px" }} />
+            <Box
+              className="md:gap-[49px] gap-[10px]"
+              sx={{ ...theme.container }}
+            >
+              <img
+                src={XverseIcon}
+                alt="Icon"
+                className="w-[50px] md:w-[78px]"
+              />
+              <img
+                src={LeatherIcon}
+                alt="Icon"
+                className="w-[50px] md:w-[78px]"
+              />
             </Box>
           </Box>
         </Box>
-        <p style={{ textAlign: "center", lineHeight: "24px" }}>
+        <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] md:mb-[40px] mb-5 text-center font-medium">
           You can fund projects using BTC and STX. <br /> With integration of
           popular Bitcoin and Stacks wallets, just download XVERSE or Leather
           wallet and
@@ -229,13 +234,14 @@ const BackerSection = () => {
         </p>
       </Box>
       <Box
+        className="pb-[1rem] md:pb-[56px] p-4"
         sx={{
-          paddingBottom: "56px",
           ...theme.container,
           flexDirection: "column",
         }}
       >
         <Box
+        className="md:max-w-[100%] max-w-[95%]:"
           sx={{
             ...theme.container,
             gap: "49px",
@@ -243,17 +249,12 @@ const BackerSection = () => {
             flexDirection: Laptop3 ? "column" : "row",
           }}
         >
-          <img src={MainImage2} alt="Image" />
+          <img className="md:w-auto w-[50vw]" src={MainImage2} alt="Image" />
           <Box sx={{ textAlign: Laptop3 ? "center" : "left" }}>
-            <p
-              style={{
-                fontSize: theme.fontSize.subTitle,
-                marginBottom: "48px",
-              }}
-            >
+            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] mb-4 font-bold md:mt-[4rem] mt-0">
               Perks and Rewards
             </p>
-            <p style={{ lineHeight: "24px", marginBottom: "110px" }}>
+            <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] md:mb-[40px] mb-5">
               Each project decides what they want to offer in terms of perks or
               rewards to <br />
               backers. They could range from digital assets to physical goods
@@ -262,11 +263,11 @@ const BackerSection = () => {
               <br /> Perks and Rewards are listed on the project fund page.
             </p>
             <Box
+              className="md:mt-[10rem] mt-4 ml-0 md:ml-[76px]"
               sx={{
                 ...theme.container,
                 flexDirection: "column",
                 alignItems: "flex-start",
-                marginLeft: "76px",
               }}
             >
               <p style={{ fontSize: "12px", lineHeight: "21px" }}>
@@ -277,8 +278,8 @@ const BackerSection = () => {
                 ecosystem
               </p>
               <Box
+              className="gap-4 md:gap-0"
                 sx={{
-                  marginBottom: "10px",
                   ...theme.container,
                   justifyContent: "flex-start",
                   marginTop: theme.gaps[1],
@@ -286,6 +287,7 @@ const BackerSection = () => {
                 }}
               >
                 <TextField
+                  className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
                   id="outlined"
                   label="Your email address"
                   variant="outlined"
@@ -300,16 +302,14 @@ const BackerSection = () => {
                   }}
                   sx={{
                     display: "block",
-                    width: "267px",
                   }}
                 />
                 <Button
-                  className="navbar-item"
                   variant="contained"
                   sx={{
                     ...theme.buttons.primary,
-                    width: "160px",
                   }}
+                  className="navbar-item md:w-[160px w-[100px]"
                 >
                   SUBSCRIBE
                 </Button>
@@ -333,7 +333,7 @@ const BackerSection = () => {
                     },
                   }}
                 />
-                <p>
+                <p className="md:text-[1rem] text-[0.8rem]">
                   I agree to the{" "}
                   <a
                     style={{

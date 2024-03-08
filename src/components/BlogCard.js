@@ -23,9 +23,9 @@ const BlogCard = (props) => {
   return (
     <React.Fragment>
       <Box
+      className="w-[40vw] sm:w-[30vw]"
         sx={{
-          width: "22vw",
-          height: "55vh",
+          height: "auto",
           cursor: "pointer",
           margin: "auto",
         }}

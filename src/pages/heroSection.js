@@ -33,19 +33,18 @@ const HeroSection = () => {
   return (
     <React.Fragment>
       <Box
+        className="md:h-auto h-[84vh]"
         sx={{
           position: "relative",
           ...theme.container,
           background: theme.background.primary,
           justifyContent: "space-between",
-          py: theme.gaps[3],
         }}
       >
-        <Box sx={{ paddingLeft: "120px" }}>
+        <Box className="lg:pl-[4rem] pl-[2rem] relative md:top-[6rem] top-[4rem]">
           <h1
-            className="font-extrabold leading-[3.5rem]"
+            className="font-extrabold md:leading-[3.5rem] leading-[2.5rem] lg:text-[35px] text-[2rem]"
             style={{
-              fontSize: Laptop4 ? "35px" : theme.fontSize.mainTitle,
               color: theme.colors.white,
               marginBottom: theme.gaps[2],
             }}
@@ -53,8 +52,8 @@ const HeroSection = () => {
             Crowdfunding for Bitcoin <br /> start-ups
           </h1>
           <p
+            className="lg:text-[1.2rem] text-[1rem] md:mb-[50px] mb-[10px]"
             style={{
-              fontSize: theme.fontSize.content,
               color: theme.colors.grey,
               marginBottom: theme.gaps[5],
             }}
@@ -81,7 +80,7 @@ const HeroSection = () => {
               <span
                 className="font-extrabold"
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 For Backers
@@ -99,36 +98,42 @@ const HeroSection = () => {
               <span
                 className="font-extrabold"
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 For Startups
               </span>
             </Button>
           </Box>
+          <Box
+            className="flex flex-col lg:mt-[2rem] mt-6 mb-4"
+            sx={{
+              bottom: Laptop4 ? "8px" : "1rem",
+            }}
+          >
+            <p
+              style={{ color: theme.colors.white, marginBottom: theme.gaps[1] }}
+            >
+              Fund with
+            </p>
+            <Box className="flex flex-row">
+              <img className="lg:w-[50px] w-[30px]" src={Coin1} alt="Icon" />
+              <img
+                className="lg:w-[50px] w-[30px]"
+                src={Coin2}
+                alt="Coin Icon"
+              />
+            </Box>
+          </Box>
         </Box>
         <img
+          className="md:block hidden h-[100vh]"
           src={HeroImg}
           alt="Hero Image"
           style={{
             width: imageWidth,
           }}
         />
-        <Box
-          sx={{
-            position: "absolute",
-            left: "121px",
-            bottom: Laptop4 ? "8px" : "1rem",
-          }}
-        >
-          <p style={{ color: theme.colors.white, marginBottom: theme.gaps[1] }}>
-            Fund with
-          </p>
-          <Box sx={{ ...theme.container, gap: theme.gaps[2] }}>
-            <img style={{ width: "50px" }} src={Coin1} alt="Icon" />
-            <img src={Coin2} alt="Coin Icon" />
-          </Box>
-        </Box>
       </Box>
     </React.Fragment>
   );

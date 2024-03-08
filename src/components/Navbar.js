@@ -23,7 +23,7 @@ import { Link, useNavigate } from "react-router-dom";
 const pages = [
   { name: "Explore", link: "/category", menuItems: [] },
   { name: "Curated Projects", link: "/", menuItems: [] },
-  { name: "Start a project", link: "/", menuItems: [] },
+  { name: "Start a project", menuItems: [] },
 ];
 
 function Navbar(props) {
@@ -95,8 +95,15 @@ function Navbar(props) {
             }}
             onClick={() => navigate("/")}
           >
-            <img src={Logo} alt="logo Images" style={{ width: "72px" }} />
-            <Box style={{ textAlign: "center", fontSize: theme.fontSize.logo }}>
+            <img
+              className="w-[50px] md:w-[72px]"
+              src={Logo}
+              alt="logo Images"
+            />
+            <Box
+              className="text-[20px] md:text-[0.8rem]"
+              style={{ textAlign: "center", fontSize: theme.fontSize.logo }}
+            >
               InventOn <br />
               <span style={{ color: theme.colors.primary }}>BTC</span>
             </Box>
@@ -218,7 +225,7 @@ function Navbar(props) {
               return (
                 <Box key={page.name}>
                   <Button
-                    className="menu-item"
+                    className="menu-item lg:text-[10px] text-[14px]"
                     key={page.name}
                     onClick={() => handleRedirectUrl(page.link)}
                     onMouseEnter={() => handleExpandedMenu(page.name)}
@@ -227,16 +234,19 @@ function Navbar(props) {
                       position: "relative",
                       display: "inline-block",
                       color: theme.colors.white,
-                      fontSize: theme.fontSize.small,
                     }}
                   >
                     {page.name}
                     {page.menuItems.length > 0 && (
                       <span>
                         {expandedSubMenu === page.name ? (
-                          <ExpandLess sx={{ position: "absolute", top: "7px" }} />
+                          <ExpandLess
+                            sx={{ position: "absolute", top: "7px" }}
+                          />
                         ) : (
-                          <ExpandMore sx={{ position: "absolute", top: "7px" }} />
+                          <ExpandMore
+                            sx={{ position: "absolute", top: "7px" }}
+                          />
                         )}
                       </span>
                     )}
@@ -281,7 +291,7 @@ function Navbar(props) {
             >
               <span
                 style={{
-                  display: isMobile ? "none" : "inline",
+                  
                 }}
               >
                 Connect Wallet

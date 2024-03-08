@@ -23,10 +23,10 @@ const FeedbackCard = (props) => {
   return (
     <React.Fragment>
       <Box
+        className="sm:w-[30vw] w-[60vw]"
         sx={{
           ...theme.container,
           alignItems: "flex-start",
-          width: "30vw",
           ml: props.index % 2 === 0 && "auto !important",
           background: "#f8f8f8",
           borderRadius: "10px",
@@ -34,9 +34,8 @@ const FeedbackCard = (props) => {
         }}
       >
         <Box
+          className="md:w-[55px] w-[35px] md:h-[55px] h-[35px]"
           sx={{
-            width: "55px",
-            height: "55px",
             borderRadius: "50%",
             background: theme.background.black,
             mr: theme.gaps[2],
@@ -45,7 +44,7 @@ const FeedbackCard = (props) => {
         />
         <Box sx={{ flex: 1 }}>
           <h6
-            className="text-[1.2rem]"
+            className="md:text-[1.2rem] text-[1rem]"
             style={{
               fontWeight: "bold",
             }}
@@ -53,8 +52,8 @@ const FeedbackCard = (props) => {
             {props.title}
           </h6>
           <p
+            className="md:text-[0.8rem] text-[0.7rem]"
             style={{
-              fontSize: "0.8rem",
               fontWeight: 500,
             }}
           >

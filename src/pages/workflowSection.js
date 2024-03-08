@@ -20,11 +20,7 @@ const WorkflowSection = () => {
   const isSmallMobile = useMediaQuery("(max-width:375px)");
   return (
     <React.Fragment>
-      <Box
-        sx={{
-          px: theme.gaps[5],
-        }}
-      >
+      <Box className="px-6">
         <h1
           className="mt-[6rem] font-extrabold"
           style={{
@@ -48,7 +44,10 @@ const WorkflowSection = () => {
           Welcome to InventOnBTC, where you can support and fund projects
           created on Bitcoin. Here's how it works:
         </p>
-        <Box sx={{ ...theme.container, marginBottom: theme.gaps[2] }}>
+        <Box
+          className="lg:flex hidden items-center justify-center flex-wrap"
+          sx={{ marginBottom: theme.gaps[2] }}
+        >
           <Box sx={{ width: "25%", ...theme.container }}>
             <Box
               className="flex justify-center items-center"
@@ -143,17 +142,15 @@ const WorkflowSection = () => {
           </Box>
         </Box>
         <Box
+          className="flex items-center justify-center gap-4 flex-wrap lg:flex-nowrap"
           sx={{
-            ...theme.container,
             alignItems: "stretch",
           }}
         >
           <Box
+            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
-              p: theme.gaps[3],
-              mr: theme.gaps[2],
+              height: "auto",
               background: theme.background.secondary,
               borderRadius: "10px",
             }}
@@ -174,11 +171,9 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
+            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
-              p: theme.gaps[3],
-              mr: theme.gaps[2],
+              height: "auto",
               background: theme.background.secondary,
               borderRadius: "10px",
             }}
@@ -199,17 +194,15 @@ const WorkflowSection = () => {
             </p>
           </Box>
           <Box
+            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
-              p: theme.gaps[3],
-              mr: theme.gaps[2],
+              height: "auto",
               background: theme.background.secondary,
               borderRadius: "10px",
             }}
           >
             <p
-              className="text-[1.2rem]"
+              className="sm:text-[1.2rem] text-[1rem]"
               style={{
                 fontWeight: "bold",
                 marginBottom: theme.gaps[1],
@@ -217,18 +210,16 @@ const WorkflowSection = () => {
             >
               Track Progress
             </p>
-            <p className="text-sm" style={{ opacity: 0.5 }}>
+            <p className="sm:text-sm text-[12px]" style={{ opacity: 0.5 }}>
               Stay updated on the progress of the projects you've supported. Get
               insights into how the funds are being utilized and the milestones
               achieved.
             </p>
           </Box>
           <Box
+            className="xl:w-[25%] sm:w-[30%] w-[55%] sm:mr-2 mr-0 sm:p-6 p-2"
             sx={{
-              width: "25%",
-              height: "35vh",
-              p: theme.gaps[3],
-              mr: theme.gaps[2],
+              height: "auto",
               background: theme.background.secondary,
               borderRadius: "10px",
             }}

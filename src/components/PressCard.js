@@ -29,16 +29,17 @@ const PressCard = (props) => {
   return (
     <React.Fragment>
       <Box
+        className="h-auto xl:w-[22vw] lg:w-[30vw] w-[40vw]"
+
         sx={{
-          width: "22vw",
-          height: "75vh",
           cursor: "pointer",
           margin: "auto",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         }}
       >
         <img
-          style={{ width: "22vw", height: "32vh", margin: "auto" }}
+          className=" w-[60vw] h-[30vh] md:h-[24vh] md:w-[40vw] lg:h-[22vh] lg:w-[30vw]"
+          style={{ margin: "auto" }}
           src={props.image}
           alt="Project Image"
         />
@@ -76,7 +77,10 @@ const PressCard = (props) => {
           >
             {props.content}
           </p>
-          <p className="text-[0.8rem] color-[#6A6A6A]" style={{ textTransform: "uppercase" }}>
+          <p
+            className="text-[0.8rem] color-[#6A6A6A]"
+            style={{ textTransform: "uppercase" }}
+          >
             {props.type}
           </p>
           {/* <p
@@ -90,9 +94,7 @@ const PressCard = (props) => {
           </p> */}
           <Box sx={{ ...theme.container, justifyContent: "flex-start" }}>
             <img className="relative top-10" src={LaunchIcon} alt="Icon" />
-            <p
-            className="text-[0.6rem] opacity-[0.6] relative top-10 ml-3"
-            >
+            <p className="text-[0.6rem] opacity-[0.6] relative top-10 ml-3">
               Launching Soon
             </p>
           </Box>
