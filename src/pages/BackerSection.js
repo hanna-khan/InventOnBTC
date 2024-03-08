@@ -134,22 +134,22 @@ const BackerSection = () => {
           Innovations from ideas to launched projects
         </h2>
         <Box sx={{ ...theme.container, gap: "20px" }}>
-          <img className="md:w-auto w-[5vw]" src={StepIcon1} alt="Icon" />
+          <img className="md:w-auto w-[10vw]" src={StepIcon1} alt="Icon" />
           <Box
             className="md:w-[119px] w-[50px]"
             sx={{ border: "1px solid black" }}
           />
-          <img className="md:w-auto w-[5vw]" src={StepIcon2} alt="Icon" />
+          <img className="md:w-auto w-[10vw]" src={StepIcon2} alt="Icon" />
           <Box
             className="md:w-[119px] w-[50px]"
             sx={{ border: "1px solid black" }}
           />
-          <img className="md:w-auto w-[5vw]" src={StepIcon3} alt="Icon" />
+          <img className="md:w-auto w-[10vw]" src={StepIcon3} alt="Icon" />
           <Box
             className="md:w-[119px] w-[50px]"
             sx={{ border: "1px solid black" }}
           />
-          <img className="md:w-auto w-[5vw]" src={StepIcon4} alt="Icon" />
+          <img className="md:w-auto w-[10vw]" src={StepIcon4} alt="Icon" />
         </Box>
         <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[20px] text-center">
           Invent On BTC gives you access to projects on all stages in their
@@ -164,25 +164,19 @@ const BackerSection = () => {
           access to the projects they want to back.
         </p>
         <Button
-          className="navbar-item"
+          className="navbar-item md:w-[180px] md:h-[2.6rem] h-[50px] w-[120px]"
           variant="contained"
           sx={{
             ...theme.buttons.primary,
-            width: "160px",
           }}
         >
-          <span
-            style={{
-              
-            }}
-          >
-            EXPLORE <br />
-            Projects
+          <span className="md:text-[0.8rem] text-[0.6rem] text-white">
+            EXPLORE Projects
           </span>
         </Button>
       </Box>
       <Box
-      className="p-4 md:p-[30px]" 
+        className="p-4 md:p-[30px]"
         sx={{
           background: theme.background.sectionColor,
           ...theme.container,
@@ -191,9 +185,11 @@ const BackerSection = () => {
           marginBottom: theme.gaps[6],
         }}
       >
-        <Box sx={{ ...theme.container, alignItems: "stretch", gap: "144px" }}>
+        <Box 
+        className="gap-[2rem] sm:gap-[144px]"
+        sx={{ ...theme.container, alignItems: "stretch" }}>
           <Box>
-            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
+            <p className="md:text-[2rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
               Fund With
             </p>
             <Box
@@ -205,7 +201,7 @@ const BackerSection = () => {
             </Box>
           </Box>
           <Box>
-            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
+            <p className="md:text-[2rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
               Wallet integration
             </p>
             <Box
@@ -241,7 +237,7 @@ const BackerSection = () => {
         }}
       >
         <Box
-        className="md:max-w-[100%] max-w-[95%]:"
+          className="md:max-w-[100%] max-w-[95%]:"
           sx={{
             ...theme.container,
             gap: "49px",
@@ -278,7 +274,7 @@ const BackerSection = () => {
                 ecosystem
               </p>
               <Box
-              className="gap-4 md:gap-0"
+                className="gap-4 md:gap-0"
                 sx={{
                   ...theme.container,
                   justifyContent: "flex-start",

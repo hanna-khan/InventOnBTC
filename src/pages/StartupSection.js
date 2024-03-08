@@ -62,39 +62,39 @@ const StartupSection = () => {
           }}
         >
           <Box className="flex justify-center items-center md:flex-row flex-col">
-            <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[48.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold md:mr-8 mr-0">
-              Become a <br /> Bitcoin
-              <br /> Entrepreneur
-            </h1>
+            <div className="flex flex-col mb-6">
+              <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[58.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold md:mr-8 mr-0 md:max-w-[50%] max-w-[100%]">
+                Become a Bitcoin Entrepreneur
+              </h1>
+              <Box>
+                <p style={{ marginBottom: "12px" }}>Get Funded With</p>
+                <Box
+                  sx={{
+                    ...theme.container,
+                    justifyContent: "flex-start",
+                    gap: theme.gaps[2],
+                  }}
+                >
+                  <img className="md:w-[50px] w-[8vw]" src={Coin1} alt="Icon" />
+                  <img className="md:w-[50px] w-[8vw]" src={Coin2} alt="Icon" />
+                </Box>
+              </Box>
+            </div>
+
             <Button
-              className="navbar-item md:w-[300px] md:h-[80px] h-[50px] w-[200px]"
+              className="navbar-item md:w-[300px] md:h-[80px] h-[50px] w-[120px]"
               variant="contained"
               sx={{
                 ...theme.buttons.primary,
-                fontSize: "24px",
                 ml: theme.gaps[2],
               }}
             >
-              <span
-                className="lg:text-[1.5rem] text-[1rem] text-white"
-              >
+              <span className="md:text-[1rem] text-[0.6rem] text-white">
                 start a project
               </span>
             </Button>
           </Box>
-          <Box>
-            <p style={{ marginBottom: "12px" }}>Get Funded With</p>
-            <Box
-              sx={{
-                ...theme.container,
-                justifyContent: "flex-start",
-                gap: theme.gaps[2],
-              }}
-            >
-              <img className="md:w-[50px] w-[8vw]" src={Coin1} alt="Icon" />
-              <img className="md:w-[50px] w-[8vw]" src={Coin2} alt="Icon" />
-            </Box>
-          </Box>
+
           <Box className="md:mt-[4rem] mt-6 flex justify-center items-center gap-[4rem] flex-col md:flex-row">
             <Box sx={{ textAlign: "center" }}>
               <img
