@@ -50,10 +50,9 @@ const BackerSection = () => {
         }}
       >
         <Box
-          className="md:gap-[97px] gap-[1rem]"
+          className="md:gap-[97px] gap-[1rem] py-[108px] px-[1rem]"
           sx={{
             ...theme.container,
-            padding: "108px",
             flexDirection: Laptop3 ? "column" : "row",
           }}
         >
@@ -247,7 +246,7 @@ const BackerSection = () => {
         >
           <img className="md:w-auto w-[50vw]" src={MainImage2} alt="Image" />
           <Box sx={{ textAlign: Laptop3 ? "center" : "left" }}>
-            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] mb-4 font-bold md:mt-[4rem] mt-0">
+            <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[24px] mb-4 font-bold md:mt-[4rem] mt-0">
               Perks and Rewards
             </p>
             <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] md:mb-[40px] mb-5">

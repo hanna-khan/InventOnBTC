@@ -35,6 +35,7 @@ const BlogCard = (props) => {
             height: "300px",
             margin: "auto",
             objectFit: "cover",
+            marginBottom: "10px",
           }}
           src={props.img}
           alt="Img"

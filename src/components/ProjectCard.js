@@ -35,8 +35,8 @@ const ProjectCard = (props) => {
   return (
     <React.Fragment>
       <Box
+        className="md:w-[400px] w-[300px]"
         sx={{
-          width: "400px",
           cursor: "pointer",
           margin: "auto",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
