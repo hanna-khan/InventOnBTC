@@ -23,16 +23,16 @@ const BlogCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="md:w-[400px] w-[300px]"
+        className="md:w-[400px] w-[200px]"
         sx={{
           cursor: "pointer",
           margin: "auto",
         }}
       >
         <img
+          className="h-[150px] md:h-[200px]"
           style={{
             width: "100%",
-            height: "300px",
             margin: "auto",
             objectFit: "cover",
             marginBottom: "10px",

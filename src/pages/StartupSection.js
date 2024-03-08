@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
-import { Box, Checkbox, Button, TextField } from "@mui/material";
+import { Box, Checkbox, Button, TextField, Grid } from "@mui/material";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -251,8 +251,8 @@ const StartupSection = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="p-6">
-          <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] font-extrabold leading-[40px] md:mb-10 mb-4">
+        <Box>
+          <p className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] font-extrabold leading-[30px] md:mb-10 mb-4 p-3">
             PROJECTS FUNDED THROUGH{" "}
             <span style={{ color: theme.colors.primary }}>INVENT ON BTC</span>{" "}
           </p>
@@ -280,7 +280,7 @@ const StartupSection = () => {
             Entrepreneurial journey
           </p>
           <Box
-            className="md:gap-x-[8rem] md:gap-y-[2rem] gap-4"
+            className="md:gap-x-[8rem] md:gap-y-[2rem] gap-4 justify-center"
             sx={{
               display: "grid",
               gridTemplateColumns: isMobile
