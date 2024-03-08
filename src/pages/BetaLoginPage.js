@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import {
   TextField,
@@ -123,13 +123,7 @@ const BetaLoginPage = () => {
                 ...theme.buttons.primary,
               }}
             >
-              <span
-                style={{
-                  
-                }}
-              >
-                Doc
-              </span>
+              <span style={{}}>Doc</span>
             </Button>
           </Toolbar>
         </Container>
@@ -137,24 +131,26 @@ const BetaLoginPage = () => {
       <Box sx={{ height: "calc(100vh - 86px)" }}>
         <Box
           sx={{
-            position: "relative",
-            ...theme.container,
+            display: "flex",
+            flexWrap: "wrap",
             background: theme.background.black,
             justifyContent: "space-between",
+            flexDirection: { xs: "column-reverse", md: "row" },
             py: theme.gaps[3],
             paddingTop: "119px",
           }}
         >
           <Box
             sx={{
-              paddingLeft: "120px",
+              paddingLeft: { xs: "0", md: "120px" },
               ...theme.container,
               flexDirection: Laptop3 ? "column" : "row",
             }}
           >
-            <h1
-              style={{
-                fontSize: Laptop3 ? "50px" : theme.fontSize.mainTitle,
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: { xs: "2.4rem", md: "3rem" },
                 color: theme.colors.white,
                 marginBottom: theme.gaps[2],
                 textTransform: "uppercase",
@@ -171,7 +167,7 @@ const BetaLoginPage = () => {
               <span style={{ fontSize: theme.fontSize.mainTitle }}>
                 Coming soon
               </span>
-            </h1>
+            </Typography>
             <EastIcon
               sx={{
                 display: Laptop3 && "none",
@@ -195,12 +191,7 @@ const BetaLoginPage = () => {
             </p>
           </Box>
           <img
-            style={{
-              position: "absolute",
-              bottom: 0,
-              right: 0,
-              width: "374px",
-            }}
+            style={{ width: "400px", objectFitL: "contain" }}
             src={BetaIcon}
             alt="Hero Image"
           />
@@ -209,12 +200,12 @@ const BetaLoginPage = () => {
           sx={{
             width: "100%",
             backgroundColor: "#d77b27",
-            padding: "27px",
+            padding: "27px 0",
           }}
         >
           <Box
             sx={{
-              width: "50%",
+              // width: "50%",
               ...theme.container,
               flexDirection: "column",
               gap: theme.gaps[4],
@@ -225,6 +216,7 @@ const BetaLoginPage = () => {
               sx={{
                 ...theme.container,
                 justifyContent: "space-between",
+                flexWrap: "wrap",
                 gap: theme.gaps[3],
               }}
             >
@@ -239,13 +231,7 @@ const BetaLoginPage = () => {
                   Sign up for early BETA access
                 </p>
               </Box>
-              <Box
-                sx={{
-                  ...theme.container,
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
+              <Box>
                 <TextField
                   id="outlined-basic"
                   label="Your email address"
@@ -306,6 +292,7 @@ const BetaLoginPage = () => {
             <Box
               sx={{
                 ...theme.container,
+                flexWrap: "wrap",
                 justifyContent: "space-between",
                 gap: theme.gaps[3],
               }}
@@ -313,6 +300,7 @@ const BetaLoginPage = () => {
               <Box
                 sx={{
                   ...theme.container,
+                  flexWrap: "wrap",
                   flexDirection: "column",
                   alignItems: "flex-start",
                 }}
@@ -323,6 +311,8 @@ const BetaLoginPage = () => {
                 </p>
               </Box>
               <Button
+                as="a"
+                href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                 className="navbar-item"
                 variant="contained"
                 onClick={addEmailAndTwitterHandle}
@@ -333,15 +323,7 @@ const BetaLoginPage = () => {
                   ml: theme.gaps[3],
                 }}
               >
-                <a href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
-                  style={{
-                    textDecoration: "underline",
-                    
-                    color: "#fff"
-                  }}
-                >
-                   START A PROJECT
-                </a>
+                START A PROJECT
               </Button>
             </Box>
           </Box>

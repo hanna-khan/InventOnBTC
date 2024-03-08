@@ -86,11 +86,10 @@ const Home = () => {
       <Box
         sx={{
           width: "100%",
-          height: Laptop4 ? "300px" : "368px",
+          height: "40vh",
           backgroundImage: `url(${HeroImg})`,
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPositionY: "76px",
         }}
       />
       <Box
