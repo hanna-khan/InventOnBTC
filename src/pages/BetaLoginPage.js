@@ -148,7 +148,7 @@ const BetaLoginPage = () => {
           }}
         >
           <Box className="md:pl-[2rem] px-0 flex flex-col">
-            <div className="flex flex-row gap-4">
+            <div className="flex md:flex-row flex-col gap-4">
               <h1
                 className="max-w-[30vw] md:text-[3rem] text-[1.5rem]"
                 style={{
@@ -221,13 +221,7 @@ const BetaLoginPage = () => {
               margin: "auto",
             }}
           >
-            <Box
-              sx={{
-                ...theme.container,
-                justifyContent: "space-between",
-                gap: theme.gaps[3],
-              }}
-            >
+            <Box className="flex md:justify-between justify-center md:flex-row flex-col items-center md:gap-[30px] gap-[10px]">
               <Box
                 sx={{
                   ...theme.container,
@@ -266,13 +260,11 @@ const BetaLoginPage = () => {
                     style: {
                       backgroundColor: theme.background.white,
                       border: "none",
-                      width: "100%",
                       marginBottom: theme.gaps[2],
                     },
                   }}
                   sx={{
                     display: "block",
-                    width: "100%",
                   }}
                 />
                 <TextField
