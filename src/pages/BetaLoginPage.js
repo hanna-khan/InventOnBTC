@@ -318,10 +318,10 @@ const BetaLoginPage = () => {
               </Box>
             </Box>
             <Box
+              className="md:gap-[30px] gap-[10px]"
               sx={{
                 ...theme.container,
                 justifyContent: "space-between",
-                gap: theme.gaps[3],
               }}
             >
               <Box
@@ -337,7 +337,7 @@ const BetaLoginPage = () => {
                 </p>
               </Box>
               <Button
-                className="navbar-item"
+                className="navbar-item md:w-[200px] md:h-[2.6rem] h-[50px] w-[120px]"
                 variant="contained"
                 onClick={addEmailAndTwitterHandle}
                 sx={{
@@ -348,10 +348,10 @@ const BetaLoginPage = () => {
                 }}
               >
                 <a
+                  className="md:text-[0.8rem] text-[0.6rem] text-white"
                   href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                   style={{
                     textDecoration: "underline",
-
                     color: "#fff",
                   }}
                 >
