@@ -261,7 +261,43 @@ const ProjectDetail = () => {
             </div>
           </div>
         </Box>
-        <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
+        <div className="flex flex-col  my-[4rem] justify-center items-center">
+          <h1 className="md:text-[1.5rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[20px] mb-4 font-bold">
+            GET MORE INFORMATION TO HELP YOU IN YOUR FUNDING DECISION
+          </h1>
+          <h1 className="md:text-[0.8rem] text-[0.6rem] md:leading-[24px] leading-[20px] md:mb-[30px] mb-5 text-[#6a6a6a]">
+            Only available for CURATED projects
+          </h1>
+          <div className="flex flex-row flex-wrap gap-2">
+            <Button
+              className="navbar-item w-[8vw] h-[3rem]"
+              variant="contained"
+              sx={{
+                ...theme.buttons.secondary,
+                backgroundColor: "#1597E1",
+                color: "#fff",
+              }}
+            >
+              <span className="md:text-[0.7rem] text-[8px] text-dark">
+                Project Analytics
+              </span>
+            </Button>
+            <Button
+              className="navbar-item w-[8vw] h-[3rem]"
+              variant="contained"
+              sx={{
+                ...theme.buttons.secondary,
+                backgroundColor: "#1597E1",
+                color: "#fff",
+              }}
+            >
+              <span className="md:text-[0.7rem] text-[8px] text-dark">
+                Founder interview
+              </span>
+            </Button>
+          </div>
+        </div>
+        {/* <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
           <h1
             style={{
               fontSize: theme.fontSize.mainTitle,
@@ -524,7 +560,7 @@ const ProjectDetail = () => {
               </p>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
       <Footer />
     </React.Fragment>
