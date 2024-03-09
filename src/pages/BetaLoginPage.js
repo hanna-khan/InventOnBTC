@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import {
   TextField,
@@ -130,9 +130,13 @@ const BetaLoginPage = () => {
                 ...theme.buttons.primary,
               }}
             >
+<<<<<<< HEAD
               <span className="md:text-[0.8rem] text-[0.6rem] text-white uppercase">
                 Doc
               </span>
+=======
+              <span style={{}}>Doc</span>
+>>>>>>> origin/main
             </Button>
           </Toolbar>
         </Container>
@@ -141,12 +145,21 @@ const BetaLoginPage = () => {
         <Box
           className="justify-center md:justify-between flex items-center"
           sx={{
+<<<<<<< HEAD
             position: "relative",
             background: theme.background.black,
+=======
+            display: "flex",
+            flexWrap: "wrap",
+            background: theme.background.black,
+            justifyContent: "space-between",
+            flexDirection: { xs: "column-reverse", md: "row" },
+>>>>>>> origin/main
             py: theme.gaps[3],
             paddingTop: "119px",
           }}
         >
+<<<<<<< HEAD
           <Box className="md:pl-[2rem] px-0 flex flex-col">
             <div className="flex flex-row gap-4">
               <h1
@@ -186,11 +199,25 @@ const BetaLoginPage = () => {
             <span
               className="md:text-[3rem] text-[1.5rem]"
               style={{
+=======
+          <Box
+            sx={{
+              paddingLeft: { xs: "0", md: "120px" },
+              ...theme.container,
+              flexDirection: Laptop3 ? "column" : "row",
+            }}
+          >
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: { xs: "2.4rem", md: "3rem" },
+>>>>>>> origin/main
                 color: theme.colors.white,
                 marginBottom: theme.gaps[2],
                 textTransform: "uppercase",
               }}
             >
+<<<<<<< HEAD
               Coming soon
             </span>
           </Box>
@@ -201,6 +228,44 @@ const BetaLoginPage = () => {
               bottom: 0,
               right: 0,
             }}
+=======
+              DEFI <br /> Crowdfunding <br />
+              for <span style={{ color: theme.colors.primary }}>
+                Bitcoin
+              </span>{" "}
+              <br />
+              startups
+              <br />
+              <br />
+              <span style={{ fontSize: theme.fontSize.mainTitle }}>
+                Coming soon
+              </span>
+            </Typography>
+            <EastIcon
+              sx={{
+                display: Laptop3 && "none",
+                color: "white",
+                fontSize: "100px",
+                marginRight: "30px",
+              }}
+            />
+            <p
+              style={{
+                textTransform: "uppercase",
+                color: "white",
+                textAlign: "right",
+                fontSize: theme.fontSize.subTitle,
+                borderBottom: "1px solid red",
+                cursor: "pointer",
+              }}
+              onClick={handleClickOpen}
+            >
+              Access Invite Only <br /> Beta
+            </p>
+          </Box>
+          <img
+            style={{ width: "400px", objectFitL: "contain" }}
+>>>>>>> origin/main
             src={BetaIcon}
             alt="Hero Image"
           />
@@ -210,11 +275,19 @@ const BetaLoginPage = () => {
           sx={{
             width: "100%",
             backgroundColor: "#d77b27",
+<<<<<<< HEAD
+=======
+            padding: "27px 0",
+>>>>>>> origin/main
           }}
         >
           <Box
             className="md:w-[50%] w-[100%]"
             sx={{
+<<<<<<< HEAD
+=======
+              // width: "50%",
+>>>>>>> origin/main
               ...theme.container,
               flexDirection: "column",
               gap: theme.gaps[4],
@@ -225,6 +298,7 @@ const BetaLoginPage = () => {
               sx={{
                 ...theme.container,
                 justifyContent: "space-between",
+                flexWrap: "wrap",
                 gap: theme.gaps[3],
               }}
             >
@@ -239,13 +313,7 @@ const BetaLoginPage = () => {
                   Sign up for early BETA access
                 </p>
               </Box>
-              <Box
-                sx={{
-                  ...theme.container,
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
+              <Box>
                 <TextField
                   className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"
@@ -320,6 +388,7 @@ const BetaLoginPage = () => {
             <Box
               sx={{
                 ...theme.container,
+                flexWrap: "wrap",
                 justifyContent: "space-between",
                 gap: theme.gaps[3],
               }}
@@ -327,6 +396,7 @@ const BetaLoginPage = () => {
               <Box
                 sx={{
                   ...theme.container,
+                  flexWrap: "wrap",
                   flexDirection: "column",
                   alignItems: "flex-start",
                 }}
@@ -337,6 +407,8 @@ const BetaLoginPage = () => {
                 </p>
               </Box>
               <Button
+                as="a"
+                href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                 className="navbar-item"
                 variant="contained"
                 onClick={addEmailAndTwitterHandle}
@@ -347,6 +419,7 @@ const BetaLoginPage = () => {
                   ml: theme.gaps[3],
                 }}
               >
+<<<<<<< HEAD
                 <a
                   href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                   style={{
@@ -357,6 +430,9 @@ const BetaLoginPage = () => {
                 >
                   START A PROJECT
                 </a>
+=======
+                START A PROJECT
+>>>>>>> origin/main
               </Button>
             </Box>
           </Box>

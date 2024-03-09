@@ -281,17 +281,18 @@ function Navbar(props) {
             })}
           </Box>
           <Box sx={{ ...theme.container }}>
-          <Button
-                className="navbar-item md:w-[8rem] md:h-[3.2rem] h-[40px] w-[6rem] mr-2"
-                variant="contained"
-                sx={{
-                  ...theme.buttons.primary,
-                }}
-              >
-                <span className="md:text-[0.8rem] text-[0.6rem] text-white uppercase">
-                 Connect Wallet
-                </span>
-              </Button>
+            <Button
+              className="navbar-item md:h-[3.2rem] h-[40px]"
+              variant="contained"
+              sx={{
+                ...theme.buttons.primary,
+                marginRight: 2,
+              }}
+            >
+              <span className="md:text-[0.8rem] text-[0.6rem] text-white uppercase">
+                Connect Wallet
+              </span>
+            </Button>
             <LogoutIcon
               sx={{ cursor: "pointer" }}
               onClick={() => navigate("/betaLogin")}
