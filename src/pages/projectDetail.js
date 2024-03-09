@@ -261,8 +261,8 @@ const ProjectDetail = () => {
             </div>
           </div>
         </Box>
-        <div className="flex flex-col  my-[4rem] justify-center items-center">
-          <h1 className="md:text-[1.5rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[20px] mb-4 font-bold">
+        <div className="flex flex-col  my-[4rem] justify-center items-center p-5">
+          <h1 className="md:text-[1.5rem] text-[1rem] md:mb-[20px] mb-4 font-bold text-center">
             GET MORE INFORMATION TO HELP YOU IN YOUR FUNDING DECISION
           </h1>
           <h1 className="md:text-[0.8rem] text-[0.6rem] md:leading-[24px] leading-[20px] md:mb-[30px] mb-5 text-[#6a6a6a]">
@@ -270,7 +270,7 @@ const ProjectDetail = () => {
           </h1>
           <div className="flex flex-row flex-wrap gap-2">
             <Button
-              className="navbar-item w-[8vw] h-[3rem]"
+              className="navbar-item w-[10vw] h-[3rem]"
               variant="contained"
               sx={{
                 ...theme.buttons.secondary,
@@ -283,7 +283,7 @@ const ProjectDetail = () => {
               </span>
             </Button>
             <Button
-              className="navbar-item w-[8vw] h-[3rem]"
+              className="navbar-item w-[10vw] h-[3rem]"
               variant="contained"
               sx={{
                 ...theme.buttons.secondary,
