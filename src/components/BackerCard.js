@@ -30,19 +30,18 @@ const BackerCard = (props) => {
     <React.Fragment>
      
       <Box
+        className="w-[300px] md:w-[400px]"
         sx={{
           p: theme.gaps[2],
-          width: "400px",
         }}
       >
         <img
+        className="w-[80%] md:w-[100%]"
           src={props.img}
           style={{
-            width: "100%",
             height: "300px",
             margin: "auto",
             objectFit: "cover",
-            marginBottom: theme.gaps[2],
           }}
         />
         <Box className="flex flex-col justify-center items-center">

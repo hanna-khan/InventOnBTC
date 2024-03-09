@@ -369,6 +369,18 @@ const ProjectDetail = () => {
             </div>
           </nav>
         </div>
+        <div className="flex items-center md:justify-end justify-center mt-[6rem]">
+          <div className="border border-gray-200 p-8 max-w-lg md:w-[50vw] w-[80vw] h-[5vh] flex items-center justify-center">
+            <p className="md:text-sm text-[12px] text-center font-bold">
+              Looking for more information? Check the project FAQ
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center md:justify-end justify-center mt-2 mb-[4rem]">
+          <p className="md:text-sm text-[12px] text-center text-[#6a6a6a]">
+            Let us know if you think this campaign contains prohibited content.
+          </p>
+        </div>
         {/* 
         <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
           <h1
