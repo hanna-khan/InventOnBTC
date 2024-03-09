@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
@@ -317,7 +318,57 @@ const ProjectDetail = () => {
             })}
           </Grid>
         </Box>
-
+        <div className="flex justify-center my-[4rem]">
+          <nav
+            style={{
+              background: theme.background.sectionColor,
+            }}
+            className="md:w-[50%] w-[80%]  flex justify-center items-center"
+          >
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:p-4 p-0">
+              <div
+                className="items-center justify-between w-full md:flex md:w-auto md:order-1"
+                id="navbar-sticky"
+              >
+                <ul className="flex p-4 md:p-0font-medium ">
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 text-black uppercase md:text-[1rem] text-[0.7rem]"
+                      aria-current="page"
+                    >
+                      Details
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 text-black uppercase md:text-[1rem] text-[0.7rem]"
+                    >
+                      Faqs
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 text-black uppercase md:text-[1rem] text-[0.7rem]"
+                    >
+                      Updates
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block py-2 px-3 text-black uppercase md:text-[1rem] text-[0.7rem]"
+                    >
+                      Discussions
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
         {/* 
         <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
           <h1

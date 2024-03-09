@@ -28,6 +28,7 @@ const BackerCard = (props) => {
 
   return (
     <React.Fragment>
+     
       <Box
         sx={{
           p: theme.gaps[2],
