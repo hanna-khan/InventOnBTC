@@ -41,7 +41,7 @@ const ProjectDetail = () => {
           }}
         >
           <img
-            className="h-[450px]"
+            className="md:h-[450px] h-[260px]"
             style={{ width: { xs: "100%", lg: "40%" } }}
             src={image}
             alt="Project Detail"
@@ -323,7 +323,7 @@ const ProjectDetail = () => {
             style={{
               background: theme.background.sectionColor,
             }}
-            className="md:w-[50%] w-[80%]  flex justify-center items-center"
+            className="md:w-[50%] w-[90%]  flex justify-center items-center"
           >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:p-4 p-0">
               <div
