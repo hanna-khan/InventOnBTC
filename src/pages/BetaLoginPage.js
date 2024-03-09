@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -17,6 +18,7 @@ import {
 
 import EastIcon from "@mui/icons-material/East";
 import BetaIcon from "../assets/images/beta_icon.png";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
@@ -107,9 +109,14 @@ const BetaLoginPage = () => {
               }}
               onClick={() => navigate("/")}
             >
-              <img src={Logo} alt="logo Images" style={{ width: "72px" }} />
+              <img
+                className="w-[60px] md:w-[72px]"
+                src={Logo}
+                alt="logo Images"
+              />
               <Box
-                style={{ textAlign: "center", fontSize: theme.fontSize.logo }}
+                className="md:text-[20px] text-[0.8rem]"
+                style={{ textAlign: "center" }}
               >
                 InventOn <br />
                 <span style={{ color: theme.colors.primary }}>BTC</span>
@@ -117,17 +124,13 @@ const BetaLoginPage = () => {
             </Box>
 
             <Button
-              className="navbar-item"
+              className="navbar-item md:w-[6rem] md:h-[2.5rem] h-[2rem] w-[4rem] mr-2"
               variant="contained"
               sx={{
                 ...theme.buttons.primary,
               }}
             >
-              <span
-                style={{
-                  
-                }}
-              >
+              <span className="md:text-[0.8rem] text-[0.6rem] text-white uppercase">
                 Doc
               </span>
             </Button>
@@ -136,85 +139,82 @@ const BetaLoginPage = () => {
       </AppBar>
       <Box sx={{ height: "calc(100vh - 86px)" }}>
         <Box
+          className="justify-center md:justify-between flex items-center"
           sx={{
             position: "relative",
-            ...theme.container,
             background: theme.background.black,
-            justifyContent: "space-between",
             py: theme.gaps[3],
             paddingTop: "119px",
           }}
         >
-          <Box
-            sx={{
-              paddingLeft: "120px",
-              ...theme.container,
-              flexDirection: Laptop3 ? "column" : "row",
-            }}
-          >
-            <h1
+          <Box className="md:pl-[2rem] px-0 flex flex-col">
+            <div className="flex flex-row gap-4">
+              <h1
+                className="max-w-[30vw] md:text-[3rem] text-[1.5rem]"
+                style={{
+                  color: theme.colors.white,
+                  textTransform: "uppercase",
+                }}
+              >
+                DEFI Crowdfunding
+                <br />
+                for <span style={{ color: theme.colors.primary }}>
+                  Bitcoin
+                </span>{" "}
+                <br />
+                startups
+                <br />
+                <br />
+              </h1>
+              <div className="m-auto flex gap-4">
+                <FaArrowRightLong className="md:text-[4rem] text-[2.5rem] mr-4 text-white" />
+                <p
+                  className="mb-4 md:text-[1.5rem] text-[0.8rem]"
+                  style={{
+                    textTransform: "uppercase",
+                    color: "white",
+                    textAlign: "right",
+                    borderBottom: "1px solid red",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleClickOpen}
+                >
+                  Access Invite Only <br /> Beta
+                </p>
+              </div>
+            </div>
+            <span
+              className="md:text-[3rem] text-[1.5rem]"
               style={{
-                fontSize: Laptop3 ? "50px" : theme.fontSize.mainTitle,
                 color: theme.colors.white,
                 marginBottom: theme.gaps[2],
                 textTransform: "uppercase",
               }}
             >
-              DEFI <br /> Crowdfunding <br />
-              for <span style={{ color: theme.colors.primary }}>
-                Bitcoin
-              </span>{" "}
-              <br />
-              startups
-              <br />
-              <br />
-              <span style={{ fontSize: theme.fontSize.mainTitle }}>
-                Coming soon
-              </span>
-            </h1>
-            <EastIcon
-              sx={{
-                display: Laptop3 && "none",
-                color: "white",
-                fontSize: "100px",
-                marginRight: "30px",
-              }}
-            />
-            <p
-              style={{
-                textTransform: "uppercase",
-                color: "white",
-                textAlign: "right",
-                fontSize: theme.fontSize.subTitle,
-                borderBottom: "1px solid red",
-                cursor: "pointer",
-              }}
-              onClick={handleClickOpen}
-            >
-              Access Invite Only <br /> Beta
-            </p>
+              Coming soon
+            </span>
           </Box>
           <img
+            className="w-[25vw] md:block hidden"
             style={{
               position: "absolute",
               bottom: 0,
               right: 0,
-              width: "374px",
             }}
             src={BetaIcon}
             alt="Hero Image"
           />
         </Box>
         <Box
+          className="nd:p-[27px] p-[10px]"
           sx={{
             width: "100%",
             backgroundColor: "#d77b27",
-            padding: "27px",
           }}
         >
           <Box
+            className="md:w-[50%] w-[100%]"
             sx={{
-              width: "50%",
               ...theme.container,
               flexDirection: "column",
               gap: theme.gaps[4],
@@ -247,6 +247,7 @@ const BetaLoginPage = () => {
                 }}
               >
                 <TextField
+                  className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"
                   label="Your email address"
                   value={form.email}
@@ -275,6 +276,7 @@ const BetaLoginPage = () => {
                   }}
                 />
                 <TextField
+                  className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"
                   label="Your twitter handle"
                   value={form.twitter}
@@ -301,6 +303,18 @@ const BetaLoginPage = () => {
                     width: "100%",
                   }}
                 />
+                <Button
+                  className="md:w-[8vw] md:h-[2rem] h-[1.5rem] w-[6vw]"
+                  style={{ margin: "auto", marginTop: "10px" }}
+                  variant="contained"
+                  sx={{
+                    ...theme.buttons.secondary,
+                  }}
+                >
+                  <span className="md:text-[0.8rem] text-[0.6rem] text-dark font-bold">
+                    SUBMIT
+                  </span>
+                </Button>
               </Box>
             </Box>
             <Box
@@ -333,14 +347,15 @@ const BetaLoginPage = () => {
                   ml: theme.gaps[3],
                 }}
               >
-                <a href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
+                <a
+                  href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                   style={{
                     textDecoration: "underline",
-                    
-                    color: "#fff"
+
+                    color: "#fff",
                   }}
                 >
-                   START A PROJECT
+                  START A PROJECT
                 </a>
               </Button>
             </Box>
