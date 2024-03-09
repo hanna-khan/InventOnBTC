@@ -1,34 +1,17 @@
 import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
-import {
-  Box,
-  AppBar,
-  Toolbar,
-  Container,
-  Button,
-  IconButton,
-  Menu,
-  Typography,
-  MenuItem,
-  Slider,
-} from "@mui/material";
-
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { Box, Button, Slider, Checkbox } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackerCard from "../components/BackerCard";
-
 import Coin1 from "../assets/images/Footer_logo.png";
 import Coin2 from "../assets/images/coin_2.png";
 import LinkIcon from "../assets/images/link_icon.png";
-
 import { BackerData } from "../constant";
-
-import ProjectDetailImg from "../assets/images/project_detail.png";
+import detailImage from "../assets/images/detail.png";
 
 const ProjectDetail = () => {
   const theme = useTheme();
@@ -47,7 +30,7 @@ const ProjectDetail = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Box sx={{ p: theme.gaps[3] }}>
+      <Box>
         <Box
           sx={{
             display: "flex",
@@ -57,28 +40,25 @@ const ProjectDetail = () => {
           }}
         >
           <img
-            style={{ width: { xs: "100%", lg: "40%" }, height: "523px" }}
+            className="h-[450px]"
+            style={{ width: { xs: "100%", lg: "40%" } }}
             src={image}
             alt="Project Detail"
           />
           <Box sx={{ width: { xs: "100%", lg: "40%" }, pl: theme.gaps[3] }}>
-            <p style={{ color: theme.colors.secondary }}>FUNDING</p>
+            <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-2 text-[#088366]">
+              FUNDING LIVE
+            </p>
             <h1
+              className="md:text-[2rem] text-[1.2rem] md:leading-[4rem] leading-[40px] mb-2 font-bold text-black"
               style={{
                 fontSize: theme.fontSize.subTitle,
-                color: theme.colors.primary,
-                marginBottom: theme.gaps[3],
                 textTransform: "uppercase",
               }}
             >
               {title}
             </h1>
-            <p
-              style={{
-                marginBottom: theme.gaps[3],
-                fontSize: theme.fontSize.medium,
-              }}
-            >
+            <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-4 text-[#000] font-medium">
               Bringing an easy to use Bitcoin Wallet with ordinals , BRC20 and
               Stamps integration
             </p>
@@ -89,43 +69,47 @@ const ProjectDetail = () => {
                 mb: theme.gaps[3],
               }}
             >
-              <p style={{ marginRight: theme.gaps[1] }}>AKASO</p>
+              <img className="mr-4" src={detailImage} alt="detail_img" />
               <Box>
-                <p
-                  style={{
-                    fontSize: theme.fontSize.content,
-                    fontWeight: "bold",
-                  }}
-                >
+                <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-bold">
                   Ava InnLead
                 </p>
-                <p style={{ fontSize: theme.fontSize.content }}>
+                <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-medium">
                   3 Campaigns | Hongkong, Hong Kong
+                </p>
+                <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-bold mt-2">
+                  <Checkbox
+                    defaultChecked
+                    sx={{
+                      color: theme.colors.blue,
+                      padding: "0px",
+                      mr: "12px",
+                      "&.Mui-checked": {
+                        color: theme.colors.blue,
+                      },
+                    }}
+                  />
+                  <span style={{ color: theme.colors.blue }}>
+                    CURATED Projects
+                  </span>{" "}
                 </p>
               </Box>
             </Box>
             <Box sx={{ ...theme.container, justifyContent: "space-between" }}>
-              <p>
+              <p className="md:text-[1rem] text-[0.8rem] mb-4 text-[#6A6A6A] font-medium">
                 <span
                   style={{
-                    fontSize: theme.fontSize.content,
                     fontWeight: "bold",
                     marginRight: "11px",
+                    color: "#000",
                   }}
                 >
                   1.22
                 </span>
                 ₿TC raised
               </p>
-              <p>
-                <span
-                  style={{
-                    fontSize: theme.fontSize.content,
-                    fontWeight: "bold",
-                  }}
-                >
-                  4 ₿TC goal
-                </span>
+              <p className="md:text-[1rem] text-[0.8rem] mb-2 text-[#6A6A6A] font-medium">
+                <span>4 ₿TC goal</span>
               </p>
             </Box>
             <Slider
@@ -133,7 +117,6 @@ const ProjectDetail = () => {
               aria-label="Big"
               sx={{
                 height: "10px",
-                paddingTop: theme.gaps[1],
                 "& .MuiSlider-thumb": {
                   display: "none",
                 },
@@ -163,18 +146,32 @@ const ProjectDetail = () => {
                   gap: theme.gaps[2],
                 }}
               >
-                <Box sx={{ ...theme.container, gap: theme.gaps[2] }}>
-                  <img style={{ width: "50px" }} src={Coin1} alt="Icon" />
-                  <img src={Coin2} alt="Coin Icon" />
+                <Box>
+                  <p className="md:text-[1rem] text-[0.8rem]">Fund With</p>
+                  <Box
+                    className="md:gap-[1rem] gap-[4px]"
+                    sx={{ ...theme.container }}
+                  >
+                    <img
+                      className="w-[30px] md:w-[40px]"
+                      src={Coin1}
+                      alt="Icon"
+                    />
+                    <img
+                      className="w-[30px] md:w-[40px]"
+                      src={Coin2}
+                      alt="Icon"
+                    />
+                  </Box>
                 </Box>
                 <Button
-                  className="navbar-item"
                   variant="contained"
                   sx={{
                     ...theme.buttons.primary,
                   }}
+                  className="navbar-item md:w-[140px] w-[100px]"
                 >
-                  <span style={{}}>Fund Now</span>
+                  FUND NOW
                 </Button>
               </Box>
               <Box
@@ -190,6 +187,78 @@ const ProjectDetail = () => {
               </Box>
             </Box>
           </Box>
+        </Box>
+        <Box
+          className="flex md:justify-start justify-center md:items-baseline items-center"
+          sx={{
+            padding: "68px",
+            background: theme.background.sectionColor,
+            flexDirection: "column",
+            gap: theme.gaps[3],
+          }}
+        >
+          <div className="block m-auto">
+            <Box className="flex items-center md:text-left text-center">
+              <h3 className="md:text-[2rem] text-[1.2rem] md:leading-[4rem] leading-[40px]">
+                This is a{" "}
+                <span style={{ color: theme.colors.blue }}>
+                  CURATED Project
+                  <Checkbox
+                    defaultChecked
+                    sx={{
+                      color: theme.colors.blue,
+                      padding: "0px",
+                      mr: "12px",
+                      "&.Mui-checked": {
+                        color: theme.colors.blue,
+                      },
+                    }}
+                  />
+                </span>{" "}
+              </h3>
+            </Box>
+
+            <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[20px]  md:text-left text-center mb-[2rem]">
+              This means the project has gone through the process of satisfying
+              the requirements set forth by the platform designed <br /> to get
+              specific information* regarding development and teams.
+            </p>
+            <div className="flex flex-row flex-wrap gap-2">
+              <Button
+                className="navbar-item md:w-[12vw] md:h-[1.8rem] h-[1.2rem] w-[9vw]"
+                variant="contained"
+                sx={{
+                  ...theme.buttons.secondary,
+                }}
+              >
+                <span className="md:text-[0.7rem] text-[0.6rem] text-dark">
+                  Bitcoin software
+                </span>
+              </Button>
+              <Button
+                className="navbar-item md:w-[12vw] md:h-[1.8rem] h-[1.2rem] w-[9vw]"
+                variant="contained"
+                sx={{
+                  ...theme.buttons.secondary,
+                }}
+              >
+                <span className="md:text-[0.7rem] text-[0.6rem] text-dark">
+                  Productivity
+                </span>
+              </Button>
+              <Button
+                className="navbar-item md:w-[12vw] md:h-[1.8rem] h-[1.2rem] w-[9vw]"
+                variant="contained"
+                sx={{
+                  ...theme.buttons.secondary,
+                }}
+              >
+                <span className="md:text-[0.7rem] text-[0.6rem] text-dark">
+                  Wallet
+                </span>
+              </Button>
+            </div>
+          </div>
         </Box>
         <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
           <h1

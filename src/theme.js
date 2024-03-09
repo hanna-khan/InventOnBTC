@@ -51,7 +51,7 @@ const themeSettings = createTheme({
     },
   },
   gaps: {
-    0: "6px",
+    0: "0px",
     1: "10px",
     2: "20px",
     3: "30px",

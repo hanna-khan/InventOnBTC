@@ -4,11 +4,6 @@ import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
 import { Box, Checkbox, Button, TextField } from "@mui/material";
-
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -304,7 +299,7 @@ const BackerSection = () => {
                   sx={{
                     ...theme.buttons.primary,
                   }}
-                  className="navbar-item md:w-[160px w-[100px]"
+                  className="navbar-item md:w-[160px] w-[100px]"
                 >
                   SUBSCRIBE
                 </Button>
