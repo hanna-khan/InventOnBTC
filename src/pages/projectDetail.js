@@ -54,7 +54,7 @@ const ProjectDetail = () => {
               FUNDING LIVE
             </p>
             <h1
-              className="md:text-[2rem] text-[1.2rem] md:leading-[4rem] leading-[40px] mb-2 font-bold text-black"
+              className="md:text-[2rem] text-[1rem] md:leading-[4rem] leading-[40px] mb-2 font-bold text-black"
               style={{
                 fontSize: theme.fontSize.subTitle,
                 textTransform: "uppercase",
