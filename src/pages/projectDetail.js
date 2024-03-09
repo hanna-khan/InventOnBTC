@@ -45,7 +45,10 @@ const ProjectDetail = () => {
             src={image}
             alt="Project Detail"
           />
-          <Box sx={{ width: { xs: "100%", lg: "40%" }, pl: theme.gaps[3] }}>
+          <Box
+            className="px-[30px] lg:pt-0 pt-5"
+            sx={{ width: { xs: "100%", lg: "40%" } }}
+          >
             <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-2 text-[#088366]">
               FUNDING LIVE
             </p>
@@ -58,7 +61,7 @@ const ProjectDetail = () => {
             >
               {title}
             </h1>
-            <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] mb-4 text-[#000] font-medium">
+            <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-medium">
               Bringing an easy to use Bitcoin Wallet with ordinals , BRC20 and
               Stamps integration
             </p>
@@ -95,8 +98,8 @@ const ProjectDetail = () => {
                 </p>
               </Box>
             </Box>
-            <Box sx={{ ...theme.container, justifyContent: "space-between" }}>
-              <p className="md:text-[1rem] text-[0.8rem] mb-4 text-[#6A6A6A] font-medium">
+            <Box className="flex justify-between">
+              <p className="md:text-[1rem] text-[0.8rem] text-[#6A6A6A] font-medium">
                 <span
                   style={{
                     fontWeight: "bold",
@@ -108,13 +111,12 @@ const ProjectDetail = () => {
                 </span>
                 ₿TC raised
               </p>
-              <p className="md:text-[1rem] text-[0.8rem] mb-2 text-[#6A6A6A] font-medium">
+              <p className="md:text-[1rem] text-[0.8rem] text-[#6A6A6A] font-medium">
                 <span>4 ₿TC goal</span>
               </p>
             </Box>
             <Slider
-              size="big"
-              aria-label="Big"
+              className="lg:w-[100%] w-[25%]"
               sx={{
                 height: "10px",
                 "& .MuiSlider-thumb": {
@@ -169,7 +171,7 @@ const ProjectDetail = () => {
                   sx={{
                     ...theme.buttons.primary,
                   }}
-                  className="navbar-item md:w-[140px] w-[100px]"
+                  className="navbar-item md:w-[140px] w-[100px] h-[2.8rem] md:h-[3.3rem]"
                 >
                   FUND NOW
                 </Button>
@@ -189,9 +191,8 @@ const ProjectDetail = () => {
           </Box>
         </Box>
         <Box
-          className="flex md:justify-start justify-center md:items-baseline items-center"
+          className="flex md:justify-start justify-center md:items-baseline items-center md:p-[38px] p-[10px]"
           sx={{
-            padding: "68px",
             background: theme.background.sectionColor,
             flexDirection: "column",
             gap: theme.gaps[3],
@@ -225,35 +226,35 @@ const ProjectDetail = () => {
             </p>
             <div className="flex flex-row flex-wrap gap-2">
               <Button
-                className="navbar-item md:w-[12vw] md:h-[1.8rem] h-[1.2rem] w-[9vw]"
+                className="navbar-item w-[13vw] h-[2rem]"
                 variant="contained"
                 sx={{
                   ...theme.buttons.secondary,
                 }}
               >
-                <span className="md:text-[0.7rem] text-[0.6rem] text-dark">
+                <span className="md:text-[0.7rem] text-[8px] text-dark">
                   Bitcoin software
                 </span>
               </Button>
               <Button
-                className="navbar-item md:w-[12vw] md:h-[1.8rem] h-[1.2rem] w-[9vw]"
+                className="navbar-item w-[13vw] h-[2rem]"
                 variant="contained"
                 sx={{
                   ...theme.buttons.secondary,
                 }}
               >
-                <span className="md:text-[0.7rem] text-[0.6rem] text-dark">
+                <span className="md:text-[0.7rem] text-[8px] text-dark">
                   Productivity
                 </span>
               </Button>
               <Button
-                className="navbar-item md:w-[12vw] md:h-[1.8rem] h-[1.2rem] w-[9vw]"
+                className="navbar-item w-[13vw] h-[2rem]"
                 variant="contained"
                 sx={{
                   ...theme.buttons.secondary,
                 }}
               >
-                <span className="md:text-[0.7rem] text-[0.6rem] text-dark">
+                <span className="md:text-[0.7rem] text-[8px] text-dark">
                   Wallet
                 </span>
               </Button>
