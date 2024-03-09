@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
-import { Box, Button, Slider, Checkbox } from "@mui/material";
+import { Box, Button, Slider, Checkbox, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Navbar from "../components/Navbar";
@@ -297,36 +297,28 @@ const ProjectDetail = () => {
             </Button>
           </div>
         </div>
-        {/* <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
-          <h1
-            style={{
-              fontSize: theme.fontSize.mainTitle,
-              color: theme.colors.primary,
-            }}
-          >
-            Backer Rewards
+        <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
+          <h1 className="md:text-[1.5rem] text-[1rem] md:mb-[20px] mb-4 font-bold text-center">
+            FUNDER’S PERKS
           </h1>
-          <p style={{ opacity: 0.5, marginBottom: theme.gaps[3] }}>
-            You can fund this project by choosing from the packages and deals on
-            offer.
-          </p>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "10px",
-              flexWrap: "wrap",
-            }}
-          >
-            {BackerData.map((item, index) => (
-              <BackerCard
-                key={index}
-                title={item.title}
-                content={item.content}
-              />
-            ))}
-          </Box>
+          <Grid container columnGap={2} rowGap={5} justifyContent={"center"}>
+            {BackerData.map((item, index) => {
+              return (
+                <Grid item>
+                  <BackerCard
+                    key={index}
+                    img={item.image}
+                    title={item.title}
+                    subTitle={item.subTitle}
+                    content={item.content}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
         </Box>
+
+        {/* 
         <Box sx={{ px: theme.gaps[2], mb: theme.gaps[6] }}>
           <h1
             style={{

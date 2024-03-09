@@ -29,6 +29,10 @@ import Resource2 from "./assets/images/resource_2.png";
 import Resource3 from "./assets/images/resource_3.png";
 import Resource4 from "./assets/images/resource_4.png";
 
+import car from "./assets/images/car.png";
+import man from "./assets/images/man.png";
+import bike from "./assets/images/bike.jpeg";
+
 export const sliderSettings = {
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -243,19 +247,22 @@ export const CornerData = [
 
 export const BackerData = [
   {
-    title: "Deal 1",
-    content:
-      "Learn more about the project and its goals. See how your contribution can make a difference.",
+    image: man,
+    title: "1 Ordinal drop",
+    subTitle: "0.0035 BTC Contribution",
+    content: "Public sale 0.003",
   },
   {
-    title: "Deal 2",
-    content:
-      "Discover the marketing material created to promote the project and attract more contributors.",
+    image: car,
+    title: "2 Ordinals",
+    subTitle: "0.0035 BTC Contribution",
+    content: "Public sale 0.003",
   },
   {
-    title: "Deal 3",
-    content:
-      "Track the funding progress with a visually appealing progress bar. See how close the project is to reaching its goal.",
+    image: bike,
+    title: "2 Ordinal +",
+    subTitle: "0.0035 BTC Contribution",
+    content: "Public sale 0.003",
   },
 ];
 

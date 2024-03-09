@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
@@ -30,11 +31,11 @@ const BackerCard = (props) => {
       <Box
         sx={{
           p: theme.gaps[2],
-          background: "#F8F8F8",
           width: "400px",
         }}
       >
         <img
+          src={props.img}
           style={{
             width: "100%",
             height: "300px",
@@ -43,17 +44,37 @@ const BackerCard = (props) => {
             marginBottom: theme.gaps[2],
           }}
         />
-        <Box>
-          <h4
+        <Box className="flex flex-col justify-center items-center">
+          <h6
             style={{
-              fontWeight: "bold",
-              marginBottom: theme.gaps[1],
-              textAlign: "left",
+              fontSize: "15.25px",
+              fontWeight: 500,
+              lineHeight: "24px",
+              marginBottom: "0.6rem",
+              textAlign: "center",
             }}
           >
             {props.title}
-          </h4>
-          <p style={{ opacity: 0.5 }}>{props.content}</p>
+          </h6>
+          <h6
+            style={{
+              fontSize: "15.25px",
+              fontWeight: 600,
+              lineHeight: "24px",
+              marginBottom: "0.6rem",
+              textAlign: "center",
+            }}
+          >
+            {props.subTitle}
+          </h6>
+          <p
+            className="text-[0.8rem] text-[#E21941] line-through	uppercase"
+            style={{
+              marginBottom: theme.gaps[1],
+            }}
+          >
+            {props.content}
+          </p>
         </Box>
       </Box>
     </React.Fragment>
