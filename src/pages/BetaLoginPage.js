@@ -241,7 +241,7 @@ const BetaLoginPage = () => {
                 }}
               >
                 <TextField
-                  className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
+                  className="md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"
                   label="Your email address"
                   value={form.email}
@@ -268,7 +268,7 @@ const BetaLoginPage = () => {
                   }}
                 />
                 <TextField
-                  className="md:w-[265px] w-[150px] md:text-[1rem] text-[0.7rem]"
+                  className="md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"
                   label="Your twitter handle"
                   value={form.twitter}
@@ -299,6 +299,7 @@ const BetaLoginPage = () => {
                   className="md:w-[8vw] md:h-[2rem] h-[1.5rem] w-[6vw]"
                   style={{ margin: "auto", marginTop: "10px" }}
                   variant="contained"
+                  onClick={addEmailAndTwitterHandle}
                   sx={{
                     ...theme.buttons.secondary,
                   }}
@@ -314,6 +315,7 @@ const BetaLoginPage = () => {
               sx={{
                 ...theme.container,
                 justifyContent: "space-between",
+                flexWrap: "wrap",
               }}
             >
               <Box
@@ -329,26 +331,18 @@ const BetaLoginPage = () => {
                 </p>
               </Box>
               <Button
-                className="navbar-item md:w-[200px] md:h-[2.6rem] h-[50px] w-[120px]"
+                className="navbar-item md:h-[2.6rem] h-[50px]"
                 variant="contained"
-                onClick={addEmailAndTwitterHandle}
                 sx={{
                   ...theme.buttons.primary,
                   textTransform: "none",
                   background: theme.background.black,
                   ml: theme.gaps[3],
                 }}
+                as="a"
+                href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
               >
-                <a
-                  className="md:text-[0.8rem] text-[0.6rem] text-white"
-                  href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
-                  style={{
-                    textDecoration: "underline",
-                    color: "#fff",
-                  }}
-                >
-                  START A PROJECT
-                </a>
+                START A PROJECT
               </Button>
             </Box>
           </Box>
