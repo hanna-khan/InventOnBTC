@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import {
   TextField,
@@ -38,6 +38,7 @@ const BetaLoginPage = () => {
     email: "",
     twitter: "",
   });
+  const [message, setMessage] = React.useState("");
   const [password, setPassword] = React.useState("");
   const { login } = useAuth();
   const Laptop3 = useMediaQuery("(max-width:1530px)");
@@ -57,6 +58,7 @@ const BetaLoginPage = () => {
         email: "",
         twitter: "",
       });
+      setMessage("Submitted successfully");
     } catch (e) {
       console.error("Error adding document: ", e);
     }
@@ -129,6 +131,8 @@ const BetaLoginPage = () => {
               sx={{
                 ...theme.buttons.primary,
               }}
+              as="a"
+              href="https://invent-on-btc.gitbook.io/invent-on-btc/"
             >
               <span className="md:text-[0.8rem] text-[0.6rem] text-white uppercase">
                 Doc
@@ -240,6 +244,19 @@ const BetaLoginPage = () => {
                   alignItems: "flex-start",
                 }}
               >
+                {message && (
+                  <Typography
+                    sx={{
+                      backgroundColor: "green",
+                      color: "#fff",
+                      textAlign: "center",
+                      width: "100%",
+                      padding: "10px 0",
+                    }}
+                  >
+                    {message}
+                  </Typography>
+                )}
                 <TextField
                   className="md:text-[1rem] text-[0.7rem]"
                   id="outlined-basic"

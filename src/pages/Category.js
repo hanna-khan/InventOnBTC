@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
@@ -14,6 +14,7 @@ import {
   FormControl,
   Select,
   Grid,
+  Drawer,
 } from "@mui/material";
 
 import Navbar from "../components/Navbar";
@@ -25,6 +26,9 @@ import Coin2 from "../assets/images/coin_2.png";
 
 import ProjectCard from "../components/ProjectCard";
 import { sliderSettings, ProjectsData } from "../constant";
+
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 const Categories = [
   { name: "Ordinals", link: "" },
@@ -43,6 +47,7 @@ const Categories = [
 
 const Home = () => {
   const theme = useTheme();
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const [selectedTimingValue, setSelectedTimingValue] = React.useState("all");
   const [selectedStateValue, setSelectedStateValue] = React.useState("all");
@@ -305,26 +310,268 @@ const Home = () => {
           </Box>
           <hr />
         </Box>
+        <Drawer
+          open={openDrawer}
+          sx={{ "& .MuiDrawer-paper": { width: "320px", padding: "10px" } }}
+          onClose={() => setOpenDrawer(false)}
+        >
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <Box
+              as={IoMdCloseCircleOutline}
+              sx={{ alignSelf: "flex-end" }}
+              size={40}
+              onClick={() => setOpenDrawer(false)}
+            />
+            <p
+              style={{
+                lineHeight: "24px",
+                fontWeight: "bold",
+                marginBottom: "15px",
+              }}
+            >
+              Filter results
+            </p>
+            <Box sx={{ py: "15px" }}>
+              <p
+                style={{
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                  lineHeight: "18px",
+                  color: "#949494",
+                  fontWeight: 500,
+                  marginBottom: "15px",
+                }}
+              >
+                Category
+              </p>
+              <Box>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    lineHeight: "33px",
+                    fontWeight: "500",
+                    color: theme.colors.primary,
+                    marginBottom: "10px",
+                  }}
+                >
+                  All Categories
+                </p>
+                <Box
+                  sx={{
+                    ...theme.container,
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                    gap: "15px",
+                    paddingLeft: "11px",
+                  }}
+                >
+                  {Categories.map((item, index) => (
+                    <span style={{ cursor: "pointer" }} key={index}>
+                      {item.name}
+                    </span>
+                  ))}
+                </Box>
+              </Box>
+            </Box>
+            <hr />
+            <Box sx={{ py: "15px" }}>
+              <p
+                style={{
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                  lineHeight: "18px",
+                  color: "#949494",
+                  fontWeight: 500,
+                  marginBottom: "15px",
+                }}
+              >
+                Project timing
+              </p>
+              <Box>
+                <Box
+                  sx={{
+                    ...theme.container,
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="all_timing"
+                      {...controlTimingProps("all")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="all_timing">All</label>
+                  </Box>
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="launching"
+                      {...controlTimingProps("launching")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="launching">Launching soon</label>
+                  </Box>
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="ending"
+                      {...controlTimingProps("ending")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="ending">Ending soon</label>
+                  </Box>
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="launched"
+                      {...controlTimingProps("launched")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="launched">Just launched</label>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+            <hr />
+            <Box sx={{ py: "15px" }}>
+              <p
+                style={{
+                  fontSize: "18px",
+                  textTransform: "uppercase",
+                  lineHeight: "18px",
+                  color: "#949494",
+                  fontWeight: 500,
+                  marginBottom: "15px",
+                }}
+              >
+                Project timing
+              </p>
+              <Box>
+                <Box
+                  sx={{
+                    ...theme.container,
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="all_state"
+                      {...controlStateProps("all")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="all_state">All</label>
+                  </Box>
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="concept"
+                      {...controlStateProps("concept")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="concept">Concept</label>
+                  </Box>
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="prototype"
+                      {...controlStateProps("prototype")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="prototype">Prototype</label>
+                  </Box>
+                  <Box
+                    sx={{ ...theme.container, justifyContent: "flex-start" }}
+                  >
+                    <Radio
+                      id="live"
+                      {...controlStateProps("live")}
+                      sx={{
+                        "&.Mui-checked": {
+                          color: theme.colors.primary,
+                        },
+                      }}
+                    />
+                    <label htmlFor="live">Live</label>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+            <hr />
+          </Box>
+        </Drawer>
         <Box sx={{ width: { xs: "100%", lg: "70%" } }}>
-          <Paper
-            component="form"
+          <Box
             sx={{
-              p: "2px 4px",
               display: "flex",
               alignItems: "center",
-              width: "100%",
               marginBottom: "26px",
+              gap: "10px",
             }}
           >
-            <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-              <SearchIcon />
-            </IconButton>
-            <InputBase
-              sx={{ ml: 1, flex: 1 }}
-              placeholder="Search Google Maps"
-              inputProps={{ "aria-label": "search google maps" }}
+            <Box
+              as={GiHamburgerMenu}
+              size={30}
+              sx={{ display: { xs: "block", lg: "none" } }}
+              onClick={() => setOpenDrawer(true)}
             />
-          </Paper>
+            <Paper
+              component="form"
+              sx={{
+                p: "2px 4px",
+                display: "flex",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Search Google Maps"
+                inputProps={{ "aria-label": "search google maps" }}
+              />
+            </Paper>
+          </Box>
           <Box
             sx={{
               ...theme.container,

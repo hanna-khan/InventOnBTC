@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useTheme, useMediaQuery, Typography } from "@mui/material";
 import { Box, Checkbox, Button, TextField } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -18,6 +18,9 @@ import Coin1 from "../assets/images/Footer_logo.png";
 import Coin2 from "../assets/images/coin_2.png";
 import XverseIcon from "../assets/images/xverse_icon.png";
 import LeatherIcon from "../assets/images/leather_icon.png";
+import { Link } from "react-router-dom";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
 
 const BackerSection = () => {
   const theme = useTheme();
@@ -26,6 +29,19 @@ const BackerSection = () => {
   const isMobile = useMediaQuery("(max-width:430px)");
   const isSmallMobile = useMediaQuery("(max-width:375px)");
   const Laptop3 = useMediaQuery("(max-width:1366px)");
+
+  const [form, setForm] = React.useState({ email: "" });
+  const [message, setMessage] = React.useState("");
+
+  const subscribe = async () => {
+    try {
+      await addDoc(collection(db, "subscription"), form);
+      setForm({ email: "" });
+      setMessage("Submited successfully");
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
 
   return (
     <React.Fragment>
@@ -158,6 +174,8 @@ const BackerSection = () => {
           access to the projects they want to back.
         </p>
         <Button
+          as={Link}
+          to="/category"
           className="navbar-item md:w-[180px] md:h-[2.6rem] h-[50px] w-[120px]"
           variant="contained"
           sx={{
@@ -179,9 +197,10 @@ const BackerSection = () => {
           marginBottom: theme.gaps[6],
         }}
       >
-        <Box 
-        className="gap-[2rem] sm:gap-[144px]"
-        sx={{ ...theme.container, alignItems: "stretch" }}>
+        <Box
+          className="gap-[2rem] sm:gap-[144px]"
+          sx={{ ...theme.container, alignItems: "stretch" }}
+        >
           <Box>
             <p className="md:text-[2rem] text-[1rem] md:leading-[44.8px] leading-[40px] md:mb-[30px] mb-4 font-bold">
               Fund With
@@ -267,6 +286,19 @@ const BackerSection = () => {
                 Get updates on the latest projects campaigns and the Bitcoin
                 ecosystem
               </p>
+              {message && (
+                <Typography
+                  sx={{
+                    backgroundColor: "green",
+                    color: "#fff",
+                    textAlign: "center",
+                    width: "100%",
+                    padding: "10px 0",
+                  }}
+                >
+                  {message}
+                </Typography>
+              )}
               <Box
                 className="gap-4 md:gap-0"
                 sx={{
@@ -300,6 +332,7 @@ const BackerSection = () => {
                     ...theme.buttons.primary,
                   }}
                   className="navbar-item md:w-[160px] w-[100px]"
+                  onClick={subscribe}
                 >
                   SUBSCRIBE
                 </Button>

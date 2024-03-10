@@ -300,19 +300,26 @@ export const FeedbackData = [
 ];
 export const BlogData = [
   {
-    image: Blog1,
-    title: "The Rise of the Bitcoin Economy",
-    content: "Now you can give the gift of crowdfunding.",
+    image:
+      "https://miro.medium.com/v2/resize:fit:640/format:webp/0*o46xeLnEbK4n564P",
+    title: "Bitcoin DeFi: Blooming Beyond Expectation",
+    content:
+      "While Bitcoin remains synonymous with digital gold, a silent revolution is brewing within its ecosystem: Decentralized Finance (DeFi). Once viewed as an Ethereum domain, DeFi is finding fertile ground on the Bitcoin network, attracting users and startups with its unique offerings.",
   },
   {
-    image: Blog1,
-    title: "The UTXO problem",
-    content: "Does the AYANEO KUN live up to the hype?",
+    image:
+      "https://miro.medium.com/v2/resize:fit:640/format:webp/0*NlGclvcpCeXq44Mp",
+    title: "Beyond the Base Layer: The Thriving Bitcoin Layer 2 Ecosystem",
+    content:
+      "Bitcoin, the revolutionary cryptocurrency, is no longer just a digital gold. While its core function as a store of value remains crucial, the layer 2 (L2) ecosystem is flourishing, expanding Bitcoin’s capabilities beyond basic transactions and paving the way for a vibrant financial future.",
   },
   {
-    image: Blog3,
-    title: "Programming BTC for the new age",
-    content: "Putting the new AYANEO Pocket Air to the test!",
+    image:
+      "https://miro.medium.com/v2/resize:fit:640/format:webp/0*fkfx-KElhYQlzaHe.jpg",
+    title:
+      "Battle of the Fungibles: BRC20 vs. Runes — Who Rules the Bitcoin Token Game?",
+    content:
+      "Bitcoin, the OG cryptocurrency, is no stranger to evolution. While its core function as a digital store of value remains vital, the emergence of fungible tokens has opened a new chapter.",
   },
 ];
 

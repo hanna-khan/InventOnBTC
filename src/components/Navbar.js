@@ -105,7 +105,7 @@ function Navbar(props) {
               style={{ textAlign: "center" }}
             >
               InventOn <br />
-              <span style={{ color: theme.colors.primary }}>BTC</span>
+              <span style={{ color: "#f19c1d" }}>BTC</span>
             </Box>
           </Box>
           <Box

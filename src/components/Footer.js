@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from "react";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Box,
@@ -20,6 +20,8 @@ import FaceBookIcon from "../assets/images/facebook.png";
 import DiscordIcon from "../assets/images/discord.png";
 import TwitterIcon from "../assets/images/twitter.png";
 import UtubuIcon from "../assets/images/utubu.png";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../firebase";
 
 const pages = [
   { name: "EXPLORE", link: "/", menuItems: [] },
@@ -38,8 +40,21 @@ function Footer(props) {
   const Laptop3 = useMediaQuery("(max-width:1366px)");
   const Laptop4 = useMediaQuery("(max-width:1280px)");
   const Laptop5 = useMediaQuery("(max-width:1024px)");
+  const [message, setMessage] = React.useState("");
+
+  const [form, setForm] = React.useState({ email: "" });
 
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
+
+  const subscribe = async () => {
+    try {
+      await addDoc(collection(db, "subscription"), form);
+      setForm({ email: "" });
+      setMessage("Submited successfully");
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
 
   return (
     <Box
@@ -124,7 +139,15 @@ function Footer(props) {
                     alignItems: "flex-start",
                   }}
                 >
-                  <a href="#">About Us</a>
+                  <a href="https://invent-on-btc.gitbook.io/invent-on-btc/">
+                    About Us
+                  </a>
+                  <a href="https://invent-on-btc.gitbook.io/invent-on-btc/terms-and-conditions">
+                    Terms & Conditions
+                  </a>
+                  <a href="https://invent-on-btc.gitbook.io/invent-on-btc/privacy-policy">
+                    Privacy Policy
+                  </a>
                   <a href="#">Blog</a>
                   <a href="#">Trust & Safety</a>
                   <a href="#">Help & Support</a>
@@ -197,6 +220,19 @@ function Footer(props) {
               >
                 Discover new innovations in the <br /> InventOnBTC newsletter
               </p>
+              {message && (
+                <Typography
+                  sx={{
+                    backgroundColor: "green",
+                    color: "#fff",
+                    textAlign: "center",
+                    width: "100%",
+                    padding: "10px 0",
+                  }}
+                >
+                  {message}
+                </Typography>
+              )}
               <Box
                 className="md:w-[282px] w-[180px] md:text-[0.8rem] text-[0.6rem]"
                 sx={{ marginBottom: "10px" }}
@@ -207,6 +243,7 @@ function Footer(props) {
                   label="Your email address"
                   variant="filled"
                   name="first_name"
+                  onChange={(e) => setForm({ email: e.target.value })}
                   InputLabelProps={{
                     style: { color: "grey" },
                   }}
@@ -272,6 +309,7 @@ function Footer(props) {
                 sx={{
                   ...theme.buttons.primary,
                 }}
+                onClick={subscribe}
               >
                 <span className="md:text-[0.8rem] text-[0.6rem] text-white">
                   Sign me up
@@ -287,16 +325,16 @@ function Footer(props) {
             }}
           >
             <Button
-                className="navbar-item md:w-[300px] md:h-[2.6rem] h-[50px] w-[120px]"
-                variant="contained"
-                sx={{
-                  ...theme.buttons.secondary,
-                }}
-              >
-                <span className="md:text-[0.8rem] text-[0.6rem] text-dark">
-                  BTC & STX
-                </span>
-              </Button>
+              className="navbar-item md:w-[300px] md:h-[2.6rem] h-[50px] w-[120px]"
+              variant="contained"
+              sx={{
+                ...theme.buttons.secondary,
+              }}
+            >
+              <span className="md:text-[0.8rem] text-[0.6rem] text-dark">
+                BTC & STX
+              </span>
+            </Button>
             <img
               className="w-[10px] md:w-[15px]"
               src={FaceBookIcon}
