@@ -121,15 +121,16 @@ const BetaLoginPage = () => {
                 style={{ textAlign: "center" }}
               >
                 InventOn <br />
-                <span style={{ color: theme.colors.primary }}>BTC</span>
+                <span style={{ color: "#f19c1d" }}>BTC</span>
               </Box>
             </Box>
 
             <Button
-              className="navbar-item md:w-[6rem] md:h-[2.5rem] h-[2rem] w-[4rem] mr-2"
+              className="navbar-item mr-2"
               variant="contained"
               sx={{
                 ...theme.buttons.primary,
+                backgroundColor: "#f19c1d",
               }}
               as="a"
               href="https://invent-on-btc.gitbook.io/invent-on-btc/"
@@ -162,10 +163,7 @@ const BetaLoginPage = () => {
               >
                 DEFI Crowdfunding
                 <br />
-                for <span style={{ color: theme.colors.primary }}>
-                  Bitcoin
-                </span>{" "}
-                <br />
+                for <span style={{ color: "#f19c1d" }}>Bitcoin</span> <br />
                 startups
                 <br />
                 <br />
