@@ -78,6 +78,8 @@ const PressSection = () => {
                   amount={item.amout}
                   percent={item.percent}
                   leftDays={item.leftDays}
+                  curated={item.curated}
+                  treasury={item.treasury}
                 />
               );
             } else {
@@ -89,6 +91,8 @@ const PressSection = () => {
                   content={item.content}
                   type={item.type}
                   explain={item.explain}
+                  curated={item.curated}
+                  treasury={item.treasury}
                 />
               );
             }

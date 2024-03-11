@@ -223,142 +223,143 @@ const BetaLoginPage = () => {
               margin: "auto",
             }}
           >
-            <Box className="flex md:justify-between justify-center md:flex-row flex-col items-center md:gap-[30px] gap-[10px]">
-              <Box
-                sx={{
-                  ...theme.container,
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
-                <p style={{ fontWeight: "bold", color: theme.colors.white }}>
-                  Sign up for early BETA access
-                </p>
-              </Box>
-              <Box
-                sx={{
-                  ...theme.container,
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
-                {message && (
-                  <Typography
-                    sx={{
-                      backgroundColor: "green",
-                      color: "#fff",
-                      textAlign: "center",
-                      width: "100%",
-                      padding: "10px 0",
-                    }}
-                  >
-                    {message}
-                  </Typography>
-                )}
-                <TextField
-                  className="md:text-[1rem] text-[0.7rem]"
-                  id="outlined-basic"
-                  label="Your email address"
-                  value={form.email}
-                  onChange={(e) =>
-                    setForm({
-                      ...form,
-                      email: e.target.value,
-                    })
-                  }
-                  variant="filled"
-                  name="mail_address"
-                  InputLabelProps={{
-                    style: { color: "grey" },
-                  }}
-                  InputProps={{
-                    style: {
-                      backgroundColor: theme.background.white,
-                      border: "none",
-                      marginBottom: theme.gaps[2],
-                    },
-                  }}
-                  sx={{
-                    display: "block",
-                  }}
-                />
-                <TextField
-                  className="md:text-[1rem] text-[0.7rem]"
-                  id="outlined-basic"
-                  label="Your twitter handle"
-                  value={form.twitter}
-                  onChange={(e) =>
-                    setForm({
-                      ...form,
-                      twitter: e.target.value,
-                    })
-                  }
-                  variant="filled"
-                  name="twitter_address"
-                  InputLabelProps={{
-                    style: { color: "grey" },
-                  }}
-                  InputProps={{
-                    style: {
-                      backgroundColor: theme.background.white,
-                      border: "none",
-                      width: "100%",
-                    },
-                  }}
-                  sx={{
-                    display: "block",
-                    width: "100%",
-                  }}
-                />
-                <Button
-                  className="md:w-[8vw] md:h-[2rem] h-[1.5rem] w-[6vw]"
-                  style={{ margin: "auto", marginTop: "10px" }}
-                  variant="contained"
-                  onClick={addEmailAndTwitterHandle}
-                  sx={{
-                    ...theme.buttons.secondary,
+            <Box>
+              <Box>
+                <p
+                  style={{
+                    fontWeight: "bold",
+                    color: theme.colors.white,
+                    marginBottom: "20px",
                   }}
                 >
-                  <span className="md:text-[0.8rem] text-[0.6rem] text-dark font-bold">
-                    SUBMIT
-                  </span>
-                </Button>
+                  Sign up for early BETA access
+                </p>
+                <Box>
+                  {message && (
+                    <Typography
+                      sx={{
+                        backgroundColor: "green",
+                        color: "#fff",
+                        textAlign: "center",
+                        width: "100%",
+                        padding: "10px 0",
+                      }}
+                    >
+                      {message}
+                    </Typography>
+                  )}
+                  <TextField
+                    className="md:text-[1rem] text-[0.7rem]"
+                    id="outlined-basic"
+                    label="Your email address"
+                    value={form.email}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        email: e.target.value,
+                      })
+                    }
+                    variant="filled"
+                    name="mail_address"
+                    InputLabelProps={{
+                      style: { color: "grey" },
+                    }}
+                    InputProps={{
+                      style: {
+                        backgroundColor: theme.background.white,
+                        border: "none",
+                        marginBottom: theme.gaps[2],
+                        width: "100%",
+                      },
+                    }}
+                    sx={{
+                      display: "block",
+                      width: "100%",
+                    }}
+                  />
+                  <TextField
+                    className="md:text-[1rem] text-[0.7rem]"
+                    id="outlined-basic"
+                    label="Your twitter handle"
+                    value={form.twitter}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        twitter: e.target.value,
+                      })
+                    }
+                    variant="filled"
+                    name="twitter_address"
+                    InputLabelProps={{
+                      style: { color: "grey" },
+                    }}
+                    InputProps={{
+                      style: {
+                        backgroundColor: theme.background.white,
+                        border: "none",
+                        width: "100%",
+                      },
+                    }}
+                    sx={{
+                      display: "block",
+                      width: "100%",
+                    }}
+                  />
+                  <Button
+                    className="md:w-[8vw] md:h-[2rem] h-[1.5rem] w-[6vw]"
+                    style={{
+                      margin: "auto",
+                      marginTop: "10px",
+                      alignSelf: "flex-end",
+                    }}
+                    variant="contained"
+                    onClick={addEmailAndTwitterHandle}
+                    sx={{
+                      ...theme.buttons.secondary,
+                    }}
+                  >
+                    <span className="md:text-[0.8rem] text-[0.6rem] text-dark font-bold">
+                      SUBMIT
+                    </span>
+                  </Button>
+                </Box>
               </Box>
-            </Box>
-            <Box
-              className="md:gap-[30px] gap-[10px]"
-              sx={{
-                ...theme.container,
-                justifyContent: "space-between",
-                flexWrap: "wrap",
-              }}
-            >
               <Box
+                className="md:gap-[30px] gap-[10px]"
                 sx={{
                   ...theme.container,
-                  flexDirection: "column",
-                  alignItems: "flex-start",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
+                  marginTop: "30px",
                 }}
               >
-                <p style={{ fontWeight: "bold" }}>For Startups:</p>
-                <p style={{ fontWeight: "bold" }}>
-                  Submit a project for crowdfunding
-                </p>
+                <Box
+                  sx={{
+                    ...theme.container,
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  {/* <p style={{ fontWeight: "bold" }}>For Startups:</p> */}
+                  <p style={{ fontWeight: "bold" }}>
+                    Submit a project for crowdfunding
+                  </p>
+                </Box>
+                <Button
+                  className="navbar-item md:h-[2.6rem] h-[50px]"
+                  variant="contained"
+                  sx={{
+                    ...theme.buttons.primary,
+                    textTransform: "none",
+                    background: theme.background.black,
+                    ml: theme.gaps[3],
+                  }}
+                  as="a"
+                  href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
+                >
+                  START A PROJECT
+                </Button>
               </Box>
-              <Button
-                className="navbar-item md:h-[2.6rem] h-[50px]"
-                variant="contained"
-                sx={{
-                  ...theme.buttons.primary,
-                  textTransform: "none",
-                  background: theme.background.black,
-                  ml: theme.gaps[3],
-                }}
-                as="a"
-                href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
-              >
-                START A PROJECT
-              </Button>
             </Box>
           </Box>
         </Box>

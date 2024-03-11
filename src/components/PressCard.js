@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTheme, useMediaQuery, Checkbox } from "@mui/material";
 import {
   Box,
   AppBar,
@@ -60,6 +60,72 @@ const PressCard = (props) => {
             >
               FUNDING
             </p>
+            {props.curated || props.treasury ? (
+              <Box>
+                <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-bold flex items-center gap-2">
+                  <Checkbox
+                    defaultChecked
+                    sx={{
+                      color: theme.colors.blue,
+                      padding: "0px",
+                      "&.Mui-checked": {
+                        color: theme.colors.blue,
+                      },
+                    }}
+                  />
+                  <span style={{ color: theme.colors.blue }}>CURATED</span>
+                  <div
+                    style={{
+                      backgroundColor: theme.colors.blue,
+                      color: "#fff",
+                      borderRadius: "50%",
+                      width: "20px",
+                      height: "20px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      fontSize: "16px",
+                      opacity: 0.6,
+                    }}
+                  >
+                    ?
+                  </div>
+                </p>
+                {props.treasury ? (
+                  <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-bold flex items-center gap-2">
+                    <Checkbox
+                      defaultChecked
+                      sx={{
+                        color: theme.colors.secondary,
+                        padding: "0px",
+                        "&.Mui-checked": {
+                          color: theme.colors.secondary,
+                        },
+                      }}
+                    />
+                    <span style={{ color: theme.colors.secondary }}>
+                      Treasury Funded
+                    </span>
+                    <div
+                      style={{
+                        backgroundColor: theme.colors.secondary,
+                        color: "#fff",
+                        borderRadius: "50%",
+                        width: "20px",
+                        height: "20px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        fontSize: "16px",
+                        opacity: 0.6,
+                      }}
+                    >
+                      ?
+                    </div>
+                  </p>
+                ) : null}
+              </Box>
+            ) : null}
             <FavoriteBorderIcon sx={{ opacity: 0.4 }} />
           </Box>
           <p

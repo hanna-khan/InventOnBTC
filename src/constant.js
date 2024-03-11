@@ -82,6 +82,8 @@ export const ProjectsData = [
       "<b>23000</b> <span style='opacity: 0.6; font-size: 10.44px'> STX raised </span>",
     percent: 67,
     leftDays: "24",
+    curated: false,
+    treasury: false,
   },
 
   {
@@ -94,6 +96,8 @@ export const ProjectsData = [
       "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
     percent: 25,
     leftDays: "60",
+    curated: true,
+    treasury: false,
   },
 
   {
@@ -106,6 +110,8 @@ export const ProjectsData = [
       "<b>2.66</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
     percent: 96,
     leftDays: "27",
+    curated: false,
+    treasury: false,
   },
 
   {
@@ -118,6 +124,8 @@ export const ProjectsData = [
       "<b>12.9</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
     percent: 213,
     leftDays: "2",
+    curated: false,
+    treasury: false,
   },
 ];
 export const ProjectsFundData = [
@@ -169,6 +177,8 @@ export const PressData = [
       "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
     percent: 25,
     leftDays: "60",
+    curated: true,
+    treasury: false,
   },
   {
     image: Press2,
@@ -177,6 +187,8 @@ export const PressData = [
       "Bringing you a world of adventure and mystery. Dive into an experience unlike any and for the first time ITS ON CHAIN",
     type: "bitcoin games",
     explain: "Snapdragon®G3x Gen2丨1GHz GPU丨Ultra Thin丨 6' 2K IPS Screen",
+    curated: true,
+    treasury: true,
   },
   {
     image: Press2,
@@ -185,6 +197,8 @@ export const PressData = [
       "A collection of 10,000 punks living on Bitcoin with different traits.",
     type: "bitcoin games",
     explain: "Snapdragon®G3x Gen2丨1GHz GPU丨Ultra Thin丨 6' 2K IPS Screen",
+    curated: true,
+    treasury: false,
   },
 ];
 
