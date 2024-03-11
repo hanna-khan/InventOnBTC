@@ -30,6 +30,7 @@ const Feedback = () => {
   return (
     <React.Fragment>
       <Box
+        className="max-w-[95%] m-auto flex flex-col justify-center"
         sx={{
           p: theme.gaps[3],
           background: theme.background.white,
@@ -48,7 +49,7 @@ const Feedback = () => {
         </h1>
 
         <p
-        className="sm:text-[0.9rem] text-[0.8rem]"
+          className="sm:text-[0.9rem] text-[0.8rem]"
           style={{
             color: "#808080",
             lineHeight: "18px",

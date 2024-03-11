@@ -22,7 +22,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const pages = [
   { name: "Explore", link: "/category", menuItems: [] },
-  { name: "Curated Projects", link: "/", menuItems: [] },
+  { name: "Curated Projects", link: "/category", menuItems: [] },
   { name: "Start a project", menuItems: [] },
 ];
 
@@ -145,74 +145,46 @@ function Navbar(props) {
                 maxWidth: "unset",
               }}
             >
-              {pages.map((page, index) => (
-                <Link key={page.name} to={page.link}>
-                  <MenuItem
-                    key={page.name}
-                    onClick={() => handleExpandedMenu(page.name)}
-                  >
-                    <Typography
-                      key={page.name}
-                      className="navbar-itemm"
-                      sx={{
-                        color: theme.colors.black,
-                        position: "relative",
-                      }}
-                      textAlign="center"
-                    >
-                      {page.name}
-                      {page.menuItems.length > 0 && (
-                        <span className="mobile_parent_navbar">
-                          <ArrowForwardIosIcon
-                            className={`${page.name}arrow_icon`}
-                          />
-                        </span>
-                      )}
-                    </Typography>
-                  </MenuItem>
-                </Link>
-              ))}
+              <MenuItem as={Link} to="/category">
+                <Typography
+                  className="navbar-itemm"
+                  sx={{
+                    color: theme.colors.black,
+                    position: "relative",
+                  }}
+                  textAlign="center"
+                >
+                  Explore
+                </Typography>
+              </MenuItem>
+              <MenuItem as={Link} to="/category">
+                <Typography
+                  className="navbar-itemm"
+                  sx={{
+                    color: theme.colors.black,
+                    position: "relative",
+                  }}
+                  textAlign="center"
+                >
+                  Curated Projects
+                </Typography>
+              </MenuItem>
+              <MenuItem
+                as="a"
+                href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
+              >
+                <Typography
+                  className="navbar-itemm"
+                  sx={{
+                    color: theme.colors.black,
+                    position: "relative",
+                  }}
+                  textAlign="center"
+                >
+                  start a project
+                </Typography>
+              </MenuItem>
             </Menu>
-            {pages.map((page, index) => (
-              <Box key={page.name}>
-                {expandedSubMenu === page.name && page.menuItems.length > 0 && (
-                  <Box
-                    className="submenu"
-                    sx={{
-                      position: "absolute",
-                      textAlign: "left",
-                      height: "auto",
-                      width: "163px",
-                      background: theme.colors.white,
-                      zIndex: 3,
-                      left: "204px",
-                      top: page.name === "ABOUT" ? "200px" : "247px",
-                      padding: "12px 1px",
-                      transition: "all 2s",
-                      borderRadius: "7px",
-                    }}
-                  >
-                    {page.menuItems.map((item, index) => (
-                      <Link key={item.name} to={item.link}>
-                        <p
-                          className="navbar-item"
-                          onClick={handleCloseNavMenu}
-                          style={{
-                            padding: "7px 13px",
-                            background: theme.colors.white,
-                            color: theme.colors.black,
-                            marginBottom: "7px",
-                          }}
-                          key={index}
-                        >
-                          {item.name}
-                        </p>
-                      </Link>
-                    ))}
-                  </Box>
-                )}
-              </Box>
-            ))}
           </Box>
           <Box
             sx={{
@@ -221,7 +193,43 @@ function Navbar(props) {
               marginLeft: "142px",
             }}
           >
-            {pages.map((page, index) => {
+            <Button
+              className="menu-item lg:text-[10px] text-[14px]"
+              as={Link}
+              to="/category"
+              sx={{
+                position: "relative",
+                display: "inline-block",
+                color: theme.colors.white,
+              }}
+            >
+              Explore
+            </Button>
+            <Button
+              className="menu-item lg:text-[10px] text-[14px]"
+              as={Link}
+              to="/category"
+              sx={{
+                position: "relative",
+                display: "inline-block",
+                color: theme.colors.white,
+              }}
+            >
+              curated projects
+            </Button>
+            <Button
+              className="menu-item lg:text-[10px] text-[14px]"
+              as="a"
+              href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
+              sx={{
+                position: "relative",
+                display: "inline-block",
+                color: theme.colors.white,
+              }}
+            >
+              start a project
+            </Button>
+            {/* {pages.map((page, index) => {
               return (
                 <Box key={page.name}>
                   <Button
@@ -278,7 +286,7 @@ function Navbar(props) {
                   </Button>
                 </Box>
               );
-            })}
+            })} */}
           </Box>
           <Box sx={{ ...theme.container }}>
             <Button

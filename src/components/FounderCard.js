@@ -29,10 +29,12 @@ const FounderCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        className="border-[0.5px] border-[#dddddd] md:w-[400px] w-[300px]"
+        className="border-[0.5px] border-[#dddddd] w-[300px]"
         sx={{
           cursor: "pointer",
           margin: "auto",
+          height: "100%",
+          maxHeight: "570px",
           justifyContent: "space-around",
         }}
       >

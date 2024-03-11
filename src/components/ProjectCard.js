@@ -38,7 +38,8 @@ const ProjectCard = (props) => {
         sx={{
           width: { md: "300px", xl: "400px" },
           cursor: "pointer",
-          margin: "auto",
+          height: "100%",
+          maxHeight: "570px",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         }}
         onClick={handleRedirectProjectDetail}

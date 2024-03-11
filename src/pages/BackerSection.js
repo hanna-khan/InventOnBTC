@@ -51,6 +51,7 @@ const BackerSection = () => {
         sx={{
           backgroundImage: `url(${ForeImage})`,
           backgroundSize: "cover",
+          backgroundPosition: { xs: "11% 80%", md: "top left" },
         }}
       />
       <Box
@@ -70,7 +71,7 @@ const BackerSection = () => {
           <img className="md:w-auto w-[50vw]" src={MainImage1} alt="Image" />
           <div style={{ textAlign: "center", flex: 1 }}>
             <h1 className="md:text-[2rem] text-[1.2rem] md:leading-[44.8px] leading-[40px] md:mb-[40px] mb-2">
-              Fund the next big thing on
+              Fund the next big thing on{" "}
               <span style={{ color: theme.colors.primary }}>Bitcoin</span>
             </h1>
             <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[15px] mb-5">

@@ -32,7 +32,7 @@ const PressCard = (props) => {
         sx={{
           width: { md: "300px", xl: "400px" },
           cursor: "pointer",
-          margin: "auto",
+          height: "570px",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
         }}
       >
@@ -46,7 +46,7 @@ const PressCard = (props) => {
           src={props.image}
           alt="Project Image"
         />
-        <Box sx={{ p: theme.gaps[2], height: "293px" }}>
+        <Box sx={{ p: theme.gaps[2] }}>
           <Box
             sx={{
               ...theme.container,
@@ -95,11 +95,15 @@ const PressCard = (props) => {
           >
             {props.explain}
           </p> */}
-          <Box sx={{ ...theme.container, justifyContent: "flex-start" }}>
-            <img className="relative top-10" src={LaunchIcon} alt="Icon" />
-            <p className="text-[0.6rem] opacity-[0.6] relative top-10 ml-3">
-              Launching Soon
-            </p>
+          <Box
+            sx={{
+              ...theme.container,
+              justifyContent: "flex-start",
+              marginTop: "40px",
+            }}
+          >
+            <img src={LaunchIcon} alt="Icon" />
+            <p className="text-[0.6rem] opacity-[0.6] ml-3">Launching Soon</p>
           </Box>
         </Box>
       </Box>

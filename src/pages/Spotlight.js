@@ -40,7 +40,7 @@ const Spotlight = () => {
   return (
     <React.Fragment>
       <Box
-        className="m-auto flex flex-col justify-center mt-[10rem]"
+        className="max-w-[95%] m-auto flex flex-col justify-center mt-[10rem]"
         sx={{
           padding: "10px",
           background: theme.background.white,
@@ -65,9 +65,8 @@ const Spotlight = () => {
             color: "#808080",
           }}
         >
-          Get insights on the founders behind the projects on <br />{" "}
-          InventOnBTC. Dive deep into their vision behind <br /> their ideas and
-          innovations
+          Get insights on the founders behind the projects on InventOnBTC. Dive
+          deep into their vision behind <br /> their ideas and innovations
         </p>
         <Grid container columnGap={2} rowGap={5} justifyContent={"center"}>
           {FounderData.map((item, index) => {

@@ -61,9 +61,9 @@ const StartupSection = () => {
             alignItems: "flex-start",
           }}
         >
-          <Box className="flex justify-center items-center md:flex-row flex-col">
+          <Box className="flex justify-center md:flex-row flex-col">
             <div className="flex flex-col mb-6">
-              <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[58.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold md:mr-8 mr-0 md:max-w-[50%] max-w-[100%]">
+              <h1 className="md:text-[3rem] text-[1.5rem] md:leading-[58.8px] leading-[40px] md:mb-[30px] mb-4 font-extrabold md:mr-8 mr-0">
                 Become a Bitcoin Entrepreneur
               </h1>
               <Box>
@@ -81,21 +81,26 @@ const StartupSection = () => {
               </Box>
             </div>
 
-            <Button
-              className="navbar-item md:w-[300px] md:h-[80px] h-[50px] w-[120px]"
-              variant="contained"
-              sx={{
-                ...theme.buttons.primary,
-                ml: theme.gaps[2],
-              }}
+            <Box
+              as="a"
+              href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
             >
-              <span className="md:text-[1rem] text-[0.6rem] text-white">
-                start a project
-              </span>
-            </Button>
+              <Button
+                className="navbar-item md:w-[300px] md:h-[80px] h-[50px] w-[120px]"
+                variant="contained"
+                sx={{
+                  ...theme.buttons.primary,
+                  ml: theme.gaps[2],
+                }}
+              >
+                <span className="md:text-[1rem] text-[0.6rem] text-white">
+                  start a project
+                </span>
+              </Button>
+            </Box>
           </Box>
 
-          <Box className="md:mt-[4rem] mt-6 flex justify-center items-center gap-[4rem] flex-col md:flex-row">
+          <Box className="md:mt-[4rem] mt-6 flex justify-center items-center gap-[4rem] flex-col md:flex-row w-[100%]">
             <Box sx={{ textAlign: "center" }}>
               <img
                 className="md:w-auto w-[12vw] m-auto mb-6"
@@ -115,7 +120,6 @@ const StartupSection = () => {
               <p
                 style={{
                   fontWeight: 700,
-                  textAlign: "left",
                   lineHeight: "27px",
                 }}
               >
@@ -123,7 +127,6 @@ const StartupSection = () => {
               </p>
               <p
                 style={{
-                  textAlign: "left",
                   lineHeight: "27px",
                 }}
               >
@@ -151,7 +154,6 @@ const StartupSection = () => {
               <p
                 style={{
                   fontWeight: 700,
-                  textAlign: "left",
                   lineHeight: "27px",
                 }}
               >
@@ -159,7 +161,6 @@ const StartupSection = () => {
               </p>
               <p
                 style={{
-                  textAlign: "left",
                   lineHeight: "27px",
                 }}
               >
