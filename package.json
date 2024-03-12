@@ -1,6 +1,7 @@
 {
   "name": "source",
   "version": "0.1.0",
+  "homepage": "https://inventonbtc.com/",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",
