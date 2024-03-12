@@ -51,7 +51,7 @@ function App() {
         />
         <Route
           exact
-          path="/project_detail"
+          path="/project_detail/:index"
           element={
             <ProtectedRoute>
               <ProjectDetail />

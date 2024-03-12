@@ -72,6 +72,7 @@ const ProjectSection = () => {
                 leftDays={item.leftDays}
                 curated={item.curated}
                 treasury={item.treasury}
+                index={index}
               />
             </Grid>
           ))}

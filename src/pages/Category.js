@@ -596,7 +596,11 @@ const Home = () => {
                   src={Coin1}
                   alt="Icon"
                 />
-                <img src={Coin2} alt="Coin" />
+                <img
+                  src={Coin2}
+                  alt="Coin"
+                  style={{ width: "50px", height: "50px" }}
+                />
               </Box>
             </Box>
             <Box sx={{ ...theme.container, justifyContent: "space-between" }}>

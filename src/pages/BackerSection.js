@@ -177,7 +177,7 @@ const BackerSection = () => {
         <Button
           as={Link}
           to="/category"
-          className="navbar-item md:w-[180px] md:h-[2.6rem] h-[50px] w-[120px]"
+          className="navbar-item md:h-[2.6rem] h-[50px]"
           variant="contained"
           sx={{
             ...theme.buttons.primary,

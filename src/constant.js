@@ -76,8 +76,7 @@ export const ProjectsData = [
     image: Project1,
     title: "The world in shambles",
     content:
-      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
-    type: "Bitcoin Metaverse",
+      "Step into a post apocalyptic world where only Bitcoin can save the people",
     amout:
       "<b>23000</b> <span style='opacity: 0.6; font-size: 10.44px'> STX raised </span>",
     percent: 67,
@@ -90,7 +89,7 @@ export const ProjectsData = [
     image: Project2,
     title: "Bwallet: Software wallet for Bitcoin",
     content:
-      "1 in 100 babies are born with a congenital heart condition. We want to show their stories.",
+      "Bringing you an easy to use Bitcoin wallet with Ordinals, Stamps and BRC-20 integrations",
     type: "wallets",
     amout:
       "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
@@ -104,7 +103,7 @@ export const ProjectsData = [
     image: Project3,
     title: "Project eduBTC",
     content:
-      "A documentary about the life and death of a Brooklyn dive bar. Help me complete post-production!.",
+      "A virtual educational program focused on Bitcoin education for the masses. We go into  every aspect of Bitcoin integration",
     type: "bitcoin education",
     amout:
       "<b>2.66</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
@@ -118,7 +117,7 @@ export const ProjectsData = [
     image: Project4,
     title: "MinePRO: A self mining suite for Bitcoin miners",
     content:
-      "CYBERFROG: HEARTSICK DELUXE Edition! Let's RACE with CYBERFROG! MINI-CARS!.",
+      "CYBERFROG: HEARTSICK DELUXE Edition! Let's RACE with CYBERFROG! MINI-CARS!",
     type: "mining",
     amout:
       "<b>12.9</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
@@ -131,10 +130,9 @@ export const ProjectsData = [
 export const ProjectsFundData = [
   {
     image: Project1,
-    title: "The world in shambles",
+    title: "MinePRO: A self mining suite for Bitcoin miners",
     content:
-      "A Student Capstone Initiative Promoting Environmental Sustainability on our Public Lands.",
-    type: "Bitcoin Metaverse",
+      "CYBERFROG: HEARTSICK DELUXE Edition! Let's RACE with CYBERFROG! MINI-CARS!",
     amout:
       "<b>23000</b> <span style='opacity: 0.6; font-size: 10.44px'> STX raised </span>",
     percent: 67,
@@ -143,9 +141,9 @@ export const ProjectsFundData = [
 
   {
     image: Project2,
-    title: "Bwallet: Software wallet for Bitcoin",
+    title: "MinePRO: A self mining suite for Bitcoin miners",
     content:
-      "1 in 100 babies are born with a congenital heart condition. We want to show their stories.",
+      "CYBERFROG: HEARTSICK DELUXE Edition! Let's RACE with CYBERFROG! MINI-CARS!",
     type: "wallets",
     amout:
       "<b>1.22</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",
@@ -155,9 +153,9 @@ export const ProjectsFundData = [
 
   {
     image: Project3,
-    title: "Project eduBTC",
+    title: "MinePRO: A self mining suite for Bitcoin miners",
     content:
-      "A documentary about the life and death of a Brooklyn dive bar. Help me complete post-production!.",
+      "CYBERFROG: HEARTSICK DELUXE Edition! Let's RACE with CYBERFROG! MINI-CARS!",
     type: "bitcoin education",
     amout:
       "<b>2.66</b> <span style='opacity: 0.6; font-size: 10.44px'> BTC raised </span>",

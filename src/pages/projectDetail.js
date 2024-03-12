@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
 import { Box, Button, Slider, Checkbox, Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -11,7 +11,7 @@ import BackerCard from "../components/BackerCard";
 import Coin1 from "../assets/images/Footer_logo.png";
 import Coin2 from "../assets/images/coin_2.png";
 import LinkIcon from "../assets/images/link_icon.png";
-import { BackerData } from "../constant";
+import { BackerData, ProjectsData } from "../constant";
 import detailImage from "../assets/images/detail.png";
 
 const ProjectDetail = () => {
@@ -27,6 +27,10 @@ const ProjectDetail = () => {
     setImage(localStorage.getItem("selectedProjectImage"));
     setTitle(localStorage.getItem("selectedProjectTitle"));
   }, []);
+
+  const { index } = useParams();
+
+  console.log(ProjectsData[index]);
 
   return (
     <React.Fragment>
@@ -60,11 +64,10 @@ const ProjectDetail = () => {
                 textTransform: "uppercase",
               }}
             >
-              {title}
+              {ProjectsData[index].title}
             </h1>
             <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-medium">
-              Bringing an easy to use Bitcoin Wallet with ordinals , BRC20 and
-              Stamps integration
+              {ProjectsData[index].content}
             </p>
             <Box
               sx={{
@@ -81,22 +84,24 @@ const ProjectDetail = () => {
                 <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-medium">
                   3 Campaigns | Hongkong, Hong Kong
                 </p>
-                <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-bold mt-2">
-                  <Checkbox
-                    defaultChecked
-                    sx={{
-                      color: theme.colors.blue,
-                      padding: "0px",
-                      mr: "12px",
-                      "&.Mui-checked": {
+                {ProjectsData[index].curated ? (
+                  <p className="md:text-[1rem] text-[0.8rem] md:leading-[24px] leading-[20px] text-[#000] font-bold mt-2">
+                    <Checkbox
+                      defaultChecked
+                      sx={{
                         color: theme.colors.blue,
-                      },
-                    }}
-                  />
-                  <span style={{ color: theme.colors.blue }}>
-                    CURATED Projects
-                  </span>{" "}
-                </p>
+                        padding: "0px",
+                        mr: "12px",
+                        "&.Mui-checked": {
+                          color: theme.colors.blue,
+                        },
+                      }}
+                    />
+                    <span style={{ color: theme.colors.blue }}>
+                      CURATED Projects
+                    </span>{" "}
+                  </p>
+                ) : null}
               </Box>
             </Box>
             <Box className="flex justify-between">
@@ -191,77 +196,80 @@ const ProjectDetail = () => {
             </Box>
           </Box>
         </Box>
-        <Box
-          className="flex md:justify-start justify-center md:items-baseline items-center md:p-[38px] p-[10px]"
-          sx={{
-            background: theme.background.sectionColor,
-            flexDirection: "column",
-            gap: theme.gaps[3],
-          }}
-        >
-          <div className="block m-auto">
-            <Box className="flex items-center md:text-left text-center">
-              <h3 className="md:text-[2rem] text-[1.2rem] md:leading-[4rem] leading-[40px]">
-                This is a{" "}
-                <span style={{ color: theme.colors.blue }}>
-                  CURATED Project
-                  <Checkbox
-                    defaultChecked
-                    sx={{
-                      color: theme.colors.blue,
-                      padding: "0px",
-                      mr: "12px",
-                      "&.Mui-checked": {
+        {ProjectsData[index].curated ? (
+          <Box
+            className="flex md:justify-start justify-center md:items-baseline items-center md:p-[38px] p-[10px]"
+            sx={{
+              background: theme.background.sectionColor,
+              flexDirection: "column",
+              gap: theme.gaps[3],
+            }}
+          >
+            <div className="block m-auto">
+              <Box className="flex items-center md:text-left text-center">
+                <h3 className="md:text-[2rem] text-[1.2rem] md:leading-[4rem] leading-[40px]">
+                  This is a{" "}
+                  <span style={{ color: theme.colors.blue }}>
+                    CURATED Project
+                    <Checkbox
+                      defaultChecked
+                      sx={{
                         color: theme.colors.blue,
-                      },
-                    }}
-                  />
-                </span>{" "}
-              </h3>
-            </Box>
+                        padding: "0px",
+                        mr: "12px",
+                        "&.Mui-checked": {
+                          color: theme.colors.blue,
+                        },
+                      }}
+                    />
+                  </span>{" "}
+                </h3>
+              </Box>
 
-            <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[20px]  md:text-left text-center mb-[2rem]">
-              This means the project has gone through the process of satisfying
-              the requirements set forth by the platform designed <br /> to get
-              specific information* regarding development and teams.
-            </p>
-            <div className="flex flex-row flex-wrap gap-2">
-              <Button
-                className="navbar-item w-[13vw] h-[2rem]"
-                variant="contained"
-                sx={{
-                  ...theme.buttons.secondary,
-                }}
-              >
-                <span className="md:text-[0.7rem] text-[8px] text-dark">
-                  Bitcoin software
-                </span>
-              </Button>
-              <Button
-                className="navbar-item w-[13vw] h-[2rem]"
-                variant="contained"
-                sx={{
-                  ...theme.buttons.secondary,
-                }}
-              >
-                <span className="md:text-[0.7rem] text-[8px] text-dark">
-                  Productivity
-                </span>
-              </Button>
-              <Button
-                className="navbar-item w-[13vw] h-[2rem]"
-                variant="contained"
-                sx={{
-                  ...theme.buttons.secondary,
-                }}
-              >
-                <span className="md:text-[0.7rem] text-[8px] text-dark">
-                  Wallet
-                </span>
-              </Button>
+              <p className="md:text-[0.8rem] text-[0.7rem] md:leading-[24px] leading-[20px]  md:text-left text-center mb-[2rem]">
+                This means the project has gone through the process of
+                satisfying the requirements set forth by the platform designed{" "}
+                <br /> to get specific information* regarding development and
+                teams.
+              </p>
+              <div className="flex flex-row flex-wrap gap-2">
+                <Button
+                  className="navbar-item w-[13vw] h-[2rem]"
+                  variant="contained"
+                  sx={{
+                    ...theme.buttons.secondary,
+                  }}
+                >
+                  <span className="md:text-[0.7rem] text-[8px] text-dark">
+                    Bitcoin software
+                  </span>
+                </Button>
+                <Button
+                  className="navbar-item w-[13vw] h-[2rem]"
+                  variant="contained"
+                  sx={{
+                    ...theme.buttons.secondary,
+                  }}
+                >
+                  <span className="md:text-[0.7rem] text-[8px] text-dark">
+                    Productivity
+                  </span>
+                </Button>
+                <Button
+                  className="navbar-item w-[13vw] h-[2rem]"
+                  variant="contained"
+                  sx={{
+                    ...theme.buttons.secondary,
+                  }}
+                >
+                  <span className="md:text-[0.7rem] text-[8px] text-dark">
+                    Wallet
+                  </span>
+                </Button>
+              </div>
             </div>
-          </div>
-        </Box>
+          </Box>
+        ) : null}
         <div className="flex flex-col  my-[4rem] justify-center items-center p-5">
           <h1 className="md:text-[1.5rem] text-[1rem] md:mb-[20px] mb-4 font-bold text-center">
             GET MORE INFORMATION TO HELP YOU IN YOUR FUNDING DECISION

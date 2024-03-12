@@ -29,7 +29,7 @@ const ProjectCard = (props) => {
   const handleRedirectProjectDetail = () => {
     localStorage.setItem("selectedProjectImage", props.image);
     localStorage.setItem("selectedProjectTitle", props.title);
-    navigate(`/project_detail/`);
+    navigate(`/project_detail/${props.index}`);
   };
 
   return (
@@ -57,7 +57,7 @@ const ProjectCard = (props) => {
         <Box sx={{ p: theme.gaps[2] }}>
           <Box
             sx={{
-              ...theme.container,
+              display: "flex",
               justifyContent: "space-between",
               mb: theme.gaps[2],
             }}
@@ -79,9 +79,13 @@ const ProjectCard = (props) => {
                       "&.Mui-checked": {
                         color: theme.colors.blue,
                       },
+                      width: "14px",
+                      height: "14px",
                     }}
                   />
-                  <span style={{ color: theme.colors.blue }}>CURATED</span>
+                  <span style={{ color: theme.colors.blue, fontSize: "14px" }}>
+                    CURATED
+                  </span>
                   <div
                     style={{
                       backgroundColor: theme.colors.blue,
@@ -92,7 +96,7 @@ const ProjectCard = (props) => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      fontSize: "16px",
+                      fontSize: "14px",
                       opacity: 0.6,
                     }}
                   >
@@ -108,10 +112,17 @@ const ProjectCard = (props) => {
                         padding: "0px",
                         "&.Mui-checked": {
                           color: theme.colors.secondary,
+                          width: "14px",
+                          height: "14px",
                         },
                       }}
                     />
-                    <span style={{ color: theme.colors.secondary }}>
+                    <span
+                      style={{
+                        color: theme.colors.secondary,
+                        fontSize: "14px",
+                      }}
+                    >
                       Treasury Funded
                     </span>
                     <div
@@ -124,7 +135,7 @@ const ProjectCard = (props) => {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        fontSize: "16px",
+                        fontSize: "14px",
                         opacity: 0.6,
                       }}
                     >
