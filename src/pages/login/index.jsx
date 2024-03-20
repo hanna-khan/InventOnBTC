@@ -3,9 +3,9 @@ import React from "react";
 
 const Login = () => {
   return (
-    <Box>
-      <Text>Login</Text>
-    </Box>
+   <>
+   <h1 className="text-red-700">hello</h1>
+   </>
   );
 };
 

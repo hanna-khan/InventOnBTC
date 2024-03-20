@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "./layout";
+import "./index.css";
 
 const App = () => {
   return (
