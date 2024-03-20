@@ -79,7 +79,7 @@ const Home = () => {
           mb={4}
           color={useColorModeValue("#fff", "gray.400")}
         >
-          Find
+          Fund with
         </Text>
         <HStack spacing={5} mt={4}>
           <Image sx={{ width: "3vw" }} src={Coin1} alt="Coin1" />
