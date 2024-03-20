@@ -28,9 +28,11 @@ const Home = () => {
         bg="#151517"
         color="white"
         p={6}
+        pl={20}
+        pt={40}
         w={{ base: "100%", md: "60%" }}
       >
-        <Heading as="h3" size="lg" fontWeight="bold" textAlign="left" mb={2}>
+        <Heading as="h1" size="xl" fontWeight="bold" textAlign="left" mb={2}>
           Crowdfunding for Bitcoin <br /> start-ups
         </Heading>
         <Text
@@ -68,6 +70,17 @@ const Home = () => {
             For Starters
           </Button>
         </HStack>
+        <Text
+          fontSize="1rem"
+          textAlign="left"
+          lineHeight="1.375"
+          fontWeight="300"
+          maxW={{ base: "100%", md: "470px" }}
+          mb={4}
+          color={useColorModeValue("#fff", "gray.400")}
+        >
+          Find
+        </Text>
         <HStack spacing={5} mt={4}>
           <Image sx={{ width: "3vw" }} src={Coin1} alt="Coin1" />
           <Image sx={{ width: "3vw" }} src={Coin2} alt="Coin2" />
