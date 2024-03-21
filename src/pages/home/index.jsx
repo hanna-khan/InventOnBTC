@@ -16,6 +16,7 @@ import Coin1 from "../../assets/images/coin_1.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import TrendingProjects from "./TrendingProjects";
 import CuratedProjects from "./CuratedProjects";
+import Spotlight from "./Spotlight";
 
 const Home = () => {
   return (
@@ -102,6 +103,7 @@ const Home = () => {
       </Stack>
       <TrendingProjects />
       <CuratedProjects />
+      <Spotlight />
     </>
   );
 };
