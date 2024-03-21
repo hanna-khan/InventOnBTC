@@ -41,21 +41,21 @@ const Feedback = () => {
         founders and backers have to say about their experience with our
         crowdfunding platform.
       </Text>
-      <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+      <Flex justifyContent="space-between" flexWrap="wrap">
         {data.map((item, index) => (
-          <GridItem key={index}>
+          <Box key={index} flexBasis="50%" mb={4}>
             <Card maxW="md" bg="#f8f8f8" rounded="md">
-              <Flex p="4" align="center">
+              <Flex p="4">
                 <Avatar name="Segun Adebayo" src={item.image} />
                 <Box ml="3">
-                  <Heading size="sm">John Smith</Heading>
-                  <Text>{item.title}</Text>
+                  <Heading size="sm">{item.title}</Heading>
+                  <Text>{item.content}</Text>
                 </Box>
               </Flex>
             </Card>
-          </GridItem>
+          </Box>
         ))}
-      </Grid>
+      </Flex>
     </Container>
   );
 };
