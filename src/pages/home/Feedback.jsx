@@ -17,23 +17,23 @@ import { data } from "../../utils/FeedbackData";
 
 const Feedback = () => {
   return (
-    <Container maxW={"90vw"} mt={20}>
+    <Container maxW={"90vw"} mt={20} mb={20}>
       <Heading
         as="h3"
         size="lg"
         fontWeight="bold"
         textAlign="left"
-        mb={8}
+        mb={2}
         textTransform={"uppercase"}
       >
         What People Are Saying
       </Heading>
       <Text
-        fontSize="0.7rem"
+        fontSize="1rem"
         textAlign="left"
         lineHeight="1.375"
         fontWeight="400"
-        maxW={{ base: "100%", md: "470px" }}
+        maxW={{ base: "100%", md: "570px" }}
         mb={10}
         color={useColorModeValue("#6d6d6e", "gray.400")}
       >
@@ -41,7 +41,7 @@ const Feedback = () => {
         founders and backers have to say about their experience with our
         crowdfunding platform.
       </Text>
-      <Flex justifyContent="center" alignItems={'center'} flexWrap="wrap">
+      <Flex justifyContent="center" alignItems={"center"} flexWrap="wrap">
         {data.map((item, index) => (
           <Box key={index} flexBasis="40%" mb={4}>
             <Card maxW="md" bg="#f8f8f8" rounded="md">
