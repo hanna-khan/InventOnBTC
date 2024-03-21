@@ -101,7 +101,6 @@ const Blog = () => {
                         </Text>
                       </Box>
                     </Stack>
-                  <Divider />
               </GridItem>
             ))}
           </Grid>

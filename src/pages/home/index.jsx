@@ -19,6 +19,7 @@ import CuratedProjects from "./CuratedProjects";
 import Spotlight from "./Spotlight";
 import Blog from "./Blog";
 import Category from "./Category";
+import Feedback from "./Feedback";
 
 const Home = () => {
   return (
@@ -108,6 +109,7 @@ const Home = () => {
       <Category />
       <Spotlight />
       <Blog />
+      <Feedback />
     </>
   );
 };
