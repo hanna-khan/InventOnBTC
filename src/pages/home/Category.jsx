@@ -11,6 +11,7 @@ export default function Category() {
         textAlign={"center"}
         spacing={{ base: 4, md: 7 }}
         py={{ base: 20, md: 36 }}
+        mt={20}
       >
         <Heading
           fontWeight={700}
