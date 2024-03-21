@@ -18,6 +18,7 @@ import TrendingProjects from "./TrendingProjects";
 import CuratedProjects from "./CuratedProjects";
 import Spotlight from "./Spotlight";
 import Blog from "./Blog";
+import Category from "./Category";
 
 const Home = () => {
   return (
@@ -104,6 +105,7 @@ const Home = () => {
       </Stack>
       <TrendingProjects />
       <CuratedProjects />
+      <Category />
       <Spotlight />
       <Blog />
     </>
