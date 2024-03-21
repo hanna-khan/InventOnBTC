@@ -41,9 +41,9 @@ const Feedback = () => {
         founders and backers have to say about their experience with our
         crowdfunding platform.
       </Text>
-      <Flex justifyContent="space-between" flexWrap="wrap">
+      <Flex justifyContent="center" alignItems={'center'} flexWrap="wrap">
         {data.map((item, index) => (
-          <Box key={index} flexBasis="50%" mb={4}>
+          <Box key={index} flexBasis="40%" mb={4}>
             <Card maxW="md" bg="#f8f8f8" rounded="md">
               <Flex p="4">
                 <Avatar name="Segun Adebayo" src={item.image} />
