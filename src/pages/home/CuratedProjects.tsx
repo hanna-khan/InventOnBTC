@@ -17,8 +17,8 @@ import {
     Flex
 } from "@chakra-ui/react";
 import { CiHeart } from "react-icons/ci";
-import { data } from '../../utils/TrendingProjectsData';
-const TrendingProjects = () => {
+import { data } from '../../utils/CuratedProjectData';
+const CuratedProjects = () => {
     return (
         <>
             <Container
@@ -26,9 +26,9 @@ const TrendingProjects = () => {
             >
                 <Box mt="8rem">
                     <Heading as="h3" size="xl" fontWeight="bold" textAlign="left" mb={8} textTransform={"uppercase"}>
-                        Trending Projects
+                        Curated Projects
                     </Heading>
-                    <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+                    <Grid templateColumns="repeat(3, 1fr)" gap={10}>
                         {data.map((item, index) => (
                             <GridItem key={index}>
                                 <Card maxW="sm" minH="550px" height="auto">
@@ -144,4 +144,4 @@ const TrendingProjects = () => {
     )
 }
 
-export default TrendingProjects
+export default CuratedProjects

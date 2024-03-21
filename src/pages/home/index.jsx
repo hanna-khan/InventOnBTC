@@ -15,6 +15,7 @@ import HeroImage from "../../assets/images/hero_img.png";
 import Coin1 from "../../assets/images/coin_1.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import TrendingProjects from "./TrendingProjects";
+import CuratedProjects from "./CuratedProjects";
 
 const Home = () => {
   return (
@@ -100,6 +101,7 @@ const Home = () => {
         </Box>
       </Stack>
       <TrendingProjects />
+      <CuratedProjects />
     </>
   );
 };
