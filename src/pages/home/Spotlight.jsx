@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react'
 import {
     Heading,
@@ -8,12 +10,10 @@ import {
     Card,
     CardBody,
     Stack,
-    CardFooter,
     Divider,
     Box,
     Container,
     useColorModeValue,
-    Progress,
     Flex
 } from "@chakra-ui/react";
 import { CiHeart } from "react-icons/ci";

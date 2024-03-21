@@ -17,6 +17,7 @@ import Coin2 from "../../assets/images/coin_2.png";
 import TrendingProjects from "./TrendingProjects";
 import CuratedProjects from "./CuratedProjects";
 import Spotlight from "./Spotlight";
+import Blog from "./Blog";
 
 const Home = () => {
   return (
@@ -104,6 +105,7 @@ const Home = () => {
       <TrendingProjects />
       <CuratedProjects />
       <Spotlight />
+      <Blog />
     </>
   );
 };
