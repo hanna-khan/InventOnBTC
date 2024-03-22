@@ -17,7 +17,7 @@ import { data } from "../../utils/FeedbackData";
 
 const Feedback = () => {
   return (
-    <Container maxW={"90vw"} mt={20} mb={20}>
+    <Container maxW={"1440px"} mt={20} mb={20}>
       <Heading
         as="h3"
         size="lg"

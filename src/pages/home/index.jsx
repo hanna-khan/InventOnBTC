@@ -33,65 +33,73 @@ const Home = () => {
           direction="column"
           bg="#151517"
           color="white"
-          p={6}
-          pl={20}
-          pt={40}
           w={{ base: "100%", md: "60%" }}
+          alignItems={"center"}
+          justifyContent={"center"}
         >
-          <Heading as="h1" size="xl" fontWeight="bold" textAlign="left" mb={2}>
-            Crowdfunding for Bitcoin <br /> start-ups
-          </Heading>
-          <Text
-            fontSize="1.2rem"
-            textAlign="left"
-            lineHeight="1.375"
-            fontWeight="300"
-            maxW={{ base: "100%", md: "470px" }}
-            mb={4}
-            color={useColorModeValue("#6d6d6e", "gray.400")}
-          >
-            Join the revolution and support groundbreaking Bitcoin based
-            projects
-          </Text>
-          <HStack spacing={3}>
-            <Button
-              colorScheme="teal"
-              variant="solid"
-              size="md"
-              rounded="md"
-              boxShadow="md"
-              color="black"
-              bg="white"
+          <Box>
+            <Heading
+              as="h1"
+              size="xl"
+              fontWeight="bold"
+              textAlign="left"
+              mb={2}
             >
-              For Backers
-            </Button>
-            <Button
-              colorScheme="teal"
-              variant="solid"
-              size="md"
-              rounded="md"
-              boxShadow="md"
-              color="black"
-              bg="white"
+              Crowdfunding for Bitcoin <br /> start-ups
+            </Heading>
+            <Text
+              fontSize="1.2rem"
+              textAlign="left"
+              lineHeight="1.375"
+              fontWeight="300"
+              maxW={{ base: "100%", md: "470px" }}
+              mb={4}
+              color={useColorModeValue("#6d6d6e", "gray.400")}
             >
-              For Starters
-            </Button>
-          </HStack>
-          <Text
-            fontSize="1rem"
-            textAlign="left"
-            lineHeight="1.375"
-            fontWeight="300"
-            maxW={{ base: "100%", md: "470px" }}
-            mb={4}
-            color={useColorModeValue("#fff", "gray.400")}
-          >
-            Fund with
-          </Text>
-          <HStack spacing={5} mt={4}>
-            <Image sx={{ width: "3vw" }} src={Coin1} alt="Coin1" />
-            <Image sx={{ width: "3vw" }} src={Coin2} alt="Coin2" />
-          </HStack>
+              Join the revolution and support groundbreaking Bitcoin based
+              projects
+            </Text>
+            <HStack spacing={3}>
+              <Button
+                colorScheme="teal"
+                variant="solid"
+                size="md"
+                rounded="md"
+                boxShadow="md"
+                color="black"
+                bg="white"
+              >
+                For Backers
+              </Button>
+              <Button
+                colorScheme="teal"
+                variant="solid"
+                size="md"
+                rounded="md"
+                boxShadow="md"
+                color="black"
+                bg="white"
+              >
+                For Starters
+              </Button>
+            </HStack>
+            <Text
+              fontSize="1rem"
+              textAlign="left"
+              lineHeight="1.375"
+              fontWeight="300"
+              maxW={{ base: "100%", md: "470px" }}
+              mb={"4px"}
+              mt="10px"
+              color={useColorModeValue("#fff", "gray.400")}
+            >
+              Fund with
+            </Text>
+            <HStack spacing={5} mt={"4px"}>
+              <Image sx={{ width: "3vw" }} src={Coin1} alt="Coin1" />
+              <Image sx={{ width: "3vw" }} src={Coin2} alt="Coin2" />
+            </HStack>
+          </Box>
         </Stack>
         <Box w={{ base: "100%", md: "40vw" }}>
           <Image

@@ -15,12 +15,13 @@ import {
   Container,
   useColorModeValue,
   Flex,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { data } from "../../utils/BlogData";
 const Blog = () => {
   return (
     <>
-      <Container maxW="90vw">
+      <Container maxW="1440px">
         <Box mt="8rem">
           <Heading
             as="h3"
@@ -42,68 +43,72 @@ const Blog = () => {
           >
             Keep up-to date on the Bitcoin Economy
           </Heading>
-          <Grid templateColumns="repeat(3, 1fr)" gap={10}>
+          <SimpleGrid
+            columns={{ base: 2, md: 2, lg: 3, xl: 3 }}
+            gap={6}
+            justifyContent="center"
+          >
             {data.map((item, index) => (
-              <GridItem key={index}>
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    objectFit="cover"
-                    maxH="350px"
-                    width="100%"
-                  />
-                    <Stack mt="2" spacing="3">
-                      <Flex justifyContent={"space-between"}>
-                        <Text
-                          fontSize="0.8rem"
-                          margin={'auto'}
-                          display={'block'}
-                          lineHeight="1.375"
-                          fontWeight="600"
-                          maxW={{ base: "100%", md: "470px" }}
-                          color={useColorModeValue("#000", "gray.400")}
-                        >
-                          {item.title}
-                        </Text>
-                      </Flex>
-                      <Box maxW={"20vw"}>
-                        <Text
-                          fontSize="0.8rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="600"
-                          maxW={{ base: "100%", md: "470px" }}
-                          color={useColorModeValue("#000", "gray.400")}
-                        >
-                          {item.subTitle}
-                        </Text>
-                        <Text
-                          fontSize="0.7rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="400"
-                          maxW={{ base: "100%", md: "470px" }}
-                          mb={4}
-                          color={useColorModeValue("#6d6d6e", "gray.400")}
-                        >
-                          {item.content}
-                        </Text>
-                        <Text
-                          fontSize="0.7rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="600"
-                          textTransform={"uppercase"}
-                          maxW={{ base: "100%", md: "470px" }}
-                          color={useColorModeValue("#000", "gray.400")}
-                        >
-                         Learn More {'>'}
-                        </Text>
-                      </Box>
-                    </Stack>
-              </GridItem>
+              <Box key={index}>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  objectFit="cover"
+                  maxH="350px"
+                  width="100%"
+                />
+                <Stack mt="2" spacing="3">
+                  <Flex justifyContent={"space-between"}>
+                    <Text
+                      fontSize="0.8rem"
+                      margin={"auto"}
+                      display={"block"}
+                      lineHeight="1.375"
+                      fontWeight="600"
+                      maxW={{ base: "100%", md: "470px" }}
+                      color={useColorModeValue("#000", "gray.400")}
+                    >
+                      {item.title}
+                    </Text>
+                  </Flex>
+                  <Box maxW={"20vw"}>
+                    <Text
+                      fontSize="0.8rem"
+                      textAlign="left"
+                      lineHeight="1.375"
+                      fontWeight="600"
+                      maxW={{ base: "100%", md: "470px" }}
+                      color={useColorModeValue("#000", "gray.400")}
+                    >
+                      {item.subTitle}
+                    </Text>
+                    <Text
+                      fontSize="0.7rem"
+                      textAlign="left"
+                      lineHeight="1.375"
+                      fontWeight="400"
+                      maxW={{ base: "100%", md: "470px" }}
+                      mb={4}
+                      color={useColorModeValue("#6d6d6e", "gray.400")}
+                    >
+                      {item.content}
+                    </Text>
+                    <Text
+                      fontSize="0.7rem"
+                      textAlign="left"
+                      lineHeight="1.375"
+                      fontWeight="600"
+                      textTransform={"uppercase"}
+                      maxW={{ base: "100%", md: "470px" }}
+                      color={useColorModeValue("#000", "gray.400")}
+                    >
+                      Learn More {">"}
+                    </Text>
+                  </Box>
+                </Stack>
+              </Box>
             ))}
-          </Grid>
+          </SimpleGrid>
         </Box>
       </Container>
     </>
