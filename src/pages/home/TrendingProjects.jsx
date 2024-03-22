@@ -34,7 +34,7 @@ const TrendingProjects = () => {
             Trending Projects
           </Heading>
           <SimpleGrid
-            columns={{ base: 2, md: 2, lg: 3, xl: 4 }}
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
             gap={6}
             justifyContent="center"
           >
