@@ -134,7 +134,8 @@ const Footer = () => {
       <Box
         display={"flex"}
         gap={6}
-        justifyContent={{ base: "flex-start", lg: "center" }}
+        justifyContent={{ base: "center", lg: "flex-start" }}
+        ml={10}
       >
         <Button
           marginTop={4}
