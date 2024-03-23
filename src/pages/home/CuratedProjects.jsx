@@ -13,9 +13,12 @@ import {
   Progress,
   Flex,
   SimpleGrid,
+  Icon,
 } from "@chakra-ui/react";
 import { CiHeart } from "react-icons/ci";
 import { data } from "../../utils/CuratedProjectData";
+import { FaCheckSquare } from "react-icons/fa";
+import { QuestionIcon } from "@chakra-ui/icons";
 
 const CuratedProjects = () => {
   return (
@@ -46,7 +49,7 @@ const CuratedProjects = () => {
                 margin={"auto"}
               >
                 <Image src={item.image} alt={item.title} />
-                <CardBody overflowY="auto" maxH="500px">
+                <CardBody overflowY="auto" minH="300px">
                   <Stack mt="2" spacing="3">
                     <Flex justifyContent="space-between" alignItems="center">
                       <Flex gap={2} alignItems="center">
@@ -61,49 +64,40 @@ const CuratedProjects = () => {
                         >
                           {item.title}
                         </Text>
-                        <Flex flexDir={"column"}>
-                          <Box display={"flex"} flexDir={"row"} gap={2}>
-                            {item.icon &&
-                              React.createElement(item.icon, {
-                                size: 22,
-                                color: "#0034ec",
-                              })}
-                            <Text
-                              fontSize="0.7rem"
-                              letterSpacing={"2px"}
-                              textAlign="left"
-                              lineHeight="1.375"
-                              fontWeight="extrabold"
-                              textTransform={"uppercase"}
-                              color={"#0034ec"}
-                            >
-                              {item.checked}
-                            </Text>
-                          </Box>
-                          <Box display={"flex"} flexDir={"row"} gap={2}>
-                            {item.icon1 &&
-                              React.createElement(item.icon1, {
-                                size: 22,
-                                color: "#0034ec",
-                              })}
-                            <Text
-                              fontSize="0.7rem"
-                              letterSpacing={"2px"}
-                              textAlign="left"
-                              lineHeight="1.375"
-                              fontWeight="extrabold"
-                              textTransform={"uppercase"}
-                              color={"#0034ec"}
-                            >
-                              {item.checked2}
-                            </Text>
-                          </Box>
-                        </Flex>
-                        {item.icon2 &&
-                          React.createElement(item.icon2, {
-                            size: 22,
-                            color: "#848484",
-                          })}
+                        <Box>
+                          {item.curated ? (
+                            <Flex alignItems="center">
+                              <Icon
+                                as={FaCheckSquare}
+                                color="#0034EC"
+                                marginRight="3px"
+                              />
+                              <Text color="#0034EC">Curated</Text>
+                              <Icon
+                                as={QuestionIcon}
+                                opacity={0.5}
+                                marginLeft="10px"
+                                color="#0034EC"
+                              />
+                            </Flex>
+                          ) : null}
+                          {item.treasuryFunded ? (
+                            <Flex alignItems="center">
+                              <Icon
+                                as={FaCheckSquare}
+                                color="#E16A15"
+                                marginRight="3px"
+                              />
+                              <Text color="#E16A15">Treasury Funded</Text>
+                              <Icon
+                                as={QuestionIcon}
+                                opacity={0.5}
+                                marginLeft="10px"
+                                color="#E16A15"
+                              />
+                            </Flex>
+                          ) : null}
+                        </Box>
                       </Flex>
                       <CiHeart size={20} color="gray" />
                     </Flex>

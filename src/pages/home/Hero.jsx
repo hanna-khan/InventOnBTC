@@ -94,8 +94,8 @@ const Hero = () => {
                 Fund with
               </Text>
               <HStack spacing={5} mt={"4px"}>
-                <Image sx={{ width: "3vw" }} src={Coin1} alt="Coin1" />
-                <Image sx={{ width: "3vw" }} src={Coin2} alt="Coin2" />
+                <Image sx={{ width: "50px" }} src={Coin1} alt="Coin1" />
+                <Image sx={{ width: "50px" }} src={Coin2} alt="Coin2" />
               </HStack>
             </Box>
           </Box>
