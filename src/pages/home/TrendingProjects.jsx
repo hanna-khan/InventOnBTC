@@ -43,20 +43,45 @@ const TrendingProjects = () => {
                 <Image src={item.image} alt={item.title} />
                 <CardBody overflowY="auto" maxH="500px">
                   <Stack mt="2" spacing="3">
-                    <Flex justifyContent={"space-between"}>
-                      <Text
-                        fontSize="0.7rem"
-                        textAlign="left"
-                        lineHeight="1.375"
-                        fontWeight="500"
-                        textTransform={"uppercase"}
-                        maxW={{ base: "100%", md: "470px" }}
-                        color={useColorModeValue("#000", "gray.400")}
-                      >
-                        {item.title}
-                      </Text>
+                    <Flex
+                      justifyContent={"space-between"}
+                      alignItems="center"
+                      gap={2}
+                    >
+                      <Flex gap={2} alignItems="center">
+                        <Text
+                          fontSize="0.7rem"
+                          textAlign="left"
+                          lineHeight="1.375"
+                          fontWeight="500"
+                          textTransform={"uppercase"}
+                          maxW={{ base: "100%", md: "470px" }}
+                          color={useColorModeValue("#000", "gray.400")}
+                        >
+                          {item.title}
+                        </Text>
+                        {item.icon &&
+                          React.createElement(item.icon, {
+                            size: 22,
+                            color: "#0034ec",
+                          })}
+                        <Text
+                          fontSize="0.7rem"
+                          letterSpacing={"2px"}
+                          textAlign="left"
+                          lineHeight="1.375"
+                          fontWeight="extrabold"
+                          textTransform={"uppercase"}
+                          maxW={{ base: "100%", md: "470px" }}
+                          color={useColorModeValue("#0034ec", "gray.400")}
+                        >
+                          {item.checked}
+                        </Text>
+                      </Flex>
+
                       <CiHeart size={20} color="gray" />
                     </Flex>
+
                     <Text
                       fontSize="0.8rem"
                       textAlign="left"

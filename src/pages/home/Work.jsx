@@ -3,22 +3,35 @@
 import React from "react";
 import {
   Heading,
-  Grid,
-  GridItem,
   Text,
-  Image,
   Card,
-  CardBody,
-  Stack,
-  Divider,
   Box,
   Container,
-  useColorModeValue,
-  Flex,
   SimpleGrid,
+  Stepper,
+  Step,
+  StepSeparator,
+  StepDescription,
+  StepTitle,
+  StepIcon,
+  StepNumber,
+  StepStatus,
+  StepIndicator,
 } from "@chakra-ui/react";
 import { data } from "../../utils/WorkData";
+import { useSteps } from "chakra-ui-steps";
+const steps = [
+  { title: "First" },
+  { title: "Second" },
+  { title: "Third" },
+  { title: "Forth" },
+];
+
 const Work = () => {
+  const { activeStep } = useSteps({
+    index: 1,
+    count: steps.length,
+  });
   return (
     <>
       <Container maxW="1440px">
@@ -44,6 +57,47 @@ const Work = () => {
             Welcome to InventOnBTC, where you can support and fund projects
             created on Bitcoin. Here's how it works:
           </Heading>
+          <Stepper
+            size="lg"
+            index={activeStep}
+            orientation="horizontal"
+            
+            gap={0}
+          >
+            {steps.map((step, index) => (
+              <Step key={index} gap="0">
+                <StepIndicator
+                  sx={{
+                    bg: "#e16a15",
+                    border: "#e16a15",
+                    color: "#fff",
+                    width: "3rem",
+                    height: "3rem",
+                    gap: 0,
+                  }}
+                >
+                  <StepStatus
+                    sx={{
+                      gap: 0,
+                    }}
+                    complete={<StepIcon />}
+                    incomplete={<StepNumber />}
+                    active={<StepNumber />}
+                  />
+                </StepIndicator>
+
+                <StepSeparator
+                  size="md"
+                  sx={{
+                    bg: "#e16a15", // Background color of the step separator
+                    width: "1px", // Adjust the width of the step separator
+                    gap: 0,
+                  }}
+                />
+              </Step>
+            ))}
+          </Stepper>
+
           <SimpleGrid
             columns={{ base: 1, md: 1, lg: 3, xl: 4 }}
             gap={6}
