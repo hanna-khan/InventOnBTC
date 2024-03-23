@@ -6,9 +6,9 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <Flex sx={{ flexDirection: "column", height: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </Flex>
   );
 };
