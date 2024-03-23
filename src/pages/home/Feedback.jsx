@@ -48,9 +48,9 @@ const Feedback = () => {
         justifyContent="center"
       >
         {data.map((item, index) => (
-          <Box key={index} flexBasis="40%" mb={4}>
-            <Card maxW="md" bg="#f8f8f8" rounded="md">
-              <Flex p="4">
+          <Box key={index}  mb={4}>
+            <Card maxW="md" bg="#f8f8f8" rounded="md" margin={'auto'}>
+              <Flex p="4" >
                 <Avatar name="Segun Adebayo" src={item.image} />
                 <Box ml="3">
                   <Heading size="sm">{item.title}</Heading>
