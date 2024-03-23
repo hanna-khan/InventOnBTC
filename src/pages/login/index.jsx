@@ -1,11 +1,270 @@
-import { Box, Text } from "@chakra-ui/react";
 import React from "react";
+import {
+  Heading,
+  Stack,
+  Image,
+  Skeleton,
+  Box,
+  Text,
+  Container,
+  Flex,
+  Input,
+  Button,
+} from "@chakra-ui/react";
+import BetaLogin from "../../assets/images/beta_icon.png";
+import Logo from "../../assets/images/logo.png";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-   <>
-   <h1 className="text-red-700">hello</h1>
-   </>
+    <>
+      <Box bg="#000" minHeight="auto">
+        <Box bg="black" p={0} margin={0}>
+          <Container maxW={"1440px"}>
+            <Flex
+              color="white"
+              py={{ base: 2 }}
+              align="center"
+              justifyContent={"space-between"}
+            >
+              <Flex align="center">
+                <Image boxSize="60px" src={Logo} alt="Logo" />
+                <Box>
+                  <Text
+                    as="h1"
+                    color="white"
+                    fontSize="xl"
+                    textTransform={"uppercase"}
+                  >
+                    ION | Invent On
+                    <Box as="span" color="#fba418" display="block">
+                      BTC
+                    </Box>
+                  </Text>
+                </Box>
+              </Flex>
+
+              <Stack
+                flex={{ base: 1, md: 0 }}
+                justify="flex-end"
+                direction="row"
+                spacing={6}
+                align="center"
+              >
+                <Text as="h1" color="gray" fontSize="md">
+                  DOCS
+                </Text>
+              </Stack>
+            </Flex>
+          </Container>
+        </Box>
+        <Stack
+          direction={"row"}
+          mt={{ base: 0, md: -1 }}
+          gap={0}
+          justifyContent={"space-between"}
+        >
+          <Stack
+            direction="column"
+            color="white"
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <Box
+              pl={4}
+              p={{ base: "0", lg: "2rem" }}
+              ml={{ base: 2, lg: 10 }}
+              display={"flex"}
+              flexDir={{ base: "column", lg: "row" }}
+              mt={"4rem"}
+            >
+              <Box>
+                <Heading
+                  maxW={{ base: "100vw", lg: "30vw" }}
+                  as="h1"
+                  size={{ base: "xl", md: "2xl" }}
+                  fontWeight="bold"
+                  textAlign="left"
+                  mb={"4rem"}
+                >
+                  DEFI CROWDFUNDING FOR{" "}
+                  <span style={{ color: "#f68d2c" }}>BITCOIN</span> STARTUPS
+                </Heading>
+                <Heading
+                  as="h1"
+                  size="2xl"
+                  fontWeight="400"
+                  textAlign="left"
+                  mb={4}
+                >
+                  COMING SOON
+                </Heading>
+              </Box>
+              <Box mt={"6rem"} ml={"4rem"} display={"flex"} gap={4}>
+                <FaArrowRightLong size={60} />
+                <Text
+                  fontWeight="400"
+                  textAlign="right"
+                  textTransform={"uppercase"}
+                  mb={4}
+                  fontSize={"1.2rem"}
+                >
+                  Access Invite Only <br /> Beta
+                </Text>
+                {/* <Box borderBottom="2px solid #e9522a" width="100%" /> */}
+              </Box>
+            </Box>
+          </Stack>
+          <Box mt={20}>
+            <Image
+              w="100%"
+              h="100%"
+              display={{ base: "none", lg: "block" }}
+              minW={{ base: "auto" }}
+              objectFit="cover"
+              src={BetaLogin}
+              fallback={<Skeleton />}
+            />
+          </Box>
+        </Stack>
+      </Box>
+      <Box
+        bg="#d97c27"
+        minHeight="auto"
+        pb={20}
+        display={"flex"}
+        flexDir={"column"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
+        <Stack
+          direction={{ base: "column-reverse", md: "row" }}
+          mt={{ base: 0, md: -1 }}
+          gap={0}
+          justifyContent={"space-between"}
+        >
+          <Stack
+            direction="column"
+            color="white"
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <Box
+              pl={4}
+              p={{ base: "2rem", lg: "0" }}
+              ml={10}
+              display={"flex"}
+              flexDir={"row"}
+              mt={"4rem"}
+            >
+              <Box
+                display={"flex"}
+                flexDir={{ base: "column", lg: "row" }}
+                gap={8}
+                justifyContent={"center"}
+                alignItems={"center"}
+                margin={"auto"}
+              >
+                <Text
+                  fontWeight="400"
+                  textAlign="right"
+                  mb={4}
+                  fontSize={"1rem"}
+                >
+                  Sign up for early BETA access
+                </Text>
+
+                <Flex flexDir={"column"} gap={4}>
+                  <Input
+                    placeholder="Your Email address"
+                    size="sm"
+                    height="35px"
+                    width="250px"
+                    bg={"white"}
+                  />
+                  <Input
+                    placeholder="Your twitter handle @"
+                    size="sm"
+                    height="35px"
+                    width="250px"
+                    bg={"white"}
+                  />
+                  <Button
+                    textAlign={"center"}
+                    marginTop={4}
+                    size="md"
+                    height="25PX"
+                    width="80px"
+                    borderColor="#fba418"
+                    bg="#fff"
+                    rounded={0}
+                    color={"#000"}
+                    textTransform={"uppercase"}
+                    fontSize={"12px"}
+                    fontWeight={700}
+                    margin={"auto"}
+                  >
+                    SUBMIT
+                  </Button>
+                </Flex>
+              </Box>
+            </Box>
+          </Stack>
+        </Stack>
+        <Stack
+          direction={{ base: "column-reverse", md: "row" }}
+          mt={{ base: 0, md: -1 }}
+          gap={0}
+          justifyContent={"space-between"}
+        >
+          <Stack
+            direction="column"
+            color="white"
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <Box
+              pl={4}
+              p={{ base: "2rem", lg: "0" }}
+              ml={10}
+              display={"flex"}
+              flexDir={"row"}
+              mt={"4rem"}
+            >
+              <Box
+                display={"flex"}
+                flexDir={{ base: "column", lg: "row" }}
+                gap={8}
+                justifyContent={"center"}
+                alignItems={"center"}
+                margin={"auto"}
+              >
+                <Text fontWeight="500" mb={4} fontSize={"1rem"} color={"#000"}>
+                  For Start-ups: <br /> Submit a project for crowdfunding
+                </Text>
+
+                <Button
+                  marginTop={4}
+                  size="md"
+                  height="40px"
+                  width="200px"
+                  rounded="md"
+                  borderColor="#fba418"
+                  bg="#000"
+                  color={"#fff"}
+                  textTransform={"uppercase"}
+                  fontSize={"12px"}
+                  fontWeight={500}
+                >
+                  START A PROJECT
+                </Button>
+              </Box>
+            </Box>
+          </Stack>
+        </Stack>
+      </Box>
+    </>
   );
 };
 
