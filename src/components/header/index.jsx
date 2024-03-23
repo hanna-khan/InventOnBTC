@@ -31,7 +31,7 @@ export default function WithSubnavigation() {
           align="center"
           justifyContent={"space-between"}
         >
-          <Flex align="center">
+          <Flex as={Link} to="/" align="center">
             <Image boxSize="60px" src={Logo} alt="Logo" />
             <Box>
               <Text as="h1" color="white" fontSize="xl">
