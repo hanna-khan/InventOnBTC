@@ -38,7 +38,13 @@ const CuratedProjects = () => {
             justifyContent="center"
           >
             {data.map((item, index) => (
-              <Card key={index} maxW="sm" minH="550px" height="auto">
+              <Card
+                key={index}
+                maxW="sm"
+                minH="550px"
+                height="auto"
+                margin={"auto"}
+              >
                 <Image src={item.image} alt={item.title} />
                 <CardBody overflowY="auto" maxH="500px">
                   <Stack mt="2" spacing="3">

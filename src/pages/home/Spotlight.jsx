@@ -86,7 +86,7 @@ const Spotlight = () => {
                       </Text>
                       <CiHeart size={20} color="gray" />
                     </Flex>
-                    <Box maxW={"20vw"}>
+                    <Box maxW={{ base: "100vw", lg: "20vw" }}>
                       <Text
                         fontSize="0.8rem"
                         textAlign="left"

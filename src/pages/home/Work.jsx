@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
+import { useMediaQuery } from "@chakra-ui/react";
+
 import {
   Heading,
   Text,
@@ -28,10 +30,13 @@ const steps = [
 ];
 
 const Work = () => {
+  const [isLargerThanLG] = useMediaQuery("(min-width: 62em)");
+
   const { activeStep } = useSteps({
     index: 1,
     count: steps.length,
   });
+
   return (
     <>
       <Container maxW="1440px">
@@ -57,46 +62,44 @@ const Work = () => {
             Welcome to InventOnBTC, where you can support and fund projects
             created on Bitcoin. Here's how it works:
           </Heading>
-          <Stepper
-            size="lg"
-            index={activeStep}
-            orientation="horizontal"
-            
-            gap={0}
-          >
-            {steps.map((step, index) => (
-              <Step key={index} gap="0">
-                <StepIndicator
-                  sx={{
-                    bg: "#e16a15",
-                    border: "#e16a15",
-                    color: "#fff",
-                    width: "3rem",
-                    height: "3rem",
-                    gap: 0,
-                  }}
-                >
-                  <StepStatus
+          {isLargerThanLG && (
+            <Stepper
+              size="lg"
+              index={activeStep}
+              orientation={"horizontal"}
+              gap={0}
+            >
+              {steps.map((step, index) => (
+                <Step key={index} gap="0">
+                  <StepIndicator
                     sx={{
-                      gap: 0,
+                      bg: "#e16a15",
+                      border: "#e16a15",
+                      color: "#fff",
+                      width: "3rem",
+                      height: "3rem",
                     }}
-                    complete={<StepIcon />}
-                    incomplete={<StepNumber />}
-                    active={<StepNumber />}
+                  >
+                    <StepStatus
+                      sx={{
+                        gap: 0,
+                      }}
+                      complete={<StepIcon />}
+                      incomplete={<StepNumber />}
+                      active={<StepNumber />}
+                    />
+                  </StepIndicator>
+                  <StepSeparator
+                    size="md"
+                    sx={{
+                      bg: "#e16a15",
+                      width: "1px",
+                    }}
                   />
-                </StepIndicator>
-
-                <StepSeparator
-                  size="md"
-                  sx={{
-                    bg: "#e16a15", // Background color of the step separator
-                    width: "1px", // Adjust the width of the step separator
-                    gap: 0,
-                  }}
-                />
-              </Step>
-            ))}
-          </Stepper>
+                </Step>
+              ))}
+            </Stepper>
+          )}
 
           <SimpleGrid
             columns={{ base: 1, md: 1, lg: 3, xl: 4 }}
@@ -109,6 +112,7 @@ const Work = () => {
                 maxW="sm"
                 minH="250px"
                 height="auto"
+                margin={"auto"}
                 bg={"#f8f8f8"}
                 p={6}
               >
@@ -128,5 +132,4 @@ const Work = () => {
     </>
   );
 };
-
 export default Work;
