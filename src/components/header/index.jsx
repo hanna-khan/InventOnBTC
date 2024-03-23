@@ -28,13 +28,10 @@ export default function WithSubnavigation() {
           // minH="60px"
           py={{ base: 2 }}
           // px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle="solid"
-          borderColor="gray.200"
           align="center"
           justifyContent={"space-between"}
         >
-          <Flex display={{ base: "none", md: "flex" }} align="center">
+          <Flex align="center">
             <Image boxSize="60px" src={Logo} alt="Logo" />
             <Box>
               <Text as="h1" color="white" fontSize="xl">
@@ -53,7 +50,8 @@ export default function WithSubnavigation() {
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
             display={{ base: "flex", md: "none" }}
-            variant="ghost"
+            color="#fff"
+            bg="none"
             aria-label="Toggle Navigation"
           />
 
@@ -90,7 +88,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   return (
-    <Stack direction="row" spacing={4}>
+    <Stack display={{ base: "none", md: "flex" }} direction="row" spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Link

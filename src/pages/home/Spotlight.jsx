@@ -57,12 +57,12 @@ const Spotlight = () => {
             Dive deep into their vision behind their ideas and innovations
           </Text>
           <SimpleGrid
-            columns={{ base: 2, md: 2, lg: 3, xl: 3 }}
+            columns={{ base: 1, md: 1, lg: 3, xl: 3 }}
             gap={6}
             justifyContent="center"
           >
             {data.map((item, index) => (
-              <Card key={index} maxW="sm" minH="300px" height="auto">
+              <Card key={index} minH="300px" height="auto">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -93,7 +93,7 @@ const Spotlight = () => {
                         lineHeight="1.375"
                         fontWeight="600"
                         mb={4}
-                        maxW={{ base: "100%", md: "470px" }}
+                        // maxW={{ base: "100%", md: "470px" }}
                         color={useColorModeValue("#000", "gray.400")}
                       >
                         {item.subTitle}
@@ -103,7 +103,7 @@ const Spotlight = () => {
                         textAlign="left"
                         lineHeight="1.375"
                         fontWeight="400"
-                        maxW={{ base: "100%", md: "470px" }}
+                        // maxW={{ base: "100%", md: "470px" }}
                         mb={4}
                         color={useColorModeValue("#6d6d6e", "gray.400")}
                       >

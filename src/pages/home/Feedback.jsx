@@ -12,6 +12,7 @@ import {
   Avatar,
   useColorModeValue,
   Container,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { data } from "../../utils/FeedbackData";
 
@@ -41,7 +42,11 @@ const Feedback = () => {
         founders and backers have to say about their experience with our
         crowdfunding platform.
       </Text>
-      <Flex justifyContent="center" alignItems={"center"} flexWrap="wrap">
+      <SimpleGrid
+        columns={{ base: 1, md: 1, lg: 2, xl: 2 }}
+        gap={6}
+        justifyContent="center"
+      >
         {data.map((item, index) => (
           <Box key={index} flexBasis="40%" mb={4}>
             <Card maxW="md" bg="#f8f8f8" rounded="md">
@@ -55,7 +60,7 @@ const Feedback = () => {
             </Card>
           </Box>
         ))}
-      </Flex>
+      </SimpleGrid>
     </Container>
   );
 };

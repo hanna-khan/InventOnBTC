@@ -45,7 +45,7 @@ const Work = () => {
             created on Bitcoin. Here's how it works:
           </Heading>
           <SimpleGrid
-            columns={{ base: 2, md: 2, lg: 3, xl: 4 }}
+            columns={{ base: 1, md: 1, lg: 3, xl: 4 }}
             gap={6}
             justifyContent="center"
           >
@@ -62,7 +62,9 @@ const Work = () => {
                   <Heading size="md" fontWeight={"extrabold"} mb={4}>
                     {item.title}
                   </Heading>
-                  <Text color={"#7c7c7c"} fontSize={'1.2rem'}>{item.content}</Text>
+                  <Text color={"#7c7c7c"} fontSize={"1.2rem"}>
+                    {item.content}
+                  </Text>
                 </Box>
               </Card>
             ))}
