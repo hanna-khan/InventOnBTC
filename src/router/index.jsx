@@ -1,53 +1,74 @@
-import { createBrowserRouter } from "react-router-dom";
-import { Backers, Home, Login, Project, Satrtup } from "./../pages";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Backers, Home, Login, Project, Satrtup, Category } from "./../pages";
 import { Box } from "@chakra-ui/react";
+import Layout from "../layout";
 
 const styles = { container: { flex: 1 } };
 
-export default createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
-    element: (
-      <Box sx={styles.container}>
-        <Home />
-      </Box>
-    ),
-    caseSensitive: true,
-  },
-  {
-    path: "/login",
-    element: (
-      <Box sx={styles.container}>
-        <Login />
-      </Box>
-    ),
-    caseSensitive: true,
-  },
-  {
-    path: "/project/:id",
-    element: (
-      <Box sx={styles.container}>
-        <Project />
-      </Box>
-    ),
-    caseSensitive: true,
-  },
-  {
-    path: "/startup",
-    element: (
-      <Box sx={styles.container}>
-        <Satrtup />
-      </Box>
-    ),
-    caseSensitive: true,
-  },
-  {
-    path: "/backers",
-    element: (
-      <Box sx={styles.container}>
-        <Backers />
-      </Box>
-    ),
-    caseSensitive: true,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <Box sx={styles.container}>
+            <Home />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/login",
+        element: (
+          <Box sx={styles.container}>
+            <Login />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/project/:id",
+        element: (
+          <Box sx={styles.container}>
+            <Project />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/startup",
+        element: (
+          <Box sx={styles.container}>
+            <Satrtup />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/backers",
+        element: (
+          <Box sx={styles.container}>
+            <Backers />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/categories",
+        element: (
+          <Box sx={styles.container}>
+            <Category />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+    ],
   },
 ]);
+
+const Router = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default Router;

@@ -11,11 +11,11 @@ import {
   useColorModeValue,
   Image,
   useDisclosure,
-  Link,
   Container,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -91,19 +91,17 @@ const DesktopNav = () => {
     <Stack display={{ base: "none", md: "flex" }} direction="row" spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Link
+          <Box
+            as={Link}
             p={2}
-            href={navItem.href}
+            to={navItem.href}
             fontSize="sm"
             fontWeight={500}
             color="white" // Ensure text color is white
-            _hover={{
-              textDecoration:
-                navItem.label === "Start a Project" ? "underline" : "none", // Underline only for "Start a Project"
-            }}
+            _hover={{ textDecoration: "none" }}
           >
             {navItem.label}
-          </Link>
+          </Box>
         </Box>
       ))}
     </Stack>
@@ -140,11 +138,11 @@ const MobileNavItem = ({ label, href }) => {
 const NAV_ITEMS = [
   {
     label: "Explore",
-    href: "#",
+    href: "/categories",
   },
   {
     label: "Curated Project",
-    href: "#",
+    href: "/categories",
   },
   {
     label: "Start a Project",
