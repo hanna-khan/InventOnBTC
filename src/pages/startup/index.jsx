@@ -206,7 +206,7 @@ const Satrtup = () => {
           </Flex>
         </Stack>
       </Stack>
-      <Container maxW="1440px">
+      <Container maxW="1440px" mb="100px">
         <Text
           sx={{
             color: "black",
