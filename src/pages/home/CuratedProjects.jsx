@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { CiHeart } from "react-icons/ci";
 import { data } from "../../utils/CuratedProjectData";
+
 const CuratedProjects = () => {
   return (
     <>
