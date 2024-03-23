@@ -14,6 +14,7 @@ import {
 import HeroImage from "../../assets/images/hero_img.png";
 import Coin1 from "../../assets/images/coin_1.png";
 import Coin2 from "../../assets/images/coin_2.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -55,24 +56,26 @@ const Hero = () => {
             </Text>
             <HStack spacing={3}>
               <Button
-                colorScheme="teal"
                 variant="solid"
                 size="md"
                 rounded="md"
                 boxShadow="md"
                 color="black"
                 bg="white"
+                as={Link}
+                to="/backers"
               >
                 For Backers
               </Button>
               <Button
-                colorScheme="teal"
                 variant="solid"
                 size="md"
                 rounded="md"
                 boxShadow="md"
                 color="black"
                 bg="white"
+                as={Link}
+                to="/startup"
               >
                 For Starters
               </Button>
