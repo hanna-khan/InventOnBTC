@@ -6,19 +6,24 @@ import {
   Button,
   Stack,
   Collapse,
-  Popover,
-  PopoverTrigger,
-  useColorModeValue,
   Image,
   useDisclosure,
   Container,
+  Icon,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "../../assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { IoIosLogOut } from "react-icons/io";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.clear();
+    navigate("./login");
+  };
 
   return (
     <Box bg="black" p={0} margin={0}>
@@ -67,14 +72,20 @@ export default function WithSubnavigation() {
               fontSize="sm"
               fontWeight={600}
               color="white"
-              bg="#fba418"
+              bg="#E16A15"
               href="#"
               _hover={{
-                bg: "#e69517",
+                bg: "#E16A15",
               }}
             >
               Connect Wallet
             </Button>
+            <Icon
+              as={IoIosLogOut}
+              fontSize="30px"
+              onClick={logout}
+              cursor="pointer"
+            />
           </Stack>
         </Flex>
 

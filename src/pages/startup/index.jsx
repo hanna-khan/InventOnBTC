@@ -6,6 +6,7 @@ import {
   Container,
   Flex,
   Heading,
+  Icon,
   Image,
   Progress,
   SimpleGrid,
@@ -21,8 +22,9 @@ import RocketIcon from "../../assets/images/rocket.png";
 import Planet from "../../assets/images/planet.png";
 import { data } from "../../utils/CuratedProjectData";
 import { data as blogs } from "../../utils/BlogData";
-import { data as categories } from "../../utils/CategoryData";
+import { data as curatedData } from "../../utils/StartupCuratedData";
 import { CiHeart } from "react-icons/ci";
+import { FaCheckSquare } from "react-icons/fa";
 
 const Satrtup = () => {
   return (
@@ -166,9 +168,17 @@ const Satrtup = () => {
         py={{ base: 20, md: 36 }}
         mt={20}
       >
-        <Heading fontWeight="bold" fontSize="36px">
-          GET CURATED
-        </Heading>
+        <Flex justifyContent="center" alignItems="center" gap="20px">
+          <Heading fontWeight="bold" fontSize="36px">
+            GET CURATED
+          </Heading>
+          <Icon
+            as={FaCheckSquare}
+            color="#0034EC"
+            marginRight="3px"
+            fontSize={"32px"}
+          />
+        </Flex>
         <Text
           color={"#000"}
           w={{ base: "100%", md: "733px" }}
@@ -184,24 +194,32 @@ const Satrtup = () => {
           Advantages to get curated
         </Text>
         <Stack direction="column" spacing={3} align="center" alignSelf="center">
-          <Flex flexDir={{ base: "row" }} justify="center">
-            {categories.map((item, index) => (
-              <Box
+          <Flex
+            flexDir={{ base: "row" }}
+            justifyContent="center"
+            alignItems="center"
+            flexWrap="wrap"
+            gap="20px"
+          >
+            {curatedData.map((item, index) => (
+              <Flex
+                flexDir="column"
+                alignItems={"center"}
+                gap="10px"
+                maxW="200px"
                 key={index}
                 textAlign="center"
                 mr={{ base: "18px", md: "50px" }}
               >
                 <Image
-                  src={item.image}
+                  src={item.icon}
                   alt={item.title}
-                  width={{ base: "30px", md: "50px" }}
-                  height={{ base: "30px", md: "50px" }}
                   mixBlendMode={"multiply"}
                 />
                 <Text fontSize={{ base: "10px", md: "14px" }}>
-                  {item.title}
+                  {item.content}
                 </Text>
-              </Box>
+              </Flex>
             ))}
           </Flex>
         </Stack>

@@ -5,6 +5,7 @@ import image4 from "../assets/images/project_4.png";
 
 export const data = [
   {
+    id: 1,
     image: image1,
     title: "Funding",
     curated: false,
@@ -19,6 +20,7 @@ export const data = [
     barPercent: "23%",
   },
   {
+    id: 2,
     image: image2,
     title: "Funding",
     curated: true,
@@ -33,6 +35,7 @@ export const data = [
     barPercent: "23%",
   },
   {
+    id: 3,
     image: image3,
     title: "Funding",
     curated: true,
@@ -47,6 +50,7 @@ export const data = [
     barPercent: "23%",
   },
   {
+    id: 4,
     image: image4,
     title: "Funding",
     curated: false,

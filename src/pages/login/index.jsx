@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Heading,
   Stack,
@@ -10,13 +10,35 @@ import {
   Flex,
   Input,
   Button,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
 } from "@chakra-ui/react";
 import BetaLogin from "../../assets/images/beta_icon.png";
 import Logo from "../../assets/images/logo.png";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+const loginPassword = "InventOnBTC123";
 
 const Login = () => {
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const login = () => {
+    if (password === loginPassword) {
+      localStorage.setItem("loggedIn", true);
+      navigate("/");
+    }
+  };
+
   return (
     <>
       <Box bg="#000" minHeight="auto">
@@ -101,7 +123,14 @@ const Login = () => {
                   COMING SOON
                 </Heading>
               </Box>
-              <Box mt={"6rem"} ml={"4rem"} display={"flex"} gap={4}>
+              <Box
+                mt={"6rem"}
+                ml={"4rem"}
+                display={"flex"}
+                gap={4}
+                onClick={onOpen}
+                cursor="pointer"
+              >
                 <FaArrowRightLong size={60} />
                 <Text
                   fontWeight="400"
@@ -264,6 +293,26 @@ const Login = () => {
           </Stack>
         </Stack>
       </Box>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Login</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Input
+              placeholder="Enter Password To Login"
+              onChange={({ target }) => setPassword(target.value)}
+              type="password"
+            />
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={login}>
+              Login
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

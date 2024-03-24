@@ -21,6 +21,8 @@ import { CiHeart } from "react-icons/ci";
 import { data } from "../../utils/TrendingProjectsData";
 import { FaCheckSquare } from "react-icons/fa";
 import { QuestionIcon, QuestionOutlineIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
+
 const TrendingProjects = () => {
   return (
     <>
@@ -49,7 +51,9 @@ const TrendingProjects = () => {
                 height="auto"
                 margin={"auto"}
               >
-                <Image src={item.image} alt={item.title} />
+                <Box as={Link} to={`/project/${item.id}`}>
+                  <Image src={item.image} alt={item.title} />
+                </Box>
                 <CardBody overflowY="auto" minH="300px">
                   <Stack mt="2" spacing="3">
                     <Flex
