@@ -23,11 +23,18 @@ import BetaLogin from "../../assets/images/beta_icon.png";
 import Logo from "../../assets/images/logo.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "./../../firebase";
 
 const loginPassword = "InventOnBTC123";
 
 const Login = () => {
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const [form, setForm] = React.useState({
+    email: "",
+    twitter: "",
+  });
 
   const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,6 +43,19 @@ const Login = () => {
     if (password === loginPassword) {
       localStorage.setItem("loggedIn", true);
       navigate("/");
+    }
+  };
+
+  const addEmailAndTwitterHandle = async () => {
+    try {
+      await addDoc(collection(db, "betaLogin"), form);
+      setForm({
+        email: "",
+        twitter: "",
+      });
+      setMessage("Submitted successfully");
+    } catch (e) {
+      console.error("Error adding document: ", e);
     }
   };
 
@@ -210,19 +230,34 @@ const Login = () => {
                 </Text>
 
                 <Flex flexDir={"column"} gap={4}>
+                  {message ? (
+                    <Text bg="green" p="4px">
+                      {message}
+                    </Text>
+                  ) : null}
                   <Input
                     placeholder="Your Email address"
                     size="sm"
                     height="35px"
                     width="250px"
+                    value={form.email}
                     bg={"white"}
+                    color="#000"
+                    onChange={(e) =>
+                      setForm({ ...form, email: e.target.value })
+                    }
                   />
                   <Input
                     placeholder="Your twitter handle @"
                     size="sm"
                     height="35px"
+                    value={form.twitter}
                     width="250px"
                     bg={"white"}
+                    color="#000"
+                    onChange={(e) =>
+                      setForm({ ...form, twitter: e.target.value })
+                    }
                   />
                   <Button
                     textAlign={"center"}
@@ -238,6 +273,7 @@ const Login = () => {
                     fontSize={"12px"}
                     fontWeight={700}
                     margin={"auto"}
+                    onClick={addEmailAndTwitterHandle}
                   >
                     SUBMIT
                   </Button>
@@ -285,11 +321,15 @@ const Login = () => {
                   width="200px"
                   rounded="md"
                   borderColor="#fba418"
+                  _hover={{ bg: "#000" }}
                   bg="#000"
+                  variant="solid"
                   color={"#fff"}
                   textTransform={"uppercase"}
                   fontSize={"12px"}
                   fontWeight={500}
+                  as="a"
+                  href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
                 >
                   START A PROJECT
                 </Button>
