@@ -22,7 +22,7 @@ import { data } from "../../utils/SpotlightData";
 const Spotlight = () => {
   return (
     <>
-      <Container maxW="1440px">
+      <Container maxW="1240px">
         <Box mt="8rem">
           <Heading
             as="h3"
@@ -57,7 +57,7 @@ const Spotlight = () => {
             Dive deep into their vision behind their ideas and innovations
           </Text>
           <SimpleGrid
-            columns={{ base: 1, md: 1, lg: 3, xl: 3 }}
+            columns={{ base: 2, md: 2, lg: 3, xl: 3 }}
             gap={6}
             justifyContent="center"
           >
@@ -67,7 +67,7 @@ const Spotlight = () => {
                   src={item.image}
                   alt={item.title}
                   objectFit="cover"
-                  maxH="350px"
+                  maxH="450px"
                   width="100%"
                 />
                 <CardBody overflowY="auto" maxH="300px">

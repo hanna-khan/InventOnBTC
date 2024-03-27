@@ -14,7 +14,7 @@ import { data } from "../../utils/WorkData";
 const Work = () => {
   return (
     <>
-      <Container maxW="1440px">
+      <Container maxW="1240px" overflow="hidden">
         <Box mt="8rem">
           <Heading
             as="h3"
@@ -77,7 +77,7 @@ const Work = () => {
                 <Card
                   key={index}
                   maxW="sm"
-                  minH="250px"
+                  minH="350px"
                   height="auto"
                   margin={"auto"}
                   bg={"#f8f8f8"}

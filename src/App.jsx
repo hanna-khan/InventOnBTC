@@ -1,10 +1,22 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "./index.css";
 import Router from "./router";
 
+const customTheme = extendTheme({
+  components: {
+    Progress: {
+      baseStyle: {
+        filledTrack: {
+          bg: "#E16A15",
+        },
+      },
+    },
+  },
+});
+
 const App = () => {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customTheme}>
       <Router />
     </ChakraProvider>
   );

@@ -30,6 +30,8 @@ import Coin1 from "../../assets/images/coin_1.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import { data } from "../../utils/TrendingProjectsData";
 import { CiHeart } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { ProjectCard } from "../../components";
 
 const Categories = [
   { name: "Ordinals", link: "" },
@@ -72,7 +74,7 @@ const Category = () => {
           Start Funding Exciting And Innovative Projects Being Built On Bitcoin
         </Text>
       </Flex>
-      <Container my={10} maxW="1440px">
+      <Container my={10} maxW="1240px">
         <Flex gap="50px">
           <Box sx={{ display: { base: "none", md: "block" } }}>
             <Text fontSize="30px" color="black" fontWeight="semibold">
@@ -472,114 +474,7 @@ const Category = () => {
               justifyContent="center"
             >
               {data.map((item, index) => (
-                <Card key={index} maxW="sm" minH="550px" height="auto">
-                  <Image src={item.image} alt={item.title} />
-                  <CardBody overflowY="auto" maxH="500px">
-                    <Stack mt="2" spacing="3">
-                      <Flex justifyContent={"space-between"}>
-                        <Text
-                          fontSize="0.7rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="500"
-                          textTransform={"uppercase"}
-                          maxW={{ base: "100%", md: "470px" }}
-                          color={useColorModeValue("#000", "gray.400")}
-                        >
-                          {item.title}
-                        </Text>
-                        <CiHeart size={20} color="gray" />
-                      </Flex>
-                      <Text
-                        fontSize="0.8rem"
-                        textAlign="left"
-                        lineHeight="1.375"
-                        fontWeight="600"
-                        textTransform={"uppercase"}
-                        maxW={{ base: "100%", md: "470px" }}
-                        color={useColorModeValue("#000", "gray.400")}
-                      >
-                        {item.subTitle}
-                      </Text>
-                      <Text
-                        fontSize="0.7rem"
-                        textAlign="left"
-                        lineHeight="1.375"
-                        fontWeight="400"
-                        maxW={{ base: "100%", md: "470px" }}
-                        mb={4}
-                        color={useColorModeValue("#6d6d6e", "gray.400")}
-                      >
-                        {item.content}
-                      </Text>
-                      <Text
-                        fontSize="0.8rem"
-                        textAlign="left"
-                        lineHeight="1.375"
-                        fontWeight="400"
-                        maxW={{ base: "100%", md: "470px" }}
-                        mb={4}
-                        textTransform={"uppercase"}
-                        color={useColorModeValue("#6d6d6e", "gray.400")}
-                      >
-                        {item.subContent}
-                      </Text>
-                      <Flex gap={"2"}>
-                        <Text
-                          fontSize="0.8rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="500"
-                          maxW={{ base: "100%", md: "470px" }}
-                          textTransform={"uppercase"}
-                          color={useColorModeValue("#000", "gray.400")}
-                        >
-                          {item.barRate}
-                        </Text>
-
-                        <Text
-                          fontSize="0.8rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="400"
-                          maxW={{ base: "100%", md: "470px" }}
-                          textTransform={"uppercase"}
-                          mr={20}
-                          color={useColorModeValue("#6d6d6e", "gray.400")}
-                        >
-                          {item.barTitle}
-                        </Text>
-                        <Text
-                          fontSize="0.8rem"
-                          textAlign="left"
-                          lineHeight="1.375"
-                          fontWeight="400"
-                          maxW={{ base: "100%", md: "470px" }}
-                          textTransform={"uppercase"}
-                          color={useColorModeValue("#6d6d6e", "gray.400")}
-                        >
-                          {item.barPercent}
-                        </Text>
-                      </Flex>
-                      <Progress
-                        colorScheme="gray"
-                        size="sm"
-                        value={20}
-                        rounded={"10px"}
-                      />
-                      <Text
-                        fontSize="0.7rem"
-                        textAlign="left"
-                        lineHeight="1.375"
-                        fontWeight="500"
-                        maxW={{ base: "100%", md: "470px" }}
-                        color={useColorModeValue("#6d6d6e", "gray.400")}
-                      >
-                        {item.time}
-                      </Text>
-                    </Stack>
-                  </CardBody>
-                </Card>
+                <ProjectCard item={item} key={index} />
               ))}
             </SimpleGrid>
           </Box>

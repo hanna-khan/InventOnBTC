@@ -43,7 +43,7 @@ const Login = () => {
     <>
       <Box bg="#000" minHeight="auto">
         <Box bg="black" p={0} margin={0}>
-          <Container maxW={"1440px"}>
+          <Container maxW="1240px">
             <Flex
               color="white"
               py={{ base: 2 }}
@@ -74,7 +74,12 @@ const Login = () => {
                 spacing={6}
                 align="center"
               >
-                <Text as="h1" color="gray" fontSize="md">
+                <Text
+                  color="gray"
+                  fontSize="md"
+                  as="a"
+                  href="https://invent-on-btc.gitbook.io/invent-on-btc/"
+                >
                   DOCS
                 </Text>
               </Stack>

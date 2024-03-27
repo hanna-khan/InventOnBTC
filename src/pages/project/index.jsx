@@ -38,7 +38,7 @@ const Project = () => {
   return (
     <Box>
       <Container maxW="1240px">
-        <Flex gap="20px" my="100px" flexWrap="wrap">
+        <Flex gap="20px" my="100px" flexWrap={{ base: "wrap", lg: "nowrap" }}>
           <Image
             src={project.image}
             sx={{
@@ -134,7 +134,7 @@ const Project = () => {
       </Container>
       {project.curated ? (
         <Box bg={"#e6e7e9"} py={{ base: 20, md: 36 }} mb="100px">
-          <Container maxW="1440px">
+          <Container maxW="1240px">
             <Flex alignItems={"center"} gap="10px">
               <Text sx={{ fontSize: "22px" }}>This is a</Text>
               <Flex alignItems="center">
@@ -199,7 +199,7 @@ const Project = () => {
           </Button>
         </Flex>
       </Box>
-      <Container maxW="1440px" mb="100px">
+      <Container maxW="1240px" mb="100px">
         <Text sx={{ fontSize: "30px" }}>Funder's Perk</Text>
         <SimpleGrid
           columns={{ base: 1, md: 1, lg: 3, xl: 3 }}
@@ -334,6 +334,8 @@ const Project = () => {
             </Stack>
           </Box>
         </SimpleGrid>
+      </Container>
+      <Container maxW="1240px" p={0}>
         <Tabs isFitted mt="100px">
           <TabList mb="1em" bgColor="#E6E7E9" color="black">
             <Tab

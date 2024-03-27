@@ -1,14 +1,11 @@
 import {
   Box,
   Button,
-  Card,
-  CardBody,
   Container,
   Flex,
   Heading,
   Icon,
   Image,
-  Progress,
   SimpleGrid,
   Stack,
   Text,
@@ -20,11 +17,11 @@ import Coin1 from "../../assets/images/coin_1.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import RocketIcon from "../../assets/images/rocket.png";
 import Planet from "../../assets/images/planet.png";
-import { data } from "../../utils/CuratedProjectData";
+import { data } from "../../utils/TrendingProjectsData";
 import { data as blogs } from "../../utils/BlogData";
 import { data as curatedData } from "../../utils/StartupCuratedData";
-import { CiHeart } from "react-icons/ci";
 import { FaCheckSquare } from "react-icons/fa";
+import { ProjectCard } from "../../components";
 
 const Satrtup = () => {
   return (
@@ -49,7 +46,7 @@ const Satrtup = () => {
           Bring Your Bitcoin Innovations To Life
         </Text>
       </Flex>
-      <Container maxW="1440px" my={10}>
+      <Container maxW="1240px" my={10}>
         <Flex
           justifyContent="space-between"
           alignItems="center"
@@ -73,6 +70,8 @@ const Satrtup = () => {
             _hover={{
               bgColor: "#E16A15",
             }}
+            as="a"
+            href="https://blocksurvey.io/ion-inventonbtc-start-a-project-qa6auObvQaCkVgIyILXj.g?v=o"
           >
             Start A Project
           </Button>
@@ -224,7 +223,7 @@ const Satrtup = () => {
           </Flex>
         </Stack>
       </Stack>
-      <Container maxW="1440px" mb="100px">
+      <Container maxW="1240px" mb="100px">
         <Text
           sx={{
             color: "black",
@@ -245,114 +244,7 @@ const Satrtup = () => {
           justifyContent="center"
         >
           {data.map((item, index) => (
-            <Card key={index} maxW="sm" minH="550px" height="auto">
-              <Image src={item.image} alt={item.title} />
-              <CardBody overflowY="auto" maxH="500px">
-                <Stack mt="2" spacing="3">
-                  <Flex justifyContent={"space-between"}>
-                    <Text
-                      fontSize="0.7rem"
-                      textAlign="left"
-                      lineHeight="1.375"
-                      fontWeight="500"
-                      textTransform={"uppercase"}
-                      maxW={{ base: "100%", md: "470px" }}
-                      color={useColorModeValue("#000", "gray.400")}
-                    >
-                      {item.title}
-                    </Text>
-                    <CiHeart size={20} color="gray" />
-                  </Flex>
-                  <Text
-                    fontSize="0.8rem"
-                    textAlign="left"
-                    lineHeight="1.375"
-                    fontWeight="600"
-                    textTransform={"uppercase"}
-                    maxW={{ base: "100%", md: "470px" }}
-                    color={useColorModeValue("#000", "gray.400")}
-                  >
-                    {item.subTitle}
-                  </Text>
-                  <Text
-                    fontSize="0.7rem"
-                    textAlign="left"
-                    lineHeight="1.375"
-                    fontWeight="400"
-                    maxW={{ base: "100%", md: "470px" }}
-                    mb={4}
-                    color={useColorModeValue("#6d6d6e", "gray.400")}
-                  >
-                    {item.content}
-                  </Text>
-                  <Text
-                    fontSize="0.8rem"
-                    textAlign="left"
-                    lineHeight="1.375"
-                    fontWeight="400"
-                    maxW={{ base: "100%", md: "470px" }}
-                    mb={4}
-                    textTransform={"uppercase"}
-                    color={useColorModeValue("#6d6d6e", "gray.400")}
-                  >
-                    {item.subContent}
-                  </Text>
-                  <Flex gap={"2"}>
-                    <Text
-                      fontSize="0.8rem"
-                      textAlign="left"
-                      lineHeight="1.375"
-                      fontWeight="500"
-                      maxW={{ base: "100%", md: "470px" }}
-                      textTransform={"uppercase"}
-                      color={useColorModeValue("#000", "gray.400")}
-                    >
-                      {item.barRate}
-                    </Text>
-
-                    <Text
-                      fontSize="0.8rem"
-                      textAlign="left"
-                      lineHeight="1.375"
-                      fontWeight="400"
-                      maxW={{ base: "100%", md: "470px" }}
-                      textTransform={"uppercase"}
-                      mr={20}
-                      color={useColorModeValue("#6d6d6e", "gray.400")}
-                    >
-                      {item.barTitle}
-                    </Text>
-                    <Text
-                      fontSize="0.8rem"
-                      textAlign="left"
-                      lineHeight="1.375"
-                      fontWeight="400"
-                      maxW={{ base: "100%", md: "470px" }}
-                      textTransform={"uppercase"}
-                      color={useColorModeValue("#6d6d6e", "gray.400")}
-                    >
-                      {item.barPercent}
-                    </Text>
-                  </Flex>
-                  <Progress
-                    colorScheme="gray"
-                    size="sm"
-                    value={20}
-                    rounded={"10px"}
-                  />
-                  <Text
-                    fontSize="0.7rem"
-                    textAlign="left"
-                    lineHeight="1.375"
-                    fontWeight="500"
-                    maxW={{ base: "100%", md: "470px" }}
-                    color={useColorModeValue("#6d6d6e", "gray.400")}
-                  >
-                    {item.time}
-                  </Text>
-                </Stack>
-              </CardBody>
-            </Card>
+            <ProjectCard item={item} key={index} />
           ))}
         </SimpleGrid>
         <Text

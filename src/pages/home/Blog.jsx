@@ -21,7 +21,7 @@ import { data } from "../../utils/BlogData";
 const Blog = () => {
   return (
     <>
-      <Container maxW="1440px">
+      <Container maxW="1240px">
         <Box mt="8rem">
           <Heading
             as="h3"
@@ -44,7 +44,7 @@ const Blog = () => {
             Keep up-to date on the Bitcoin Economy
           </Heading>
           <SimpleGrid
-            columns={{ base: 1, md: 1, lg: 3, xl: 3 }}
+            columns={{ base: 2, md: 2, lg: 3, xl: 3 }}
             gap={6}
             justifyContent="center"
           >

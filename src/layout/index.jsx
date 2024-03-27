@@ -8,9 +8,7 @@ const Layout = () => {
   const isLoggedIn = localStorage.getItem("loggedIn");
 
   useEffect(() => {
-    if (isLoggedIn) {
-      navigate("/");
-    } else {
+    if (!isLoggedIn) {
       navigate("/login");
     }
   }, [isLoggedIn]);

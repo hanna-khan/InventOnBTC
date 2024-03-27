@@ -12,7 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import HeroImage from "../../assets/images/hero_img.png";
-import Coin1 from "../../assets/images/coin_1.png";
+import Coin1 from "../../assets/images/Footer_logo.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import { Link } from "react-router-dom";
 
@@ -77,7 +77,7 @@ const Hero = () => {
                 as={Link}
                 to="/startup"
               >
-                For Starters
+                For Startups
               </Button>
             </HStack>
             <Box mt={6}>

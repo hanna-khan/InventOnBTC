@@ -27,7 +27,7 @@ const Footer = () => {
       py="2.5rem"
       fontSize="0.875rem"
     >
-      <Container maxW="1440px">
+      <Container maxW="1240px">
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 5 }} gap={6} px={10}>
           <Flex flexDir="column" as={Link} to="/">
             <Image src={FooterLogo} alt="Coin1" width={"100px"} />

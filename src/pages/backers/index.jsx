@@ -25,6 +25,7 @@ import image1 from "../../assets/images/backer_step_icon_1.png";
 import image2 from "../../assets/images/backer_step_icon_2.png";
 import image3 from "../../assets/images/backer_step_icon_3.png";
 import image4 from "../../assets/images/backer_step_icon_4.png";
+import { Link } from "react-router-dom";
 
 const Backers = () => {
   return (
@@ -58,7 +59,7 @@ const Backers = () => {
           </Text>
         </Box>
       </Flex>
-      <Container maxW="1440px">
+      <Container maxW="1240px">
         <Flex
           my="100px"
           alignItems="center"
@@ -237,6 +238,8 @@ const Backers = () => {
             _hover={{
               bg: "#e69517",
             }}
+            as={Link}
+            to="/categories"
           >
             Explore Projects
           </Button>
@@ -309,7 +312,7 @@ const Backers = () => {
           </Text>
         </Container>
       </Box>
-      <Container maxW="1440px">
+      <Container maxW="1240px">
         <Flex
           mt="100px"
           alignItems="center"
