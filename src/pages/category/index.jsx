@@ -1,20 +1,16 @@
 import {
   Box,
-  Card,
-  CardBody,
   Container,
   Flex,
   Icon,
   Image,
   Input,
-  Progress,
   Radio,
   RadioGroup,
   Select,
   SimpleGrid,
   Stack,
   Text,
-  useColorModeValue,
   Drawer,
   DrawerBody,
   DrawerOverlay,
@@ -26,7 +22,7 @@ import {
 import React, { useRef } from "react";
 import banner1 from "../../assets/images/banner1.jpeg";
 import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
-import Coin1 from "../../assets/images/coin_1.png";
+import Coin1 from "../../assets/images/Footer_logo.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import { data } from "../../utils/TrendingProjectsData";
 import { CiHeart } from "react-icons/ci";

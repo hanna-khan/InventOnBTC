@@ -10,14 +10,13 @@ import {
   Input,
   SimpleGrid,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import banner1 from "../../assets/images/banner1.jpeg";
 import backerImage from "../../assets/images/backer_main_image_1.png";
 import perkImage from "../../assets/images/backer_main_image_2.png";
 import { FaCheckSquare } from "react-icons/fa";
-import Coin1 from "../../assets/images/coin_1.png";
+import Coin1 from "../../assets/images/Footer_logo.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import XverseIcon from "../../assets/images/xverse_icon.png";
 import LeatherIcon from "../../assets/images/leather_icon.png";

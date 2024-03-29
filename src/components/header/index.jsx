@@ -75,7 +75,13 @@ export default function WithSubnavigation() {
           justifyContent={"space-between"}
         >
           <Flex as={Link} to="/" align="center">
-            <Image boxSize="60px" src={Logo} alt="Logo" />
+            <Image
+              height="70px"
+              width="70px"
+              objectFit="cover"
+              src={Logo}
+              alt="Logo"
+            />
             <Box>
               <Text as="h1" color="white" fontSize="md">
                 InventOn

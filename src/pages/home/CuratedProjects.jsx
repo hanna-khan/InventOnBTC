@@ -38,7 +38,7 @@ const CuratedProjects = () => {
             Curated Projects
           </Heading>
           <SimpleGrid
-            columns={{ base: 1, md: 2, lg: 3, xl: 3 }}
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
             gap={6}
             justifyContent="center"
           >

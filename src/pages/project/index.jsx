@@ -23,7 +23,7 @@ import { useParams } from "react-router-dom";
 import { data } from "../../utils/TrendingProjectsData";
 import detailImage from "../../assets/images/detail.png";
 import { FaCheckSquare, FaLink, FaTwitter } from "react-icons/fa";
-import Coin1 from "../../assets/images/coin_1.png";
+import Coin1 from "../../assets/images/Footer_logo.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import car from "../../assets/images/car.png";
 import man from "../../assets/images/man.png";

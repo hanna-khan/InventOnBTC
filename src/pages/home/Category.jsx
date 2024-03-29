@@ -24,22 +24,25 @@ export default function Category() {
         </Text>
         <Text color={"#000"}>EXPLORE THE TOP CATEGORIES</Text>
         <Stack direction="column" spacing={3} align="center" alignSelf="center">
-          <Flex flexDir={{ base: "row" }} justify="center">
+          <Flex
+            flexDirection={{ base: "row" }}
+            flexWrap="wrap"
+            justify="center"
+            gap="60px"
+          >
             {data.map((item, index) => (
-              <Box
-                key={index}
-                textAlign="center"
-                mr={{ base: "18px", md: "50px" }}
-              >
+              <Box key={index} textAlign="center">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={{ base: "30px", md: "50px" }}
-                  height={{ base: "30px", md: "50px" }}
-                  mixBlendMode={"multiply"}
+                  width={{ base: "45px", md: "auto" }}
+                  height={{ base: "auto", md: "50px" }}
+                  objectFit="cover"
                 />
                 <Text
-                  fontSize={{ base: "10px",  md: "14px" }}
+                  fontSize={{ base: "10px", md: "20px" }}
+                  textTransform="capitalize"
+                  textAlign="center"
                 >
                   {item.title}
                 </Text>

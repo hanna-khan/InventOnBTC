@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import banner2 from "../../assets/images/banner2.jpeg";
-import Coin1 from "../../assets/images/coin_1.png";
+import Coin1 from "../../assets/images/Footer_logo.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import RocketIcon from "../../assets/images/rocket.png";
 import Planet from "../../assets/images/planet.png";
@@ -54,7 +54,7 @@ const Satrtup = () => {
         >
           <Text
             sx={{
-              fontSize: { base: "40px", md: "64px" },
+              fontSize: { base: "40px", md: "54px" },
               color: "#191919",
               fontWeight: "bold",
             }}
@@ -62,8 +62,8 @@ const Satrtup = () => {
             Become A Bitcoin Entrepreneur
           </Text>
           <Button
-            width="320px"
-            height="89px"
+            width="300px"
+            height="79px"
             bgColor="#E16A15"
             color="#fff"
             fontSize="20px"
