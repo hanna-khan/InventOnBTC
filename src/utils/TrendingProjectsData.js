@@ -20,7 +20,7 @@ export const data = [
     subContent: "Bitcoin Metaverse",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "STX raised",
     barPercent: "23%",
   },
   {
@@ -36,7 +36,7 @@ export const data = [
     subContent: "wallets",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "BTC raised",
     barPercent: "23%",
   },
   {
@@ -52,7 +52,7 @@ export const data = [
     subContent: "bitcoin education",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "STX raised",
     barPercent: "23%",
   },
   {
@@ -68,7 +68,7 @@ export const data = [
     subContent: "mining",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "STX raised",
     barPercent: "23%",
   },
   {
@@ -84,7 +84,7 @@ export const data = [
     subContent: "wallets",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "BTC raised",
     barPercent: "23%",
   },
   {
@@ -101,7 +101,7 @@ export const data = [
     subContent: "bitcoin games",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "STX raised",
     barPercent: "23%",
   },
   {
@@ -117,7 +117,7 @@ export const data = [
     subContent: "ordinals",
     time: "24 days left",
     barRate: "23000",
-    barTitle: "STC raised",
+    barTitle: "BTC raised",
     barPercent: "23%",
   },
 ];

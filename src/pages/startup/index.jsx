@@ -38,7 +38,7 @@ const Satrtup = () => {
       >
         <Text
           color="#fff"
-          fontSize={{ base: "20px", md: "50px" }}
+          fontSize={{ base: "20px", md: "40px" }}
           fontWeight={900}
           textAlign="center"
           px="5px"
@@ -54,7 +54,7 @@ const Satrtup = () => {
         >
           <Text
             sx={{
-              fontSize: { base: "40px", md: "54px" },
+              fontSize: "40px",
               color: "#191919",
               fontWeight: "bold",
             }}
@@ -62,8 +62,8 @@ const Satrtup = () => {
             Become A Bitcoin Entrepreneur
           </Text>
           <Button
-            width="300px"
-            height="79px"
+            width="250px"
+            height="69px"
             bgColor="#E16A15"
             color="#fff"
             fontSize="20px"
@@ -239,11 +239,11 @@ const Satrtup = () => {
           </Text>
         </Text>
         <SimpleGrid
-          columns={{ base: 1, md: 1, lg: 3, xl: 3 }}
+          columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
           gap={6}
           justifyContent="center"
         >
-          {data.map((item, index) => (
+          {data.slice(0, 4).map((item, index) => (
             <ProjectCard item={item} key={index} />
           ))}
         </SimpleGrid>
@@ -281,9 +281,8 @@ const Satrtup = () => {
                   src={item.image}
                   alt={item.title}
                   objectFit="cover"
-                  maxH="350px"
+                  height="350px"
                   width="100%"
-                  maxW="393px"
                 />
                 <Stack mt="2" spacing="3">
                   <Text

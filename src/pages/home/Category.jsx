@@ -23,20 +23,20 @@ export default function Category() {
           DISCOVER PROJECTS THAT ALIGN WITH YOUR INTERESTS
         </Text>
         <Text color={"#000"}>EXPLORE THE TOP CATEGORIES</Text>
-        <Stack direction="column" spacing={3} align="center" alignSelf="center">
+        <Stack direction="column" spacing={3}>
           <Flex
             flexDirection={{ base: "row" }}
             flexWrap="wrap"
-            justify="center"
+            justifyContent="space-around"
             gap="60px"
           >
             {data.map((item, index) => (
-              <Box key={index} textAlign="center">
+              <Flex key={index} flexDirection="column" alignItems="center">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={{ base: "45px", md: "auto" }}
-                  height={{ base: "auto", md: "50px" }}
+                  // width={{ base: "45px", md: "35px" }}
+                  height={{ base: "auto", md: "35px" }}
                   objectFit="cover"
                 />
                 <Text
@@ -46,7 +46,7 @@ export default function Category() {
                 >
                   {item.title}
                 </Text>
-              </Box>
+              </Flex>
             ))}
           </Flex>
         </Stack>

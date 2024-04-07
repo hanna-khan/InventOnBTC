@@ -42,7 +42,7 @@ const Backers = () => {
         <Box>
           <Text
             color="#fff"
-            fontSize={{ base: "20px", md: "50px" }}
+            fontSize={{ base: "20px", md: "40px" }}
             fontWeight={900}
             textAlign="center"
             px="5px"

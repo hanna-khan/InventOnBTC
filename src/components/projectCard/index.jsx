@@ -6,11 +6,13 @@ import {
   Image,
   Progress,
   Stack,
+  Icon,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { CiHeart } from "react-icons/ci";
+import { FaCheckSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ item }) => {
@@ -21,7 +23,7 @@ const ProjectCard = ({ item }) => {
       </Box>
       <CardBody overflowY="auto" maxH="500px">
         <Stack mt="2" spacing="3">
-          <Flex justifyContent={"space-between"}>
+          <Flex justifyContent={"space-between"} alignItems={"center"}>
             <Text
               fontSize="0.7rem"
               textAlign="left"
@@ -33,6 +35,32 @@ const ProjectCard = ({ item }) => {
             >
               {item.title}
             </Text>
+            <Box>
+              {item.curated ? (
+                <Flex gap="5px" alignItems="Center">
+                  <Icon as={FaCheckSquare} color="#0034EC" />
+                  <Text color="#0034EC" fontWeight="semibold">
+                    Curated
+                  </Text>
+                </Flex>
+              ) : null}
+              {item.treasuryFunded ? (
+                <Flex gap="5px" alignItems="Center">
+                  <Icon as={FaCheckSquare} color="#E16A15" />
+                  <Text color="#E16A15" fontWeight="semibold">
+                    Treasury Funded
+                  </Text>
+                </Flex>
+              ) : null}
+              {item.trending ? (
+                <Flex gap="5px" alignItems="Center">
+                  <Icon as={FaCheckSquare} color="#E16A15" />
+                  <Text color="#E16A15" fontWeight="semibold">
+                    Trending
+                  </Text>
+                </Flex>
+              ) : null}
+            </Box>
             <CiHeart size={20} color="gray" />
           </Flex>
           <Text

@@ -1,7 +1,7 @@
 import CuratedIcon1 from "../assets/images/curated_icon_1.png";
 import CuratedIcon2 from "../assets/images/curated_icon_2.png";
 import CuratedIcon3 from "../assets/images/curated_icon_3.png";
-import CuratedIcon4 from "../assets/images/curated_icon_3.png";
+import CuratedIcon4 from "../assets/images/curated_icon_4.png";
 
 export const data = [
   {

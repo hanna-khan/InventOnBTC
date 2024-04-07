@@ -9,7 +9,7 @@ import Stamp from "../assets/images/stamp.png";
 export const data = [
   { image: Mining, title: "mining" },
   { image: Layer, title: "layer 2" },
-  { image: Ordinal, title: "originals" },
+  { image: Ordinal, title: "ordinals" },
   { image: BRC20, title: "brc-20" },
   { image: Wallet, title: "wallets" },
   { image: Defi, title: "defi" },

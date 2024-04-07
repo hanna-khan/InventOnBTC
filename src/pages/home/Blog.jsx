@@ -3,14 +3,9 @@
 import React from "react";
 import {
   Heading,
-  Grid,
-  GridItem,
   Text,
   Image,
-  Card,
-  CardBody,
   Stack,
-  Divider,
   Box,
   Container,
   useColorModeValue,
@@ -49,12 +44,12 @@ const Blog = () => {
             justifyContent="center"
           >
             {data.map((item, index) => (
-              <Box key={index}>
+              <Box key={index} as="a" href={item.link}>
                 <Image
                   src={item.image}
                   alt={item.title}
                   objectFit="cover"
-                  maxH="350px"
+                  height="350px"
                   width="100%"
                 />
                 <Stack mt="2" spacing="3">

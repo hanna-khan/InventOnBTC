@@ -1,5 +1,13 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Backers, Home, Login, Project, Satrtup, Category } from "./../pages";
+import {
+  Backers,
+  Home,
+  Login,
+  Project,
+  Satrtup,
+  Category,
+  Analytics,
+} from "./../pages";
 import { Box } from "@chakra-ui/react";
 import Layout from "../layout";
 
@@ -59,6 +67,15 @@ const router = createBrowserRouter([
         element: (
           <Box sx={styles.container}>
             <Category />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/project/analytics/:id",
+        element: (
+          <Box sx={styles.container}>
+            <Analytics />
           </Box>
         ),
         caseSensitive: true,

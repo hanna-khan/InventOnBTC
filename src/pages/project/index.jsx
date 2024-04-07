@@ -19,7 +19,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { data } from "../../utils/TrendingProjectsData";
 import detailImage from "../../assets/images/detail.png";
 import { FaCheckSquare, FaLink, FaTwitter } from "react-icons/fa";
@@ -176,6 +176,8 @@ const Project = () => {
           mt="20px"
         >
           <Button
+            as={Link}
+            to={`/project/analytics/${id}`}
             fontSize="sm"
             fontWeight={600}
             color="white"
