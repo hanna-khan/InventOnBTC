@@ -7,8 +7,10 @@ import {
   Progress,
   Stack,
   Icon,
+  Tooltip,
   Text,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import { CiHeart } from "react-icons/ci";
@@ -42,32 +44,29 @@ const ProjectCard = ({ item }) => {
             >
               {item.title}
             </Text>
-            <Box>
+            <Flex alignItems="center" gap="10px">
               {item.curated ? (
-                <Flex gap="5px" alignItems="Center">
-                  <Icon as={FaCheckSquare} color="#0034EC" />
-                  <Text color="#0034EC" fontWeight="semibold">
-                    Curated
-                  </Text>
-                </Flex>
+                <Tooltip label="Curated" hasArrow>
+                  <Box>
+                    <Icon as={FaCheckSquare} color="#0034EC" />
+                  </Box>
+                </Tooltip>
               ) : null}
               {item.treasuryFunded ? (
-                <Flex gap="5px" alignItems="Center">
-                  <Icon as={FaCheckSquare} color="yellow" />
-                  <Text color="yellow" fontWeight="semibold">
-                    Treasury Funded
-                  </Text>
-                </Flex>
+                <Tooltip label="Treasury Funded" hasArrow>
+                  <Box>
+                    <Icon as={FaCheckSquare} color="#E16A15" />
+                  </Box>
+                </Tooltip>
               ) : null}
               {item.rewards ? (
-                <Flex gap="5px" alignItems="Center">
-                  <Icon as={FaCheckSquare} color="#000" />
-                  <Text color="#000" fontWeight="semibold">
-                    Runestone rewards
-                  </Text>
-                </Flex>
+                <Tooltip label="Runstone Rewards" hasArrow>
+                  <Box>
+                    <Icon as={FaCheckSquare} color="#000000" />
+                  </Box>
+                </Tooltip>
               ) : null}
-            </Box>
+            </Flex>
             <CiHeart size={20} color="gray" />
           </Flex>
           <Text
