@@ -19,7 +19,14 @@ const ProjectCard = ({ item }) => {
   return (
     <Card maxW="sm" minH="550px" height="auto">
       <Box as={Link} to={`/project/${item.id}`} width="100%">
-        <Image src={item.image} alt={item.title} width="100%" />
+        <Image
+          src={item.image}
+          alt={item.title}
+          width="100%"
+          height="100%"
+          minHeight="300px"
+          objectFit="cover"
+        />
       </Box>
       <CardBody overflowY="auto" maxH="500px">
         <Stack mt="2" spacing="3">
@@ -46,17 +53,17 @@ const ProjectCard = ({ item }) => {
               ) : null}
               {item.treasuryFunded ? (
                 <Flex gap="5px" alignItems="Center">
-                  <Icon as={FaCheckSquare} color="#E16A15" />
-                  <Text color="#E16A15" fontWeight="semibold">
+                  <Icon as={FaCheckSquare} color="yellow" />
+                  <Text color="yellow" fontWeight="semibold">
                     Treasury Funded
                   </Text>
                 </Flex>
               ) : null}
-              {item.trending ? (
+              {item.rewards ? (
                 <Flex gap="5px" alignItems="Center">
-                  <Icon as={FaCheckSquare} color="#E16A15" />
-                  <Text color="#E16A15" fontWeight="semibold">
-                    Trending
+                  <Icon as={FaCheckSquare} color="#000" />
+                  <Text color="#000" fontWeight="semibold">
+                    Runestone rewards
                   </Text>
                 </Flex>
               ) : null}

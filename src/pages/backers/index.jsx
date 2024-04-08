@@ -12,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import banner1 from "../../assets/images/banner1.jpeg";
+import banner2 from "../../assets/images/banner2.jpeg";
 import backerImage from "../../assets/images/backer_main_image_1.png";
 import perkImage from "../../assets/images/backer_main_image_2.png";
 import { FaCheckSquare } from "react-icons/fa";
@@ -30,7 +30,7 @@ const Backers = () => {
   return (
     <Box>
       <Flex
-        backgroundImage={banner1}
+        backgroundImage={banner2}
         width="100%"
         height="400px"
         backgroundRepeat="no-repeat"
@@ -42,7 +42,7 @@ const Backers = () => {
         <Box>
           <Text
             color="#fff"
-            fontSize={{ base: "20px", md: "40px" }}
+            fontSize={{ base: "20px", md: "30px", lg: "40px" }}
             fontWeight={900}
             textAlign="center"
             px="5px"
@@ -52,7 +52,7 @@ const Backers = () => {
           <Text
             textAlign="center"
             color="#fff"
-            fontSize={{ base: "10px", md: "30px" }}
+            fontSize={{ base: "13px", md: "20px", lg: "30px" }}
           >
             Discover another dimension of crowdfunding all happening on Bitcoin
           </Text>

@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
-import banner2 from "../../assets/images/banner2.jpeg";
+import banner3 from "../../assets/images/banner3.jpeg";
 import Coin1 from "../../assets/images/Footer_logo.png";
 import Coin2 from "../../assets/images/coin_2.png";
 import RocketIcon from "../../assets/images/rocket.png";
@@ -27,7 +27,7 @@ const Satrtup = () => {
   return (
     <Box>
       <Flex
-        backgroundImage={banner2}
+        backgroundImage={banner3}
         width="100%"
         height="400px"
         backgroundRepeat="no-repeat"
@@ -38,7 +38,7 @@ const Satrtup = () => {
       >
         <Text
           color="#fff"
-          fontSize={{ base: "20px", md: "40px" }}
+          fontSize={{ base: "20px", md: "30px", lg: "40px" }}
           fontWeight={900}
           textAlign="center"
           px="5px"

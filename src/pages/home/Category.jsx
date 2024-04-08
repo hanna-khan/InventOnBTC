@@ -26,8 +26,8 @@ export default function Category() {
         <Stack direction="column" spacing={3}>
           <Flex
             flexDirection={{ base: "row" }}
-            flexWrap="wrap"
-            justifyContent="space-around"
+            flexWrap={{ base: "wrap", lg: "nowrap" }}
+            justifyContent={{ base: "center", lg: "space-around" }}
             gap="60px"
           >
             {data.map((item, index) => (
@@ -35,12 +35,12 @@ export default function Category() {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  // width={{ base: "45px", md: "35px" }}
-                  height={{ base: "auto", md: "35px" }}
-                  objectFit="cover"
+                  width={{ base: "35px", lg: "45px" }}
+                  height={{ base: "35px", lg: "45px" }}
+                  objectFit="contain"
                 />
                 <Text
-                  fontSize={{ base: "10px", md: "20px" }}
+                  fontSize={{ base: "10px", lg: "20px" }}
                   textTransform="capitalize"
                   textAlign="center"
                 >
