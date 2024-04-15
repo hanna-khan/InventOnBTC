@@ -8,8 +8,23 @@ import Category from "./Category";
 import Feedback from "./Feedback";
 import Work from "./Work";
 import Hero from "./Hero";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const Home = () => {
+  // const getData = async () => {
+  //   const querySnapshot = await getDocs(collection(db, "betaLogin"));
+  //   const data = querySnapshot.docs.map((doc) => ({
+  //     id: doc.id,
+  //     ...doc.data(),
+  //   }));
+  //   console.log(data, "data");
+  // };
+
+  // React.useEffect(() => {
+  //   getData();
+  // }, []);
+
   return (
     <>
       <Hero />

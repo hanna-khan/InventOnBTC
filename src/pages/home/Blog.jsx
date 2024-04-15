@@ -44,7 +44,7 @@ const Blog = () => {
             justifyContent="center"
           >
             {data.map((item, index) => (
-              <Box key={index} as="a" href={item.link}>
+              <Box key={index} as="a" target="_blog" href={item.link}>
                 <Image
                   src={item.image}
                   alt={item.title}
