@@ -34,7 +34,7 @@ const Home = () => {
       <Category />
       <Spotlight />
       <Blog />
-      <Feedback />
+      {/* <Feedback /> */}
     </>
   );
 };

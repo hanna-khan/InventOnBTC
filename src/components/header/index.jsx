@@ -12,11 +12,23 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  HStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Logo from "../../assets/images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
+import { getAddress } from "sats-connect";
+import XverseIcon from "../../assets/images/xverse_icon.png";
+import LeatherIcon from "../../assets/images/leather_icon.png";
+import { LuUserCircle } from "react-icons/lu";
 
 const NAV_ITEMS = [
   {
@@ -58,7 +70,33 @@ const DesktopNav = () => {
 };
 
 export default function WithSubnavigation() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const navigate = useNavigate();
+
+  const connectWalletWithXverse = async () => {
+    const getAddressOptions = {
+      payload: {
+        purposes: ["ordinals", "payment"],
+        message: "Address for receiving Ordinals and payments",
+        network: {
+          type: "Mainnet",
+        },
+      },
+      onFinish: (response) => {
+        localStorage.setItem("wallet", JSON.stringify(response));
+        onClose();
+      },
+      onCancel: () => console.log("Request canceled"),
+    };
+    await getAddress(getAddressOptions);
+  };
+
+  const connectWalletWithLeather = async () => {
+    const response = await window.LeatherProvider?.request("getAddresses");
+    localStorage.setItem("wallet", JSON.stringify(response.result));
+    onClose();
+  };
 
   const logout = () => {
     localStorage.clear();
@@ -124,21 +162,28 @@ export default function WithSubnavigation() {
             justify="flex-end"
             direction="row"
             spacing={3}
-            align="center"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Button
-              as="a"
-              fontSize="sm"
-              fontWeight={600}
-              color="white"
-              bg="#E16A15"
-              href="#"
-              _hover={{
-                bg: "#E16A15",
-              }}
-            >
-              Connect Wallet
-            </Button>
+            {JSON.parse(localStorage.getItem("wallet"))?.addresses[0]
+              ?.address ? (
+              <Link to="/profile">
+                <Icon as={LuUserCircle} fontSize="30px" cursor="pointer" />
+              </Link>
+            ) : (
+              <Button
+                fontSize="sm"
+                fontWeight={600}
+                color="white"
+                bg="#E16A15"
+                _hover={{
+                  bg: "#E16A15",
+                }}
+                onClick={onOpen}
+              >
+                Connect Wallet
+              </Button>
+            )}
             <Icon
               as={IoIosLogOut}
               fontSize="30px"
@@ -148,6 +193,29 @@ export default function WithSubnavigation() {
           </Stack>
         </Flex>
       </Container>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Wallet Integration</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <HStack spacing={5} mt={"4px"}>
+              <Image
+                sx={{ width: { base: "50px", md: "100px" }, cursor: "pointer" }}
+                src={XverseIcon}
+                alt="Coin1"
+                onClick={connectWalletWithXverse}
+              />
+              <Image
+                sx={{ width: { base: "50px", md: "100px" }, cursor: "pointer" }}
+                src={LeatherIcon}
+                alt="Coin2"
+                onClick={connectWalletWithLeather}
+              />
+            </HStack>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 }

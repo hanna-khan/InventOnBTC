@@ -16,7 +16,7 @@ import { data } from "../../utils/BlogData";
 const Blog = () => {
   return (
     <>
-      <Container maxW="1240px">
+      <Container maxW="1240px" marginBottom="100px">
         <Box mt="8rem">
           <Heading
             as="h3"

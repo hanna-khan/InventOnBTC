@@ -14,13 +14,19 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@walletconnect/encoding": "^1.0.2",
+    "@walletconnect/qrcode-modal": "^1.8.0",
+    "@walletconnect/sign-client": "^2.12.2",
+    "@walletconnect/types": "^2.12.2",
+    "@walletconnect/utils": "^2.12.2",
     "chakra-ui-steps": "^2.1.0",
     "firebase": "^10.9.0",
     "framer-motion": "^11.0.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "sats-connect": "^2.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

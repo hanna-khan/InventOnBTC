@@ -7,6 +7,7 @@ import {
   Satrtup,
   Category,
   Analytics,
+  Profile,
 } from "./../pages";
 import { Box } from "@chakra-ui/react";
 import Layout from "../layout";
@@ -76,6 +77,15 @@ const router = createBrowserRouter([
         element: (
           <Box sx={styles.container}>
             <Analytics />
+          </Box>
+        ),
+        caseSensitive: true,
+      },
+      {
+        path: "/profile",
+        element: (
+          <Box sx={styles.container}>
+            <Profile />
           </Box>
         ),
         caseSensitive: true,

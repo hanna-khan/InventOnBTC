@@ -5,5 +5,6 @@ import Satrtup from "./startup";
 import Backers from "./backers";
 import Category from "./category";
 import Analytics from "./analytics";
+import Profile from "./profile";
 
-export { Analytics , Login, Home, Project, Satrtup, Backers, Category };
+export { Analytics, Login, Home, Project, Satrtup, Backers, Category, Profile };
